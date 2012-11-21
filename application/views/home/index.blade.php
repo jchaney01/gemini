@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=500, initial-scale=1, user-scalable=no">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -53,9 +53,9 @@
     <div id="centralNav">
         <div class="row-fluid">
             <div class="span12">
-                <a href="#" class="active">Overview</a>
-                <a href="#">Time Logs</a>
-                <a href="#">Change Orders</a>
+                <a href="http://apple.com" class="active">Overview</a>
+                <a href="http://apple.com">Time Logs</a>
+                <a href="http://apple.com">Change Orders</a>
             </div>
         </div>
         <div class="row-fluid">
