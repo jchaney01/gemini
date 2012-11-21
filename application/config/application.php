@@ -67,7 +67,7 @@ return array(
 	|
 	*/
 
-	'profiler' => false,
+	'profiler' => FALSE,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -122,7 +122,7 @@ return array(
 	|
 	*/
 
-	'ssl' => true,
+	'ssl' => TRUE,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -185,7 +185,7 @@ return array(
 		'Response'   	=> 'Laravel\\Response',
 		'Route'      	=> 'Laravel\\Routing\\Route',
 		'Router'     	=> 'Laravel\\Routing\\Router',
-		'Schema'     	=> 'Laravel\\Database\\Schema',
+		'Schema'     	=> 'SchemaEnhanced\\Database\\Schema',
 		'Section'    	=> 'Laravel\\Section',
 		'Session'    	=> 'Laravel\\Session',
 		'Str'        	=> 'Laravel\\Str',

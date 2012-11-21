@@ -16,6 +16,7 @@
                 $table->string('contact_name')->nullable();
                 $table->integer('contact_phone')->nullable();
                 $table->integer('company_phone')->nullable();
+                $table->integer('hour_billable');
                 $table->string('contact_email')->nullable();
                 $table->string('company_url')->nullable();
                 $table->string('access_code')->nullable();

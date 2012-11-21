@@ -66,3 +66,34 @@ git commit -s -m "this commit will be signed off automatically!"
 ## License
 
 Laravel is open-sourced software licensed under the MIT License.
+
+
+Create migration
+Run migration
+---------------------
+Create User model
+---------------------
+Hash::make("foo") returns the hashed version (don't really use this)
+---------------------
+Grab the values with Input::get("name of field")
+---------------------
+Auth::attempt(array); //Array must contain at least username and NON-hashed password and returns bool but can have other criteria like if active.  Also sets session.
+
+Auth::check() Bool for isLoggedIn (returns true if logged in)
+Auth::guest() Bool for is NOT Logged In (returns true if NOT logged in)
+
+
+Auth::logout() to kill the session
+Use Auth::guest() to return a bool if the user is NOT logged in
+
+Use route groups to run a before filter on multiple routes (not in training) and use the guest check
+
+$user = Auth::user();
+$user->name;
+
+
+
+
+Questions?
+How to add custom data to session
+Guessing Session::set("key", "value");
