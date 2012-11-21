@@ -1,0 +1,154 @@
+@mixin breakpoint($point) {
+  @if $point == small {
+    @media (max-width:547px) { @content; }
+  }
+  @if $point == medium {
+    @media (min-width:548px) and (max-width:767px) { @content; }
+  }
+  @else if $point == large {
+    @media (min-width: 768px)  { @content; }
+  }
+}
+
+
+@mixin opacity($decimal,$whole) {
+  opacity: $decimal; /* Chrome 4+, FF2+, Saf3.1+, Opera 9+, IE9, iOS 3.2+, Android 2.1+ */
+  filter: alpha(opacity=$whole); /* IE6-IE8 */
+}
+
+
+
+
+// Turn off the bullet for an element of a list
+@mixin no-bullet {
+  list-style-image : none;
+  list-style-type  : none;
+  margin-left      : 0;
+}
+
+// turns off the bullets for an entire list
+@mixin no-bullets {
+  list-style: none;
+  li { @include no-bullet; }
+}
+
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal ) {
+  @font-face {
+      font-family: $font-family;
+      src: url('#{$file-path}.eot');
+      src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+           url('#{$file-path}.woff') format('woff'),
+           url('#{$file-path}.ttf') format('truetype'),
+           url('#{$file-path}.svg##{$font-family}') format('svg');
+      font-weight: $weight;
+      font-style: $style;
+  }
+}
+
+
+@mixin border-radius ($radii) {
+  -webkit-border-radius: $radii;
+     -moz-border-radius: $radii;
+      -ms-border-radius: $radii;
+       -o-border-radius: $radii;
+          border-radius: $radii;
+}
+
+@mixin border-top-left-radius($radii) {
+  -webkit-border-top-left-radius: $radii;
+     -moz-border-top-left-radius: $radii;
+      -moz-border-radius-topleft: $radii;
+      -ms-border-top-left-radius: $radii;
+       -o-border-top-left-radius: $radii;
+          border-top-left-radius: $radii;
+}
+
+@mixin border-top-right-radius($radii) {
+  -webkit-border-top-right-radius: $radii;
+     -moz-border-top-right-radius: $radii;
+      -moz-border-radius-topright: $radii;
+      -ms-border-top-right-radius: $radii;
+       -o-border-top-right-radius: $radii;
+          border-top-right-radius: $radii;
+}
+
+@mixin border-bottom-left-radius($radii) {
+  -webkit-border-bottom-left-radius: $radii;
+     -moz-border-bottom-left-radius: $radii;
+      -moz-border-radius-bottomleft: $radii;
+      -ms-border-bottom-left-radius: $radii;
+       -o-border-bottom-left-radius: $radii;
+          border-bottom-left-radius: $radii;
+}
+
+@mixin border-bottom-right-radius($radii) {
+  -webkit-border-bottom-right-radius: $radii;
+     -moz-border-bottom-right-radius: $radii;
+      -moz-border-radius-bottomright: $radii;
+      -ms-border-bottom-right-radius: $radii;
+       -o-border-bottom-right-radius: $radii;
+          border-bottom-right-radius: $radii;
+}
+
+@mixin border-top-radius($radii) {
+  @include border-top-left-radius($radii);
+  @include border-top-right-radius($radii);
+}
+
+@mixin border-right-radius($radii) {
+  @include border-top-right-radius($radii);
+  @include border-bottom-right-radius($radii);
+}
+
+@mixin border-bottom-radius($radii) {
+  @include border-bottom-left-radius($radii);
+  @include border-bottom-right-radius($radii);
+}
+
+@mixin border-left-radius($radii) {
+  @include border-top-left-radius($radii);
+  @include border-bottom-left-radius($radii);
+}
+
+// sass
+
+@mixin rotate($degrees) {
+
+-moz-transform: rotate($degrees);
+
+-o-transform: rotate($degrees);
+
+-webkit-transform: rotate($degrees);
+
+filter:  progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)});
+
+-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=#{cos($degrees)}, M12=-#{sin($degrees)}, M21=#{sin($degrees)}, M22=#{cos($degrees)})";
+
+zoom: 1;
+
+}
+
+@function cdn($img){
+  @return "http://wpc.86c5.edgecastcdn.net/8086C5/tenfourwebsite/"+$img;
+}
+
+@mixin gradientText($color){
+  //Simply uses an opacity fade.  Not as flexible as using the text clip way, but ore stable.  Jason Chaney
+  color: $color;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.5)), color-stop(50%, rgba(0,0,0,1)), to(rgba(0,0,0,0.5)));
+}
