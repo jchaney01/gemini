@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=500, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=550, initial-scale=1, user-scalable=no">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -27,9 +27,7 @@
 
     <nav>
         <ul>
-            <li><a href="#"><? echo HTML::image('img/navProjects.png', "Projects Icon");?>Projects</a></li>
-            <li class="borderLeft">f</li>
-            <li><a href="#"><? echo HTML::image('img/navInvoices.png', "Projects Icon");?>Invoices</a></li>
+            <li class="active"><a href="#"><? echo HTML::image('img/navProjectsActive.png', "Projects Icon");?>Projects</a></li><li><a href="#"><? echo HTML::image('img/navInvoices.png', "Projects Icon");?>Invoices</a></li>
         </ul>
     </nav>
 
@@ -55,6 +53,7 @@
                     <li><a href="#">Project Nam dfg fg fdgdg fe</a></li>
                     <li><a href="#">Project Nam dfg fg fdgdg fe</a></li>
                     <li><a href="#">Project Nam dfg fg fdgdg fe</a></li>
+
                 </ul>
             </div>
         </div>

@@ -41,6 +41,10 @@ $pink:                  #c3325f;
 $purple:                #7a43b6;
 
 
+$default-text-shadow-color: rgba($black, 0.6);
+$default-text-shadow-blur: 3px;
+$default-text-shadow-v-offset: 1px;
+
 $body-grad-color : $grayDark;
 $body-color : $grayLight;
 $base-font-size:12px;
@@ -83,7 +87,7 @@ body {
   background-position: 0 20px;
   height:200px;
   position:relative;
-  overflow:auto;
+
   #logo{
     padding:35px 0 0 60px;
     @include breakpoint(small) {
@@ -103,9 +107,10 @@ body {
     }
   }
   #projectList{
+    overflow:auto;
     background-color:transparent;
     right:10px;
-    height:100%;
+    height:183px;
     padding:35px;
     @include breakpoint(small) {
       padding:25px;
@@ -172,7 +177,7 @@ body {
   h1{
     font-size: $base-font-size + 8;
     display: inline-block;
-    padding-bottom: 5px;
+    padding-bottom: 6px;
     @include gradientText($grayLighter);
   }
   h2{
@@ -190,36 +195,40 @@ body {
 
 nav {
   width: 100%;
-  height: 55px;
-  padding: .3em 0;
+  height: 50px;
   position:fixed;
   z-index: 30;
   bottom:0;
-  border-top:1px solid $white;
+  border-top:1px solid $grayLight;
   @include background-image(linear-gradient($gray 30%, $grayDark));
   ul{
     list-style: none;
-    padding: 0px;
     margin: 0px;
     font-weight: bold;
     text-align: center;
     li{
       display: inline-block;
       text-align: left;
-      &.borderLeft{
-        height: 100%;
-        width: 1px;
-        background-color: $gray;
-        display: inline-block;
+      border-right:1px solid $grayLight;
+      border-left:1px solid $grayLight;
+      &.active{
+        @include background-image(linear-gradient($grayDark 30%, $gray));
       }
-      a{
+      padding:3px;
+      a,&:hover {
         color: $grayLighter;
         font-weight: lighter;
         font-family: Arial,sans-serif;
+        font-weight: 100;
+        color:$grayLight;
         display: block;
         padding: 5px 20px;
+        font-size:11px;
+        @include single-text-shadow;
+        //text-shadow: 2px 2px 2px #000;
+
         img{
-          height: 29px;
+          height: 28px;
           display: block;
           margin: -4px auto 3px auto;
         }

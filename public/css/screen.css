@@ -75,7 +75,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-style: normal;
 }
 
-/* line 48, ../scss/screen.scss */
+/* line 52, ../scss/screen.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -83,27 +83,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   line-height: 1.5em;
 }
 
-/* line 52, ../scss/screen.scss */
+/* line 56, ../scss/screen.scss */
 a {
   color: #049cdb;
 }
-/* line 54, ../scss/screen.scss */
+/* line 58, ../scss/screen.scss */
 a:hover {
   text-decoration: none;
   color: #049cdb;
 }
 
-/* line 59, ../scss/screen.scss */
+/* line 63, ../scss/screen.scss */
 html {
   height: 100%;
 }
 
-/* line 66, ../scss/screen.scss */
+/* line 70, ../scss/screen.scss */
 .container-fluid {
   padding: 0;
 }
 
-/* line 69, ../scss/screen.scss */
+/* line 73, ../scss/screen.scss */
 body {
   font-size: 12px;
   color: #999999;
@@ -118,7 +118,7 @@ body {
   padding-bottom: 100px;
 }
 
-/* line 79, ../scss/screen.scss */
+/* line 83, ../scss/screen.scss */
 #header {
   background-image: url("../img/lighting.png");
   background-size: 519px 170px;
@@ -126,26 +126,25 @@ body {
   background-position: 0 20px;
   height: 200px;
   position: relative;
-  overflow: auto;
 }
-/* line 87, ../scss/screen.scss */
+/* line 91, ../scss/screen.scss */
 #header #logo {
   padding: 35px 0 0 60px;
 }
 @media (max-width: 547px) {
-  /* line 87, ../scss/screen.scss */
+  /* line 91, ../scss/screen.scss */
   #header #logo {
     padding: 35px 0 0 30px;
   }
 }
-/* line 92, ../scss/screen.scss */
+/* line 96, ../scss/screen.scss */
 #header #logo .clientName {
   font-size: 16px;
   padding-bottom: 5px;
   color: #eeeeee;
   -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(50%, black), to(rgba(0, 0, 0, 0.5)));
 }
-/* line 97, ../scss/screen.scss */
+/* line 101, ../scss/screen.scss */
 #header #logo #dashboardHeader {
   font-size: 35px;
   margin-left: -5px;
@@ -154,66 +153,67 @@ body {
   color: #eeeeee;
   -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(50%, black), to(rgba(0, 0, 0, 0.5)));
 }
-/* line 105, ../scss/screen.scss */
+/* line 109, ../scss/screen.scss */
 #header #projectList {
+  overflow: auto;
   background-color: transparent;
   right: 10px;
-  height: 100%;
+  height: 183px;
   padding: 35px;
   overflow: auto;
 }
 @media (max-width: 547px) {
-  /* line 105, ../scss/screen.scss */
+  /* line 109, ../scss/screen.scss */
   #header #projectList {
     padding: 25px;
     right: auto;
   }
 }
 @media (min-width: 548px) and (max-width: 767px) {
-  /* line 105, ../scss/screen.scss */
+  /* line 109, ../scss/screen.scss */
   #header #projectList {
     padding: 35px 35px 35px 60px;
     right: auto;
   }
 }
-/* line 119, ../scss/screen.scss */
+/* line 124, ../scss/screen.scss */
 #header #projectList ul {
   font-size: 16px;
   color: white;
 }
-/* line 122, ../scss/screen.scss */
+/* line 127, ../scss/screen.scss */
 #header #projectList ul li {
   background: url("../img/arrowBullet.png") 0px 3px no-repeat;
   background-size: 20px 20px;
   padding-bottom: 15px;
   padding-left: 30px;
 }
-/* line 123, ../scss/screen.scss */
+/* line 128, ../scss/screen.scss */
 #header #projectList ul li a {
   color: white;
 }
 
-/* line 135, ../scss/screen.scss */
+/* line 140, ../scss/screen.scss */
 #centralNav {
   padding: 0 20px;
 }
-/* line 138, ../scss/screen.scss */
+/* line 143, ../scss/screen.scss */
 #centralNav div.span12 a {
   margin: 0 30px 0 40px;
   color: #555555;
 }
-/* line 139, ../scss/screen.scss */
+/* line 144, ../scss/screen.scss */
 #centralNav div.span12 a.active {
   color: white;
 }
 @media (max-width: 547px) {
-  /* line 138, ../scss/screen.scss */
+  /* line 143, ../scss/screen.scss */
   #centralNav div.span12 a {
     margin-bottom: 20px;
     display: block;
   }
 }
-/* line 150, ../scss/screen.scss */
+/* line 155, ../scss/screen.scss */
 #centralNav .navLine {
   margin-top: -9px;
   height: 5px;
@@ -222,13 +222,13 @@ body {
   width: 100%;
 }
 @media (max-width: 547px) {
-  /* line 150, ../scss/screen.scss */
+  /* line 155, ../scss/screen.scss */
   #centralNav .navLine {
     display: none;
     margin-bottom: 10px;
   }
 }
-/* line 160, ../scss/screen.scss */
+/* line 165, ../scss/screen.scss */
 #centralNav .navLine .positionIndicator {
   width: 100px;
   background-color: #049cdb;
@@ -237,79 +237,85 @@ body {
   left: 40px;
 }
 
-/* line 170, ../scss/screen.scss */
+/* line 175, ../scss/screen.scss */
 #slider {
   padding: 20px 60px;
 }
-/* line 172, ../scss/screen.scss */
+/* line 177, ../scss/screen.scss */
 #slider h1 {
   font-size: 20px;
   display: inline-block;
-  padding-bottom: 5px;
+  padding-bottom: 6px;
   color: #eeeeee;
   -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(50%, black), to(rgba(0, 0, 0, 0.5)));
 }
-/* line 178, ../scss/screen.scss */
+/* line 183, ../scss/screen.scss */
 #slider h2 {
   font-size: 14px;
   margin: 5px 0;
 }
-/* line 182, ../scss/screen.scss */
+/* line 187, ../scss/screen.scss */
 #slider .overviewModule {
   margin: 30px 0 0 0;
 }
-/* line 183, ../scss/screen.scss */
+/* line 188, ../scss/screen.scss */
 #slider .overviewModule a {
   padding: 10px 10px 10px 0;
   display: inline-block;
 }
 
-/* line 191, ../scss/screen.scss */
+/* line 196, ../scss/screen.scss */
 nav {
   width: 100%;
-  height: 55px;
-  padding: .3em 0;
+  height: 50px;
   position: fixed;
   z-index: 30;
   bottom: 0;
-  border-top: 1px solid white;
+  border-top: 1px solid #999999;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(30%, #555555), color-stop(100%, #333333));
   background-image: -webkit-linear-gradient(#555555 30%, #333333);
   background-image: -moz-linear-gradient(#555555 30%, #333333);
   background-image: -o-linear-gradient(#555555 30%, #333333);
   background-image: linear-gradient(#555555 30%, #333333);
 }
-/* line 200, ../scss/screen.scss */
+/* line 204, ../scss/screen.scss */
 nav ul {
   list-style: none;
-  padding: 0px;
   margin: 0px;
   font-weight: bold;
   text-align: center;
 }
-/* line 206, ../scss/screen.scss */
+/* line 209, ../scss/screen.scss */
 nav ul li {
   display: inline-block;
   text-align: left;
+  border-right: 1px solid #999999;
+  border-left: 1px solid #999999;
+  padding: 3px;
 }
-/* line 209, ../scss/screen.scss */
-nav ul li.borderLeft {
-  height: 100%;
-  width: 1px;
-  background-color: #555555;
-  display: inline-block;
+/* line 214, ../scss/screen.scss */
+nav ul li.active {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(30%, #333333), color-stop(100%, #555555));
+  background-image: -webkit-linear-gradient(#333333 30%, #555555);
+  background-image: -moz-linear-gradient(#333333 30%, #555555);
+  background-image: -o-linear-gradient(#333333 30%, #555555);
+  background-image: linear-gradient(#333333 30%, #555555);
 }
-/* line 215, ../scss/screen.scss */
-nav ul li a {
+/* line 218, ../scss/screen.scss */
+nav ul li a, nav ul li:hover {
   color: #eeeeee;
   font-weight: lighter;
   font-family: Arial,sans-serif;
+  font-weight: 100;
+  color: #999999;
   display: block;
   padding: 5px 20px;
+  font-size: 11px;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
 }
-/* line 221, ../scss/screen.scss */
-nav ul li a img {
-  height: 29px;
+/* line 230, ../scss/screen.scss */
+nav ul li a img, nav ul li:hover img {
+  height: 28px;
   display: block;
   margin: -4px auto 3px auto;
 }
