@@ -11,6 +11,7 @@ class Create_Users_Table {
 			$table->string('password');
 			$table->string('last_name');
 			$table->integer('access_lvl');
+			$table->integer('hour_rate');
 			$table->text('api_key')->nullable();
 			$table->timestamps();
 	});

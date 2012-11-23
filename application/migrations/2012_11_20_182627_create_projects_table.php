@@ -18,10 +18,13 @@ class Create_Projects_Table {
 			$table->integer('authrequired');
 			$table->blob('1_desc')->nullable();
 			$table->string('po')->nullable();
-			$table->integer('budget')->nullable();
+			$table->integer('budgeted_dollars')->nullable();
+			$table->integer('budgeted_hours')->nullable();
 			$table->integer('tro')->default(0);
 			$table->string('preview_image')->nullable();
 			$table->string('full_image')->nullable();
+			$table->string('repo_name')->nullable();
+			$table->string('repo_URL')->nullable();
 			$table->integer('group')->nullable();
 			$table->string('thumb_loc2')->nullable();
 			$table->timestamps();

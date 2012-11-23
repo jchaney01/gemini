@@ -17,7 +17,9 @@ class Create_Invoices_Table {
 			$table->integer('client_id');
 			$table->date('date_paid')->nullable();
 			$table->string('po')->nullable();
+			$table->string('paid_with')->nullable();
 			$table->string('proj_tracking_url')->nullable();
+			$table->string('co_url')->nullable();
 			$table->integer('net')->nullable();
 			$table->timestamps();
 	});
