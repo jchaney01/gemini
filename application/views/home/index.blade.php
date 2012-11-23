@@ -80,7 +80,7 @@
         <div id='slider'>
             <ul>
                 <li style='display:block' id="projectOverview" class="page1">
-                    <div class="span6">
+                    <div class="span7">
                         <h1>Project Name</h1>
 
                         <h2>PO or Ext. Project ID</h2>
@@ -103,8 +103,87 @@
                                 The repo name is BLAH
                             </p>
                         </div>
+                        <div class="timeEntry">
+                            <div class="time">1<span>h</span> 34<span>m</span></div>
+                                <div>
+                                    5/18/2012
+                                </div>
+                                <div>
+                                    Worked on foo bar
+                                </div>
+                                <div>
+                                    <a href="#">Dave West</a>
+                                </div>
+                        </div>
+                        <div class="timeEntry">
+                            <div class="time">1<span>h</span> 34<span>m</span></div>
+                            <div>
+                                5/18/2012
+                            </div>
+                            <div>
+                                Worked on foo bar
+                            </div>
+                            <div>
+                                <a href="#">Dave West</a>
+                            </div>
+                        </div>
+                        <div class="COEntry">
+                            <div class="time">5 <span>hours</span> <span class="status approved">Approved</span></div>
+                            <div>
+                                Approved by <a href="#">Adam Young</a> on 5/18/2012
+                            </div>
+                            <div>
+                                Worked on foo bar
+                            </div>
+                        </div>
+                        <div class="COEntry">
+                            <div class="time">5 <span>hours</span> <span class="status denied">Approved</span></div>
+                            <div>
+                                Approved by <a href="#">Adam Young</a> on 5/18/2012
+                            </div>
+                            <div>
+                                Worked on foo bar
+                            </div>
+                        </div>
+                        <div class="COEntry">
+                            <div class="time">5 <span>hours</span> <span class="status pending">Approved</span></div>
+                            <div>
+                                Approved by <a href="#">Adam Young</a> on 5/18/2012
+                            </div>
+                            <div>
+                                Worked on foo bar
+                            </div>
+                        </div>
+                        <div class="invoiceEntry">
+                            <div class="time">#6421 <span class="status due">Due</span></div>
+                            <div>
+                                $9,987.50
+                            </div>
+                            <div>
+                                Desc sent on 8/2/5211
+                            </div>
+                            <div><a href="#">Pay Now</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">View</a></div>
+                        </div>
                     </div>
-                    <div class="span6">BUDGET CHART</div>
+                    <div class="span5">
+                        <div class="timeEntry">
+                            <div>Time Since last project invoice</div>
+                            <div class="time">1<span>h</span> 34<span>m</span></div>
+                        </div>
+                        <div class="timeEntry">
+                            <div>Time Since last project invoice</div>
+                            <div class="time">1<span>h</span> 34<span>m</span></div>
+                        </div>
+                        <div class="timeEntry">
+                            <div>Total Approved</div>
+                            <div class="time">7.35<span>h</span></div>
+                        </div>
+                        <div class="invoiceSummary">
+                            Currently Due
+                            <div class="time"><span style="vertical-align: super;">$</span>1,876</div>
+                            <a href="#"> View Past Invoices</a>
+                        </div>
+                    </div>
                 </li>
                 <li style='display:none'>Page 2</li>
                 <li style='display:none'>Page 3</li>

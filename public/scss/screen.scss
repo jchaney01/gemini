@@ -200,6 +200,21 @@ body {
     }
     margin: 30px 0 0 0;
   }
+  .timeEntry{
+    margin-bottom: 30px;
+    font-size: $base-font-size;
+    color:$grayLight;
+  }
+}
+
+.time{
+  color: $white;
+  font-size:$base-font-size+10;
+  margin-bottom: 5px;
+  span{
+    font-size: 12px;
+    color:$grayLight;
+  }
 }
 
 nav {
@@ -261,4 +276,40 @@ nav {
     width: 22px;
     float: left;
   }
+}
+
+.COEntry{
+  margin-bottom:20px;
+
+
+  line-height:1.2em;
+  a{
+  background-color: transparent;
+  display: inline-block;
+  padding: 5px;
+  margin-bottom: -3px;
+}}
+
+.status{
+  &.approved,&.not_sent{
+    color:$green;
+  }
+  &.denied,&.past_due{
+    color:$red;
+  }
+  &.pending,&.due{
+    color:$yellow;
+  }
+  &.paid{
+    display: none;
+  }
+}
+
+.invoiceSummary{
+  div{
+    margin-bottom: 40px;
+  }
+}
+.invoiceEntry{
+  line-height:1.5em;
 }

@@ -268,8 +268,26 @@ body {
   padding: 10px 10px 10px 0;
   display: inline-block;
 }
+/* line 203, ../scss/screen.scss */
+#slider .timeEntry {
+  margin-bottom: 30px;
+  font-size: 12px;
+  color: #999999;
+}
 
-/* line 205, ../scss/screen.scss */
+/* line 210, ../scss/screen.scss */
+.time {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+/* line 214, ../scss/screen.scss */
+.time span {
+  font-size: 12px;
+  color: #999999;
+}
+
+/* line 220, ../scss/screen.scss */
 nav {
   width: 100%;
   height: 50px;
@@ -285,14 +303,14 @@ nav {
   background-image: -o-linear-gradient(#555555 30%, #333333);
   background-image: linear-gradient(#555555 30%, #333333);
 }
-/* line 214, ../scss/screen.scss */
+/* line 229, ../scss/screen.scss */
 nav ul {
   list-style: none;
   margin: 0px;
   font-weight: bold;
   text-align: center;
 }
-/* line 219, ../scss/screen.scss */
+/* line 234, ../scss/screen.scss */
 nav ul li {
   display: inline-block;
   text-align: left;
@@ -300,7 +318,7 @@ nav ul li {
   border-left: 1px solid #999999;
   padding: 3px;
 }
-/* line 224, ../scss/screen.scss */
+/* line 239, ../scss/screen.scss */
 nav ul li.active {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF333333', endColorstr='#FF555555');
@@ -310,7 +328,7 @@ nav ul li.active {
   background-image: -o-linear-gradient(#333333 30%, #555555);
   background-image: linear-gradient(#333333 30%, #555555);
 }
-/* line 229, ../scss/screen.scss */
+/* line 244, ../scss/screen.scss */
 nav ul li a {
   color: #eeeeee;
   font-weight: lighter;
@@ -322,18 +340,18 @@ nav ul li a {
   font-size: 11px;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
 }
-/* line 230, ../scss/screen.scss */
+/* line 245, ../scss/screen.scss */
 nav ul li a:hover {
   color: #999999;
 }
-/* line 244, ../scss/screen.scss */
+/* line 259, ../scss/screen.scss */
 nav ul li a img {
   height: 28px;
   display: block;
   margin: -4px auto 3px auto;
 }
 
-/* line 254, ../scss/screen.scss */
+/* line 269, ../scss/screen.scss */
 #legal {
   color: #999999;
   position: fixed;
@@ -341,8 +359,48 @@ nav ul li a img {
   left: 10px;
   z-index: 40;
 }
-/* line 260, ../scss/screen.scss */
+/* line 275, ../scss/screen.scss */
 #legal img {
   width: 22px;
   float: left;
+}
+
+/* line 281, ../scss/screen.scss */
+.COEntry {
+  margin-bottom: 20px;
+  line-height: 1.2em;
+}
+/* line 286, ../scss/screen.scss */
+.COEntry a {
+  background-color: transparent;
+  display: inline-block;
+  padding: 5px;
+  margin-bottom: -3px;
+}
+
+/* line 294, ../scss/screen.scss */
+.status.approved, .status.not_sent {
+  color: #46a546;
+}
+/* line 297, ../scss/screen.scss */
+.status.denied, .status.past_due {
+  color: #9d261d;
+}
+/* line 300, ../scss/screen.scss */
+.status.pending, .status.due {
+  color: #ffc40d;
+}
+/* line 303, ../scss/screen.scss */
+.status.paid {
+  display: none;
+}
+
+/* line 309, ../scss/screen.scss */
+.invoiceSummary div {
+  margin-bottom: 40px;
+}
+
+/* line 313, ../scss/screen.scss */
+.invoiceEntry {
+  line-height: 1.5em;
 }
