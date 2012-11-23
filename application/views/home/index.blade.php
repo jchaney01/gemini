@@ -27,8 +27,9 @@
 
     <nav>
         <ul>
-            <li><a href="#"><? echo HTML::image('img/navProjects.png', "Projects Icon", array('width' => '27'));?>Projects</a></li>
-            <li><a href="#"><? echo HTML::image('img/navInvoices.png', "Projects Icon", array('width' => '12'));?>Invoices</a></li>
+            <li><a href="#"><? echo HTML::image('img/navProjects.png', "Projects Icon");?>Projects</a></li>
+            <li class="borderLeft">f</li>
+            <li><a href="#"><? echo HTML::image('img/navInvoices.png', "Projects Icon");?>Invoices</a></li>
         </ul>
     </nav>
 
