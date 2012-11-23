@@ -37,6 +37,18 @@ Route::get('/', function()
 	return View::make('home.index');
 });
 
+
+
+//Projects
+
+Route::get('projects', array('as' => 'projects', 'uses' => 'projects@index'));
+Route::get('projects/(:any)', array('as' => 'project', 'uses' => 'projects@show'));
+Route::get('projects/new', array('as' => 'new_project', 'uses' => 'projects@new'));
+Route::get('projects/(:any)edit', array('as' => 'edit_project', 'uses' => 'projects@edit'));
+Route::post('projects', 'projects@create');
+Route::put('projects/(:any)', 'projects@update');
+Route::delete('projects/(:any)', 'projects@destroy');
+
 /*
 |--------------------------------------------------------------------------
 | Application 404 & 500 Error Handlers

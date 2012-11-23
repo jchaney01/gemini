@@ -15,6 +15,7 @@
 
     {{ HTML::style('css/bootstrap.min.css') }}
     {{ HTML::style('css/bootstrap-responsive.min.css') }}
+    {{ HTML::style('css/darkstrap.css') }}
     {{ HTML::style('css/screen.css') }}
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
