@@ -53,9 +53,9 @@
     <div id="centralNav">
         <div class="row-fluid">
             <div class="span12">
-                <a href="http://apple.com" class="active">Overview</a>
-                <a href="http://apple.com">Time Logs</a>
-                <a href="http://apple.com">Change Orders</a>
+                <a href="http://apple.com1" class="active">Overview</a>
+                <a href="http://apple.com2">Time Logs</a>
+                <a href="http://apple.com3">Change Orders</a>
             </div>
         </div>
         <div class="row-fluid">
