@@ -27,7 +27,7 @@
 
     <nav>
         <ul>
-            <li class="active"><a href="#"><? echo HTML::image('img/navProjectsActive.png', "Projects Icon");?>Projects</a></li><li><a href="#"><? echo HTML::image('img/navInvoices.png', "Projects Icon");?>Invoices</a></li>
+            <li class="active"><a href="#"><? echo HTML::image('img/navProjectsActive.png', "Projects Icon");?>Projects</a></li><li><a href="#"><? echo HTML::image('img/navInvoices.png', "Invoices Icon");?>Invoices</a></li>
         </ul>
     </nav>
 
@@ -73,7 +73,10 @@
             </div>
         </div>
     </div>
+    <div id="legal">
+        <? echo HTML::image('img/geminiLogo.png', "Gemini Logo");?>
 
+    </div>
     <div class="row-fluid">
         <div id='slider'>
             <ul>

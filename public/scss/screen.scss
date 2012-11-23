@@ -61,7 +61,7 @@ a{
   }
 }
 html{
-  height: 100%;
+
 }
 .container-fluid{
 
@@ -78,6 +78,7 @@ body {
   background-attachment:fixed;
   background-color: $body-grad-color;
   padding-bottom: 100px;
+  background-repeat: no-repeat;
 }
 
 #header{
@@ -86,7 +87,7 @@ body {
   background-repeat: no-repeat;
   background-position: 0 20px;
   height:200px;
-  position:relative;
+
 
   #logo{
     padding:35px 0 0 60px;
@@ -234,5 +235,17 @@ nav {
         }
       }
     }
+  }
+}
+
+#legal{
+  color:$grayLight;
+  position:fixed;
+  bottom:15px;
+  left: 10px;
+  z-index:40;
+  img{
+    width: 22px;
+    float: left;
   }
 }
