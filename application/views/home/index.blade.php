@@ -42,8 +42,17 @@
             <div id="projectList">
                 <select class="visible-phone" name="projects" id="">
                     <option value="Project Nam dfg fg fdgdg fe">fdg dfggdfg df gdfgd fg</option>
+                    <option value="Project Nam dfg fg fdgdg fe">fdg dfggdfg df gdfgd fg</option>
+                    <option value="Project Nam dfg fg fdgdg fe">fdg dfggdfg df gdfgd fg</option>
+                    <option value="Project Nam dfg fg fdgdg fe">fdg dfggdfg df gdfgd fg</option>
+                    <option value="Project Nam dfg fg fdgdg fe">fdg dfggdfg df gdfgd fg</option>
+                    <option value="Project Nam dfg fg fdgdg fe">fdg dfggdfg df gdfgd fg</option>
+                    <option value="Project Nam dfg fg fdgdg fe">fdg dfggdfg df gdfgd fg</option>
+                    <option value="Project Nam dfg fg fdgdg fe">fdg dfggdfg df gdfgd fg</option>
                 </select>
                 <ul class="hidden-phone">
+                    <li><a href="#">Project Nam dfg fg fdgdg fe</a></li>
+                    <li><a href="#">Project Nam dfg fg fdgdg fe</a></li>
                     <li><a href="#">Project Nam dfg fg fdgdg fe</a></li>
                 </ul>
             </div>
