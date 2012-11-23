@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=550, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -52,7 +52,6 @@
                 <ul class="hidden-phone">
                     <li><a href="#">Project Nam dfg fg fdgdg fe</a></li>
                     <li><a href="#">Project Nam dfg fg fdgdg fe</a></li>
-                    <li><a href="#">Project Nam dfg fg fdgdg fe</a></li>
 
                 </ul>
             </div>
@@ -69,7 +68,7 @@
         </div>
         <div class="row-fluid">
             <div class="navLine">
-                <div class="positionIndicator"></div>
+                <div id="positionIndicator"></div>
             </div>
         </div>
     </div>
@@ -116,6 +115,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery.js"><\/script>')</script>
 <script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+<script src="js/bootstrap-ck.js"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@
 
 @import "compass/reset";
 @import "compass/css3";
+@import "compass/utilities/general/hacks";  /* filter-gradient needs this */
 @import "mixins";
 
 @font-face {
@@ -31,7 +32,7 @@ $white:                 #fff;
 
 // Accent colors
 // -------------------------
-$blue:                  #049cdb;
+$blue:                  #448ccb;
 $blueDark:              #0064cd;
 $green:                 #46a546;
 $red:                   #9d261d;
@@ -60,9 +61,7 @@ a{
     color: $blue;
   }
 }
-html{
 
-}
 .container-fluid{
 
 }
@@ -74,6 +73,7 @@ body {
   font-size: $base-font-size;
   color:$body-color;
   font-family: michromaregular,arial,sans-serif;
+  @include filter-gradient($black, $body-grad-color);
   @include background-image(linear-gradient(black 30%, $body-grad-color));
   background-attachment:fixed;
   background-color: $body-grad-color;
@@ -140,6 +140,7 @@ body {
 
 #centralNav{
   padding:0 20px;
+  font-size:13px;
   div.span12 {
     a{
       &.active{
@@ -163,7 +164,7 @@ body {
     background-color: transparent;
     border-bottom:1px solid $gray;
     width: 100%;
-    .positionIndicator{
+    #positionIndicator{
       width:100px;
       background-color: $blue;
       height: 5px;
@@ -174,7 +175,14 @@ body {
 };
 
 #slider{
-  padding: 20px 60px;
+  ul{
+    li{
+      padding: 20px 60px;
+      @include breakpoint(small) {
+        padding: 20px 20px;
+      }
+    }
+  }
   h1{
     font-size: $base-font-size + 8;
     display: inline-block;
@@ -201,6 +209,7 @@ nav {
   z-index: 30;
   bottom:0;
   border-top:1px solid $grayLight;
+  @include filter-gradient($gray, $grayDark);
   @include background-image(linear-gradient($gray 30%, $grayDark));
   ul{
     list-style: none;
@@ -213,10 +222,14 @@ nav {
       border-right:1px solid $grayLight;
       border-left:1px solid $grayLight;
       &.active{
+        @include filter-gradient($grayDark, $gray);
         @include background-image(linear-gradient($grayDark 30%, $gray));
       }
       padding:3px;
-      a,&:hover {
+      a {
+        &:hover{
+          color:$grayLight;
+        }
         color: $grayLighter;
         font-weight: lighter;
         font-family: Arial,sans-serif;
