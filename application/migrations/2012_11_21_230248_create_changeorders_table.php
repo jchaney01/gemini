@@ -7,11 +7,11 @@ class Create_Changeorders_Table {
 		Schema::create('changeorders', function($table) {
 			$table->increments('id');
 			$table->integer('user_id');
-			$table->email('recipient');
+			$table->string('recipient');
 			$table->blob('desc');
 			$table->string('issue_tracking_id')->nullable();
 			$table->string('status');
-			$table->email('approved_by')->nullable();
+			$table->string('approved_by')->nullable();
 			$table->timestamp('when_approved')->nullable();
 			$table->integer('project_id');
 			$table->integer('estimated_hours')->nullable();
