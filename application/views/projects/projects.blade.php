@@ -1,3 +1,5 @@
 @section('jason')
-    Yo yo
+    @foreach ($projects as $project)
+        {{ $project->name }}<br>
+    @endforeach
 @endsection

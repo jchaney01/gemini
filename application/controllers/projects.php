@@ -6,6 +6,9 @@ class Projects_Controller extends Base_Controller
     public $layout = 'layouts.common';
 
     public function get_index(){
-        $this->layout->content = View::make('projects.projects');
+        $data = array(
+            "projects"=>Project::with('client')->where('status','=','Active')->get());
+        dd($data);
+        $this->layout->content = View::make('projects.projects',$data);
     }
 }

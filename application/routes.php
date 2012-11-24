@@ -74,6 +74,10 @@ Event::listen('500', function()
 	return Response::error('500');
 });
 
+Event::listen('laravel.query',function($sql){
+    var_dump($sql);
+});
+
 /*
 |--------------------------------------------------------------------------
 | Route Filters
