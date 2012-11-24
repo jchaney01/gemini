@@ -2,10 +2,10 @@
 
 class Projects_Controller extends Base_Controller 
 {
-
+    public $restful = true;
     public $layout = 'layouts.common';
 
     public function get_index(){
-        return "CAMD Proejcts ";
+        $this->layout->content = View::make('projects.projects');
     }
 }

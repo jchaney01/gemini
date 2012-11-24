@@ -103,7 +103,7 @@ body {
       font-size: $base-font-size + 23;
       margin-left: -5px;
       display: inline-block;
-      padding-bottom: 5px;
+      padding-bottom: 15px;
       @include gradientText($grayLighter);
     }
   }

@@ -30,7 +30,7 @@
 <div class="container-fluid">
     <div class="row-fluid" id="header">
         <div id="logo" class="span6">
-            <div class="clientName">Project</div>
+            <div class="clientName">Creative Acceleration</div>
             <div id="dashboardHeader">gemini</div>
         </div>
         <div id="projectListView span6">
@@ -61,7 +61,7 @@
             <ul>
                 <li style='display:block' id="projectOverview" class="page1">
                     <div class="span7">
-                        @yield('lcontent');
+                        @yield('jason')
                     </div>
                     <div class="span5">
 
