@@ -185,7 +185,7 @@ return array(
 		'Response'   	=> 'Laravel\\Response',
 		'Route'      	=> 'Laravel\\Routing\\Route',
 		'Router'     	=> 'Laravel\\Routing\\Router',
-		'Schema'     	=> 'SchemaEnhanced\\Database\\Schema',
+		'Schema'     	=> 'schemaenhanced\\Database\\Schema',
 		'Section'    	=> 'Laravel\\Section',
 		'Session'    	=> 'Laravel\\Session',
 		'Str'        	=> 'Laravel\\Str',
