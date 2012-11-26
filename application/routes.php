@@ -75,7 +75,7 @@ Event::listen('500', function()
 });
 
 Event::listen('laravel.query',function($sql){
-    var_dump($sql);
+    //var_dump($sql);
 });
 
 /*

@@ -1,5 +1,5 @@
 @section('jason')
     @foreach ($projects as $project)
-        {{ $project->name }}<br>
+        {{ $project->client->company_name }}<br>
     @endforeach
 @endsection

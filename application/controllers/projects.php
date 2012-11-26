@@ -8,7 +8,7 @@ class Projects_Controller extends Base_Controller
     public function get_index(){
         $data = array(
             "projects"=>Project::with('client')->where('status','=','Active')->get());
-        dd($data);
+        //dd($data);
         $this->layout->content = View::make('projects.projects',$data);
     }
 }
