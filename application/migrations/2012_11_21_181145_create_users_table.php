@@ -10,7 +10,7 @@ class Create_Users_Table {
 			$table->string('email');
 			$table->string('password');
 			$table->string('last_name');
-			$table->integer('access_lvl');
+			$table->integer('access_lvl'); //In leu of groups, we use a number.  100 is admin, 50 is employee/contractor.  Clients use access codes.
 			$table->integer('hour_rate');
 			$table->text('api_key')->nullable();
 			$table->timestamps();

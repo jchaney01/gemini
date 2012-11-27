@@ -5,4 +5,9 @@ class Project extends Eloquent {
     {
         return $this->belongs_to('Client');
     }
+
+    public function changeorder()
+    {
+        return $this->has_many('Changeorders');
+    }
 }
