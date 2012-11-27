@@ -8,6 +8,6 @@ class Project extends Eloquent {
 
     public function changeorder()
     {
-        return $this->has_many('Changeorders');
+        return $this->has_many('Changeorder');
     }
 }

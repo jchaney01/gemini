@@ -1,7 +1,7 @@
 <?php
 
 class Changeorder extends Eloquent {
-    public function client()
+    public function project()
     {
         return $this->belongs_to('Project');
     }

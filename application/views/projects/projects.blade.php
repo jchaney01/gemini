@@ -1,5 +1,5 @@
 @section('jason')
-    @foreach ($projects as $project)
-        {{ $project->client->company_name }}<br>
+    @foreach ($changeorders as $changeorder)
+        {{ $changeorder->project->client->company_name }}
     @endforeach
 @endsection
