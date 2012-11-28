@@ -3,7 +3,7 @@
 class Projects_Controller extends Base_Controller 
 {
     public $restful = TRUE;
-    public $layout = 'layouts.dual_col';
+    public $layout = 'layouts.dual_col_3_slide';
 
     public function get_index(){
         $data = array(

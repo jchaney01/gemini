@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title></title>
+    <title>{{$title}}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
@@ -23,8 +23,8 @@
 <body>
 <!--[if lt IE 8]>
 <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
-    improve your experience.</p>
+                                                                                                                    your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
+                       improve your experience.</p>
 <![endif]-->
 
 <div class="container-fluid">
@@ -33,17 +33,15 @@
             <div class="clientName">Creative Acceleration</div>
             <div id="dashboardHeader">gemini</div>
         </div>
-        <div id="projectListView span6">
-
+        <div id="topRightView span6">
+            @yield('top_right');
         </div>
     </div>
 
     <div id="centralNav">
         <div class="row-fluid">
             <div class="span12">
-                <a href="http://apple.com1" class="active">Overview</a>
-                <a href="http://apple.com2">Time Logs</a>
-                <a href="http://apple.com3">Change Orders</a>
+                @yield('central_nav');
             </div>
         </div>
         <div class="row-fluid">
@@ -57,21 +55,13 @@
 
     </div>
     <div class="row-fluid">
-        <div id='slider'>
-            <ul>
-                <li style='display:block' id="projectOverview" class="page1">
-                    <div class="span7">
-                        @yield('jason')
-                    </div>
-                    <div class="span5">
 
-                    </div>
-                </li>
-                <li style='display:none'>Page 2</li>
-                <li style='display:none'>Page 3</li>
-            </ul>
+        <div class="span12">
+            @yield('content')
         </div>
+
     </div>
+</div>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery.js"><\/script>')</script>

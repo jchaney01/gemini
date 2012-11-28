@@ -97,3 +97,14 @@ $user->name;
 Questions?
 How to add custom data to session
 Guessing Session::set("key", "value");
+
+
+
+$post = Post::create(array(
+    'title'  => 'Laravel is awesome!',
+    'author' => 'Jason',
+    'body'   => 'Laravel is awesome, you should use it if you aren\'t already!'
+));
+
+The Post::create() method does exactly the same as instantiating a new object, assigning the values, and calling the save method. The created object is returned, or false on failure.
+
