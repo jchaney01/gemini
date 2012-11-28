@@ -1,3 +1,3 @@
-@section('login_form')
+@section('content')
     Form here
 @endsection

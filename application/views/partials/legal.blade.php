@@ -1,0 +1,1 @@
+echo HTML::image('img/geminiLogo.png', "Gemini Logo");

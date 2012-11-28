@@ -51,15 +51,13 @@
         </div>
     </div>
     <div id="legal">
-        <? echo HTML::image('img/geminiLogo.png', "Gemini Logo");?>
-
+        <? View::make('partials.legal');?>
     </div>
     <div class="row-fluid">
 
         <div class="span12">
             @yield('content')
         </div>
-
     </div>
 </div>
 </div>
