@@ -38,6 +38,10 @@ Route::get('/', function()
 });
 
 
+Route::get('login', array('as' => 'login', 'uses' => 'login@index')); //LIST
+
+
+
 //named routes are not full REST (meaning "projects/X/timesheets/Y") since we are omitting many individual record-views.
 //This is done for simplicity.
 

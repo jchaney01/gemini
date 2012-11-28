@@ -3,7 +3,6 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
 @import "compass/css3";
 @import "compass/utilities/general/hacks";  /* filter-gradient needs this */
 @import "mixins";
@@ -50,50 +49,41 @@ $body-grad-color : $grayDark;
 $body-color : $grayLight;
 $base-font-size:12px;
 
-*{
-  @include box-sizing("border-box");
-  line-height: 1.5em;
-}
 a{
   color: $blue;
   &:hover{
     text-decoration: none;
-    color: $blue;
+    color: $white;
   }
 }
 
-.container-fluid{
-
-}
-
-.container-fluid{
-  padding: 0;
-}
-body {
-  font-size: $base-font-size;
-  color:$body-color;
-  font-family: michromaregular,arial,sans-serif;
+html{
   @include filter-gradient($black, $body-grad-color);
   @include background-image(linear-gradient(black 30%, $body-grad-color));
   background-attachment:fixed;
-  background-color: $body-grad-color;
+  height: 100%;
+}
+body {
+  color:$body-color;
+  font-family: michromaregular,Arial,sans-serif;
+  background-color: transparent;
   padding-bottom: 100px;
   background-repeat: no-repeat;
-}
-
-#header{
+  font-size: $base-font-size;
   background-image: url("../img/lighting.png");
   background-size: 519px 170px;
   background-repeat: no-repeat;
   background-position: 0 20px;
-  height:200px;
-
-
+}
+//
+#header{
+  min-height: 200px;
+  @include breakpoint(small) {
+    min-height: 150px;
+  }
   #logo{
-    padding:35px 0 0 60px;
-    @include breakpoint(small) {
-      padding:35px 0 0 30px;
-    }
+    padding:35px 0 0 40px;
+
     .clientName{
       font-size: $base-font-size+ 4;
       padding-bottom: 5px;
@@ -103,26 +93,17 @@ body {
       font-size: $base-font-size + 23;
       margin-left: -5px;
       display: inline-block;
-      padding-bottom: 15px;
+      padding-bottom: 20px;
       @include gradientText($grayLighter);
     }
   }
-  #projectList{
+  #topRightView{
     overflow:auto;
     background-color:transparent;
-    right:10px;
-    height:183px;
-    padding:35px;
-    @include breakpoint(small) {
-      padding:25px;
-      right:auto;
-    }
-    @include breakpoint(medium) {
-      padding:35px 35px 35px 60px;
-      right:auto;
-    }
-    overflow:auto;
+    max-height:150px;
+    margin:20px 0;
     ul{
+      list-style: none;
       font-size: $base-font-size+4;
       color:$white;
       li{
@@ -139,27 +120,23 @@ body {
 };
 
 #centralNav{
-  padding:0 20px;
+  margin-bottom: 20px;
   font-size:13px;
-  div.span12 {
+  @include breakpoint(small) {
+    font-size:16px;
+    div{
+      margin-bottom: 8px;
+    }
+  }
     a{
       &.active{
         color:$white;
       }
-      @include breakpoint(small) {
-        margin-bottom: 20px;
-        display: block;
-      }
-      margin:0 30px 0 40px;
       color:$gray;
     }
-  }
+
   .navLine{
-    @include breakpoint(small) {
-      display: none;
-      margin-bottom: 10px;
-    }
-    margin-top: -9px;
+    margin: -9px 0 10px 0;
     height:5px;
     background-color: transparent;
     border-bottom:1px solid $gray;
@@ -169,60 +146,103 @@ body {
       background-color: $blue;
       height: 5px;
       position: relative;
-      left: 40px;
+      left: 34%;
     }
   }
 };
 
-#slider{
-  ul{
-    li{
-      padding: 20px 60px;
-      @include breakpoint(small) {
-        padding: 20px 20px;
-      }
-    }
-  }
-  h1{
-    font-size: $base-font-size + 8;
-    display: inline-block;
-    padding-bottom: 6px;
-    @include gradientText($grayLighter);
-  }
-  h2{
-    font-size: $base-font-size + 2;
-    margin: 5px 0
-  }
-  .overviewModule{
-    a{
-      padding: 10px 10px 10px 0;
-      display:inline-block;
-    }
-    margin: 30px 0 0 0;
-  }
-  .timeEntry{
-    margin-bottom: 30px;
-    font-size: $base-font-size;
-    color:$grayLight;
-  }
+//#slider{
+//  ul{
+//    li{
+//      padding: 20px 60px;
+//      @include breakpoint(small) {
+//        padding: 20px 20px;
+//      }
+//    }
+//  }
+//  h1{
+//    font-size: $base-font-size + 8;
+//    display: inline-block;
+//    padding-bottom: 6px;
+//    @include gradientText($grayLighter);
+//  }
+//  h2{
+//    font-size: $base-font-size + 2;
+//    margin: 5px 0
+//  }
+//  .overviewModule{
+//    a{
+//      padding: 10px 10px 10px 0;
+//      display:inline-block;
+//    }
+//    margin: 30px 0 0 0;
+//  }
+//  .timeEntry{
+//    margin-bottom: 30px;
+//    font-size: $base-font-size;
+//    color:$grayLight;
+//  }
+//}
+//
+//.time{
+//  color: $white;
+//  font-size:$base-font-size+10;
+//  margin-bottom: 5px;
+//  span{
+//    font-size: 12px;
+//    color:$grayLight;
+//  }
+//}
+//
+
+$project:-203px;
+$invoice:-373px;
+$users:-337px;
+$timesheets:-293px;
+$clients:-247px;
+
+$activeOffset: -43px;
+$inActiveOffset: -76px;
+
+@mixin projectActive(){
+  background-position: $project $activeOffset;
+}
+@mixin projectInActive(){
+  background-position: $project $inActiveOffset;
+}
+@mixin invoiceActive(){
+  background-position: $invoice $activeOffset;
+}
+@mixin invoiceInActive(){
+  background-position: $invoice $inActiveOffset;
+}
+@mixin clientsActive(){
+  background-position: $clients $activeOffset;
+}
+@mixin clientsInActive(){
+  background-position: $clients $inActiveOffset;
+}
+@mixin usersActive(){
+  background-position: $users $activeOffset;
+}
+@mixin usersInActive(){
+  background-position: $users $inActiveOffset;
+}
+@mixin timesheetsActive(){
+  background-position: $timesheets $activeOffset;
+}
+@mixin timesheetsInActive(){
+  background-position: $timesheets $inActiveOffset;
 }
 
-.time{
-  color: $white;
-  font-size:$base-font-size+10;
-  margin-bottom: 5px;
-  span{
-    font-size: 12px;
-    color:$grayLight;
-  }
-}
 
-nav {
+#tabBar {
   width: 100%;
   height: 50px;
   position:fixed;
   z-index: 30;
   bottom:0;
+  left: 0;
   border-top:1px solid $grayLight;
   @include filter-gradient($gray, $grayDark);
   @include background-image(linear-gradient($gray 30%, $grayDark));
@@ -235,7 +255,17 @@ nav {
       display: inline-block;
       text-align: left;
       border-right:1px solid $grayLight;
-      border-left:1px solid $grayLight;
+      &:first-child{
+        border-left:1px solid $grayLight;
+      }
+      @include breakpoint(small) {
+        &:first-child{
+          border-left:none;
+        }
+        &:last-child{
+          border-right:none;
+        }
+      }
       &.active{
         @include filter-gradient($grayDark, $gray);
         @include background-image(linear-gradient($grayDark 30%, $gray));
@@ -243,6 +273,23 @@ nav {
       padding:3px;
       a {
         &:hover{
+          div{
+            &#projectTabBarIcon{
+                @include projectActive;
+            }
+            &#invoiceTabBarIcon{
+                @include invoiceActive;
+            }
+            &#clientsTabBarIcon{
+                @include clientsActive;
+            }
+            &#timesheetsTabBarIcon{
+                @include timesheetsActive;
+            }
+            &#usersTabBarIcon{
+                @include usersActive;
+            }
+          }
           color:$grayLight;
         }
         color: $grayLighter;
@@ -252,64 +299,99 @@ nav {
         color:$grayLight;
         display: block;
         padding: 5px 20px;
+        @include breakpoint(small) {
+          padding: 5px 10px;
+        }
         font-size:11px;
         @include single-text-shadow;
         //text-shadow: 2px 2px 2px #000;
-
-        img{
+        div{
+          background-image: url("../img/geminiIcons.png");
+          background-size: 600px 150px;
+          background-position: -203px -76px;
           height: 28px;
           display: block;
-          margin: -4px auto 3px auto;
+          margin: -4px auto 0 auto;
+          &#projectTabBarIcon{
+            @include projectInActive;
+            &.active{
+              @include projectActive;
+            }
+          }
+          &#invoiceTabBarIcon{
+            @include invoiceInActive;
+            &.active{
+              @include invoiceActive;
+            }
+          }
+          &#usersTabBarIcon{
+            @include usersInActive;
+            &.active{
+              @include usersActive;
+            }
+          }
+          &#timesheetsTabBarIcon{
+            @include timesheetsInActive;
+            &.active{
+              @include timesheetsActive;
+            }
+          }
+          &#clientsTabBarIcon{
+            @include clientsInActive;
+            &.active{
+              @include clientsActive;
+            }
+          }
         }
       }
     }
   }
 }
 
-#legal{
-  color:$grayLight;
-  position:fixed;
-  bottom:15px;
-  left: 10px;
-  z-index:40;
-  img{
-    width: 22px;
-    float: left;
-  }
-}
-
-.COEntry{
-  margin-bottom:20px;
-
-
-  line-height:1.2em;
-  a{
-  background-color: transparent;
-  display: inline-block;
-  padding: 5px;
-  margin-bottom: -3px;
-}}
-
-.status{
-  &.approved,&.not_sent{
-    color:$green;
-  }
-  &.denied,&.past_due{
-    color:$red;
-  }
-  &.pending,&.due{
-    color:$yellow;
-  }
-  &.paid{
-    display: none;
-  }
-}
-
-.invoiceSummary{
-  div{
-    margin-bottom: 40px;
-  }
-}
-.invoiceEntry{
-  line-height:1.5em;
-}
+//#legal{
+//  color:$grayLight;
+//  position:fixed;
+//  bottom:15px;
+//  left: 10px;
+//  z-index:40;
+//  img{
+//    width: 22px;
+//    float: left;
+//  }
+//}
+//
+//.COEntry{
+//  margin-bottom:20px;
+//
+//
+//  line-height:1.2em;
+//  a{
+//  background-color: transparent;
+//  display: inline-block;
+//  padding: 5px;
+//  margin-bottom: -3px;
+//}}
+//
+//.status{
+//  &.approved,&.not_sent{
+//    color:$green;
+//  }
+//  &.denied,&.past_due{
+//    color:$red;
+//  }
+//  &.pending,&.due{
+//    color:$yellow;
+//  }
+//  &.paid{
+//    display: none;
+//  }
+//}
+//
+//.invoiceSummary{
+//  div{
+//    margin-bottom: 40px;
+//  }
+//}
+//.invoiceEntry{
+//  line-height:1.5em;
+//}

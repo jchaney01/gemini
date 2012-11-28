@@ -2,71 +2,6 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
-/* line 22, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html {
-  line-height: 1;
-}
-
-/* line 24, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
-}
-
-/* line 26, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* line 28, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-/* line 30, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 103, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-/* line 32, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
-}
-
-/* line 116, ../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
-}
-
 /* filter-gradient needs this */
 @font-face {
   font-family: 'michromaregular';
@@ -76,34 +11,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-style: normal;
 }
 
-/* line 53, ../scss/screen.scss */
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  line-height: 1.5em;
-}
-
-/* line 57, ../scss/screen.scss */
+/* line 52, ../scss/screen.scss */
 a {
   color: #448ccb;
 }
-/* line 59, ../scss/screen.scss */
+/* line 54, ../scss/screen.scss */
 a:hover {
   text-decoration: none;
-  color: #448ccb;
+  color: white;
 }
 
-/* line 69, ../scss/screen.scss */
-.container-fluid {
-  padding: 0;
-}
-
-/* line 72, ../scss/screen.scss */
-body {
-  font-size: 12px;
-  color: #999999;
-  font-family: michromaregular,arial,sans-serif;
+/* line 60, ../scss/screen.scss */
+html {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF000000', endColorstr='#FF333333');
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(30%, #000000), color-stop(100%, #333333));
@@ -112,188 +31,126 @@ body {
   background-image: -o-linear-gradient(#000000 30%, #333333);
   background-image: linear-gradient(#000000 30%, #333333);
   background-attachment: fixed;
-  background-color: #333333;
-  padding-bottom: 100px;
-  background-repeat: no-repeat;
+  height: 100%;
 }
 
-/* line 84, ../scss/screen.scss */
-#header {
+/* line 66, ../scss/screen.scss */
+body {
+  color: #999999;
+  font-family: michromaregular,Arial,sans-serif;
+  background-color: transparent;
+  padding-bottom: 100px;
+  background-repeat: no-repeat;
+  font-size: 12px;
   background-image: url("../img/lighting.png");
   background-size: 519px 170px;
   background-repeat: no-repeat;
   background-position: 0 20px;
-  height: 200px;
 }
-/* line 92, ../scss/screen.scss */
-#header #logo {
-  padding: 35px 0 0 60px;
+
+/* line 79, ../scss/screen.scss */
+#header {
+  min-height: 200px;
 }
-@media (max-width: 547px) {
-  /* line 92, ../scss/screen.scss */
-  #header #logo {
-    padding: 35px 0 0 30px;
+@media (max-width: 767px) {
+  /* line 79, ../scss/screen.scss */
+  #header {
+    min-height: 150px;
   }
 }
-/* line 97, ../scss/screen.scss */
+/* line 84, ../scss/screen.scss */
+#header #logo {
+  padding: 35px 0 0 40px;
+}
+/* line 87, ../scss/screen.scss */
 #header #logo .clientName {
   font-size: 16px;
   padding-bottom: 5px;
   color: #eeeeee;
   -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(50%, black), to(rgba(0, 0, 0, 0.5)));
 }
-/* line 102, ../scss/screen.scss */
+/* line 92, ../scss/screen.scss */
 #header #logo #dashboardHeader {
   font-size: 35px;
   margin-left: -5px;
   display: inline-block;
-  padding-bottom: 15px;
+  padding-bottom: 20px;
   color: #eeeeee;
   -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(50%, black), to(rgba(0, 0, 0, 0.5)));
 }
-/* line 110, ../scss/screen.scss */
-#header #projectList {
+/* line 100, ../scss/screen.scss */
+#header #topRightView {
   overflow: auto;
   background-color: transparent;
-  right: 10px;
-  height: 183px;
-  padding: 35px;
-  overflow: auto;
+  max-height: 150px;
+  margin: 20px 0;
 }
-@media (max-width: 547px) {
-  /* line 110, ../scss/screen.scss */
-  #header #projectList {
-    padding: 25px;
-    right: auto;
-  }
-}
-@media (min-width: 548px) and (max-width: 767px) {
-  /* line 110, ../scss/screen.scss */
-  #header #projectList {
-    padding: 35px 35px 35px 60px;
-    right: auto;
-  }
-}
-/* line 125, ../scss/screen.scss */
-#header #projectList ul {
+/* line 105, ../scss/screen.scss */
+#header #topRightView ul {
+  list-style: none;
   font-size: 16px;
   color: white;
 }
-/* line 128, ../scss/screen.scss */
-#header #projectList ul li {
+/* line 109, ../scss/screen.scss */
+#header #topRightView ul li {
   background: url("../img/arrowBullet.png") 0px 3px no-repeat;
   background-size: 20px 20px;
   padding-bottom: 15px;
   padding-left: 30px;
 }
-/* line 129, ../scss/screen.scss */
-#header #projectList ul li a {
+/* line 110, ../scss/screen.scss */
+#header #topRightView ul li a {
   color: white;
 }
 
-/* line 141, ../scss/screen.scss */
+/* line 122, ../scss/screen.scss */
 #centralNav {
-  padding: 0 20px;
+  margin-bottom: 20px;
   font-size: 13px;
 }
-/* line 145, ../scss/screen.scss */
-#centralNav div.span12 a {
-  margin: 0 30px 0 40px;
-  color: #555555;
-}
-/* line 146, ../scss/screen.scss */
-#centralNav div.span12 a.active {
-  color: white;
-}
-@media (max-width: 547px) {
-  /* line 145, ../scss/screen.scss */
-  #centralNav div.span12 a {
-    margin-bottom: 20px;
-    display: block;
+@media (max-width: 767px) {
+  /* line 122, ../scss/screen.scss */
+  #centralNav {
+    font-size: 16px;
+  }
+  /* line 127, ../scss/screen.scss */
+  #centralNav div {
+    margin-bottom: 8px;
   }
 }
-/* line 157, ../scss/screen.scss */
+/* line 131, ../scss/screen.scss */
+#centralNav a {
+  color: #555555;
+}
+/* line 132, ../scss/screen.scss */
+#centralNav a.active {
+  color: white;
+}
+/* line 138, ../scss/screen.scss */
 #centralNav .navLine {
-  margin-top: -9px;
+  margin: -9px 0 10px 0;
   height: 5px;
   background-color: transparent;
   border-bottom: 1px solid #555555;
   width: 100%;
 }
-@media (max-width: 547px) {
-  /* line 157, ../scss/screen.scss */
-  #centralNav .navLine {
-    display: none;
-    margin-bottom: 10px;
-  }
-}
-/* line 167, ../scss/screen.scss */
+/* line 144, ../scss/screen.scss */
 #centralNav .navLine #positionIndicator {
   width: 100px;
   background-color: #448ccb;
   height: 5px;
   position: relative;
-  left: 40px;
+  left: 34%;
 }
 
-/* line 179, ../scss/screen.scss */
-#slider ul li {
-  padding: 20px 60px;
-}
-@media (max-width: 547px) {
-  /* line 179, ../scss/screen.scss */
-  #slider ul li {
-    padding: 20px 20px;
-  }
-}
-/* line 186, ../scss/screen.scss */
-#slider h1 {
-  font-size: 20px;
-  display: inline-block;
-  padding-bottom: 6px;
-  color: #eeeeee;
-  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(50%, black), to(rgba(0, 0, 0, 0.5)));
-}
-/* line 192, ../scss/screen.scss */
-#slider h2 {
-  font-size: 14px;
-  margin: 5px 0;
-}
-/* line 196, ../scss/screen.scss */
-#slider .overviewModule {
-  margin: 30px 0 0 0;
-}
-/* line 197, ../scss/screen.scss */
-#slider .overviewModule a {
-  padding: 10px 10px 10px 0;
-  display: inline-block;
-}
-/* line 203, ../scss/screen.scss */
-#slider .timeEntry {
-  margin-bottom: 30px;
-  font-size: 12px;
-  color: #999999;
-}
-
-/* line 210, ../scss/screen.scss */
-.time {
-  color: white;
-  font-size: 22px;
-  margin-bottom: 5px;
-}
-/* line 214, ../scss/screen.scss */
-.time span {
-  font-size: 12px;
-  color: #999999;
-}
-
-/* line 220, ../scss/screen.scss */
-nav {
+/* line 239, ../scss/screen.scss */
+#tabBar {
   width: 100%;
   height: 50px;
   position: fixed;
   z-index: 30;
   bottom: 0;
+  left: 0;
   border-top: 1px solid #999999;
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF555555', endColorstr='#FF333333');
@@ -303,23 +160,36 @@ nav {
   background-image: -o-linear-gradient(#555555 30%, #333333);
   background-image: linear-gradient(#555555 30%, #333333);
 }
-/* line 229, ../scss/screen.scss */
-nav ul {
+/* line 249, ../scss/screen.scss */
+#tabBar ul {
   list-style: none;
   margin: 0px;
   font-weight: bold;
   text-align: center;
 }
-/* line 234, ../scss/screen.scss */
-nav ul li {
+/* line 254, ../scss/screen.scss */
+#tabBar ul li {
   display: inline-block;
   text-align: left;
   border-right: 1px solid #999999;
-  border-left: 1px solid #999999;
   padding: 3px;
 }
-/* line 239, ../scss/screen.scss */
-nav ul li.active {
+/* line 258, ../scss/screen.scss */
+#tabBar ul li:first-child {
+  border-left: 1px solid #999999;
+}
+@media (max-width: 767px) {
+  /* line 262, ../scss/screen.scss */
+  #tabBar ul li:first-child {
+    border-left: none;
+  }
+  /* line 265, ../scss/screen.scss */
+  #tabBar ul li:last-child {
+    border-right: none;
+  }
+}
+/* line 269, ../scss/screen.scss */
+#tabBar ul li.active {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF333333', endColorstr='#FF555555');
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(30%, #333333), color-stop(100%, #555555));
@@ -328,8 +198,8 @@ nav ul li.active {
   background-image: -o-linear-gradient(#333333 30%, #555555);
   background-image: linear-gradient(#333333 30%, #555555);
 }
-/* line 244, ../scss/screen.scss */
-nav ul li a {
+/* line 274, ../scss/screen.scss */
+#tabBar ul li a {
   color: #eeeeee;
   font-weight: lighter;
   font-family: Arial,sans-serif;
@@ -340,67 +210,82 @@ nav ul li a {
   font-size: 11px;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
 }
-/* line 245, ../scss/screen.scss */
-nav ul li a:hover {
-  color: #999999;
-}
-/* line 259, ../scss/screen.scss */
-nav ul li a img {
-  height: 28px;
-  display: block;
-  margin: -4px auto 3px auto;
-}
-
-/* line 269, ../scss/screen.scss */
-#legal {
-  color: #999999;
-  position: fixed;
-  bottom: 15px;
-  left: 10px;
-  z-index: 40;
-}
 /* line 275, ../scss/screen.scss */
-#legal img {
-  width: 22px;
-  float: left;
+#tabBar ul li a:hover {
+  color: #999999;
 }
-
-/* line 281, ../scss/screen.scss */
-.COEntry {
-  margin-bottom: 20px;
-  line-height: 1.2em;
+/* line 277, ../scss/screen.scss */
+#tabBar ul li a:hover div#projectTabBarIcon {
+  background-position: -203px -43px;
+}
+/* line 280, ../scss/screen.scss */
+#tabBar ul li a:hover div#invoiceTabBarIcon {
+  background-position: -373px -43px;
+}
+/* line 283, ../scss/screen.scss */
+#tabBar ul li a:hover div#clientsTabBarIcon {
+  background-position: -247px -43px;
 }
 /* line 286, ../scss/screen.scss */
-.COEntry a {
-  background-color: transparent;
-  display: inline-block;
-  padding: 5px;
-  margin-bottom: -3px;
+#tabBar ul li a:hover div#timesheetsTabBarIcon {
+  background-position: -293px -43px;
 }
-
-/* line 294, ../scss/screen.scss */
-.status.approved, .status.not_sent {
-  color: #46a546;
+/* line 289, ../scss/screen.scss */
+#tabBar ul li a:hover div#usersTabBarIcon {
+  background-position: -337px -43px;
 }
-/* line 297, ../scss/screen.scss */
-.status.denied, .status.past_due {
-  color: #9d261d;
+@media (max-width: 767px) {
+  /* line 274, ../scss/screen.scss */
+  #tabBar ul li a {
+    padding: 5px 10px;
+  }
 }
-/* line 300, ../scss/screen.scss */
-.status.pending, .status.due {
-  color: #ffc40d;
+/* line 308, ../scss/screen.scss */
+#tabBar ul li a div {
+  background-image: url("../img/geminiIcons.png");
+  background-size: 600px 150px;
+  background-position: -203px -76px;
+  height: 28px;
+  display: block;
+  margin: -4px auto 0 auto;
 }
-/* line 303, ../scss/screen.scss */
-.status.paid {
-  display: none;
+/* line 315, ../scss/screen.scss */
+#tabBar ul li a div#projectTabBarIcon {
+  background-position: -203px -76px;
 }
-
-/* line 309, ../scss/screen.scss */
-.invoiceSummary div {
-  margin-bottom: 40px;
+/* line 317, ../scss/screen.scss */
+#tabBar ul li a div#projectTabBarIcon.active {
+  background-position: -203px -43px;
 }
-
-/* line 313, ../scss/screen.scss */
-.invoiceEntry {
-  line-height: 1.5em;
+/* line 321, ../scss/screen.scss */
+#tabBar ul li a div#invoiceTabBarIcon {
+  background-position: -373px -76px;
+}
+/* line 323, ../scss/screen.scss */
+#tabBar ul li a div#invoiceTabBarIcon.active {
+  background-position: -373px -43px;
+}
+/* line 327, ../scss/screen.scss */
+#tabBar ul li a div#usersTabBarIcon {
+  background-position: -337px -76px;
+}
+/* line 329, ../scss/screen.scss */
+#tabBar ul li a div#usersTabBarIcon.active {
+  background-position: -337px -43px;
+}
+/* line 333, ../scss/screen.scss */
+#tabBar ul li a div#timesheetsTabBarIcon {
+  background-position: -293px -76px;
+}
+/* line 335, ../scss/screen.scss */
+#tabBar ul li a div#timesheetsTabBarIcon.active {
+  background-position: -293px -43px;
+}
+/* line 339, ../scss/screen.scss */
+#tabBar ul li a div#clientsTabBarIcon {
+  background-position: -247px -76px;
+}
+/* line 341, ../scss/screen.scss */
+#tabBar ul li a div#clientsTabBarIcon.active {
+  background-position: -247px -43px;
 }

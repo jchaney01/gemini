@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{$title}}</title>
+    <title>@yield('title')</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
@@ -26,6 +26,11 @@
     your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
     improve your experience.</p>
 <![endif]-->
+<nav>
+    <ul>
+        <li class="active"><a href="#"><? echo HTML::image('img/navProjectsActive.png', "Projects Icon");?>Projects</a></li><li><a href="#"><? echo HTML::image('img/navInvoices.png', "Invoices Icon");?>Invoices</a></li>
+    </ul>
+</nav>
 
 <div class="container-fluid">
     <div class="row-fluid" id="header">
@@ -34,14 +39,14 @@
             <div id="dashboardHeader">gemini</div>
         </div>
         <div id="topRightView span6">
-            @yield('top_right');
+            @yield('top_right')
         </div>
     </div>
 
     <div id="centralNav">
         <div class="row-fluid">
             <div class="span12">
-                @yield('central_nav');
+                @yield('central_nav')
             </div>
         </div>
         <div class="row-fluid">

@@ -3,13 +3,13 @@
 class Login_Controller extends Base_Controller
 {
     public $restful = TRUE;
-    public $layout = 'layouts.single_col_no_slide';
 
     public function get_index(){
+
         $data = array(
-            "title"=>"Gemini Login"
+            "title"=>"yo"
         );
-        $this->layout->content = View::make('projects.projects',$data);
+        return View::make('login',$data);
     }
 
     public function get_show(){
