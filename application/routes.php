@@ -39,6 +39,8 @@ Route::get('/', function()
 
 
 Route::get('login', array('as' => 'login', 'uses' => 'login@index')); //LIST
+Route::post('login', 'login@login'); //LIST
+Route::get('logout', array('as' => 'logout', 'uses' => 'login@logout')); //LIST
 
 
 
@@ -98,6 +100,15 @@ Route::group(array('before' => 'auth:50'), function()
     Route::post('timesheets', 'timesheets@create'); //CREATE
     Route::put('timesheets/(:any)', 'timesheets@update'); //UPDATE
     Route::delete('timesheets/(:any)', 'timesheets@destroy'); //DELETE
+});
+//Invoices
+Route::group(array('before' => 'auth:100'), function()
+{
+    Route::get('invoices', array('as' => 'invoices', 'uses' => 'invoices@index')); //LIST
+    Route::get('invoices/(:any)edit', array('as' => 'edit_invoice', 'uses' => 'invoices@edit')); //FORM TO EDIT
+    Route::post('invoices', 'invoices@create'); //CREATE
+    Route::put('invoices/(:any)', 'invoices@update'); //UPDATE
+    Route::delete('invoices/(:any)', 'invoices@destroy'); //DELETE
 });
 //Labor Items
 Route::group(array('before' => 'auth:100'), function()
@@ -191,14 +202,20 @@ Route::filter('csrf', function()
 //Used on everything but dashboard
 Route::filter('auth', function($lvl)
 {
-    if (Input::get('access_key')) {
-        //look up user with that access key
-        //If found, check access level
-        //If access level is good, log them in
-        //If not found redirect
-        //If acclvl not good, redirect
+    if (Input::get('email') && Input::get('password')) {
+
+        $credientials = array(
+            "username" => Input::get('email'),
+            "password" => Input::get('password')
+        );
+        if (Auth::attempt($credientials)) {
+
+        } else {
+            return Redirect::to('login');
+        }
+        ;
     } else {
-        if (Auth::guest()){
+        if (Auth::guest()) {
             return Redirect::to('login');
         }
 
@@ -206,7 +223,4 @@ Route::filter('auth', function($lvl)
             return Redirect::to('login');
         }
     }
-
-
-
 });

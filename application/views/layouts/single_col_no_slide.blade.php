@@ -10,14 +10,7 @@
     <title>{{$title}}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-    {{ HTML::style('css/bootstrap.min.css') }}
-    {{ HTML::style('css/bootstrap-responsive.min.css') }}
-    {{ HTML::style('css/darkstrap.css') }}
-    {{ HTML::style('css/screen.css') }}
-
+    @include("partials.css")
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
@@ -26,42 +19,19 @@
                                                                                                                     your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
                        improve your experience.</p>
 <![endif]-->
-<div id="tabBar">
-    <ul>
-        <li><a href="#"><div class="tabBarIcon" id="projectTabBarIcon"></div>Projects</a></li><li><a href="#"><div class="tabBarIcon" id="clientsTabBarIcon"></div>Clients</a></li><li><a href="#"><div class="tabBarIcon" id="timesheetsTabBarIcon"></div>&nbsp;Time&nbsp;</a></li><li><a href="#"><div class="tabBarIcon" id="invoiceTabBarIcon"></div>Invoices</a></li><li><a href="#"><div class="tabBarIcon" id="usersTabBarIcon"></div>Users</a></li>
-    </ul>
-</div>
-
+@include("partials.tabBar")
 <div class="container-fluid">
     <div class="row-fluid" id="header">
         <div id="logo" class="span7">
-            <div class="clientName">Creative Acceleration</div>
-            <div id="dashboardHeader">gemini</div>
+            @include('partials.logo')
         </div>
         <div id="topRightView" class="span5">
             @yield('top_right')
         </div>
     </div>
+    <? if (!Request::route()->is('login')) {?>@include('partials.centralNav')<?}?>
 
-    <div id="centralNav">
-        <div class="row-fluid">
-            @section("centralNav")
-            <div class="span4"><a href="http://apple.com1" class="active">Overview</a></div>
-            <div class="span4"><a href="http://apple.com1" class="">Time Logs</a></div>
-            <div class="span4"><a href="http://apple.com1" class="">Change Orders</a></div>
-            @yield_section
-        </div>
-        <div class="row-fluid hidden-phone">
-            <div class="navLine">
-                <div id="positionIndicator"></div>
-            </div>
-        </div>
-    </div>
-    <div id="legal">
-        <? View::make('partials.legal');?>
-    </div>
     <div class="row-fluid">
-
         <div class="span12">
             @yield('content')
         </div>

@@ -107,10 +107,7 @@ $post = Post::create(array(
 The Post::create() method does exactly the same as instantiating a new object, assigning the values, and calling the save method. The created object is returned, or false on failure.
 
 =ATTACK=
-Login view
-Standardize CSS
-Implement Tab bar
-Create mobile tab bar
+partials
 Login logic
 API (logs you in as a user) and AC (logs you in as a client) logic
 Users

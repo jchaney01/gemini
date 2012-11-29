@@ -33,12 +33,14 @@
 </nav>
 
 <div class="container-fluid">
+
     <div class="row-fluid" id="header">
         <div id="logo" class="span6">
             <div class="clientName">Creative Acceleration</div>
             <div id="dashboardHeader">gemini</div>
         </div>
         <div id="topRightView span6">
+
             @yield('top_right')
         </div>
     </div>
@@ -49,6 +51,7 @@
                 @yield('central_nav')
             </div>
         </div>
+
         <div class="row-fluid">
             <div class="navLine">
                 <div id="positionIndicator"></div>
@@ -57,7 +60,6 @@
     </div>
     <div id="legal">
         <? echo HTML::image('img/geminiLogo.png', "Gemini Logo");?>
-
     </div>
     <div class="row-fluid">
         <div id='slider'>

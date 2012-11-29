@@ -165,31 +165,32 @@ body {
   list-style: none;
   margin: 0px;
   font-weight: bold;
+  font-size: 0;
   text-align: center;
 }
-/* line 254, ../scss/screen.scss */
+/* line 255, ../scss/screen.scss */
 #tabBar ul li {
   display: inline-block;
   text-align: left;
   border-right: 1px solid #999999;
   padding: 3px;
 }
-/* line 258, ../scss/screen.scss */
+/* line 259, ../scss/screen.scss */
 #tabBar ul li:first-child {
   border-left: 1px solid #999999;
 }
 @media (max-width: 767px) {
-  /* line 262, ../scss/screen.scss */
+  /* line 263, ../scss/screen.scss */
   #tabBar ul li:first-child {
     border-left: none;
   }
-  /* line 265, ../scss/screen.scss */
+  /* line 266, ../scss/screen.scss */
   #tabBar ul li:last-child {
     border-right: none;
   }
 }
-/* line 269, ../scss/screen.scss */
-#tabBar ul li.active {
+/* line 270, ../scss/screen.scss */
+#tabBar ul li.active, #tabBar ul li:hover {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF333333', endColorstr='#FF555555');
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(30%, #333333), color-stop(100%, #555555));
@@ -198,7 +199,7 @@ body {
   background-image: -o-linear-gradient(#333333 30%, #555555);
   background-image: linear-gradient(#333333 30%, #555555);
 }
-/* line 274, ../scss/screen.scss */
+/* line 275, ../scss/screen.scss */
 #tabBar ul li a {
   color: #eeeeee;
   font-weight: lighter;
@@ -210,37 +211,37 @@ body {
   font-size: 11px;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
 }
-/* line 275, ../scss/screen.scss */
+/* line 277, ../scss/screen.scss */
 #tabBar ul li a:hover {
   color: #999999;
 }
-/* line 277, ../scss/screen.scss */
+/* line 279, ../scss/screen.scss */
 #tabBar ul li a:hover div#projectTabBarIcon {
   background-position: -203px -43px;
 }
-/* line 280, ../scss/screen.scss */
+/* line 282, ../scss/screen.scss */
 #tabBar ul li a:hover div#invoiceTabBarIcon {
-  background-position: -373px -43px;
+  background-position: -381px -43px;
 }
-/* line 283, ../scss/screen.scss */
+/* line 285, ../scss/screen.scss */
 #tabBar ul li a:hover div#clientsTabBarIcon {
   background-position: -247px -43px;
 }
-/* line 286, ../scss/screen.scss */
+/* line 288, ../scss/screen.scss */
 #tabBar ul li a:hover div#timesheetsTabBarIcon {
   background-position: -293px -43px;
 }
-/* line 289, ../scss/screen.scss */
+/* line 291, ../scss/screen.scss */
 #tabBar ul li a:hover div#usersTabBarIcon {
   background-position: -337px -43px;
 }
 @media (max-width: 767px) {
-  /* line 274, ../scss/screen.scss */
+  /* line 275, ../scss/screen.scss */
   #tabBar ul li a {
     padding: 5px 10px;
   }
 }
-/* line 308, ../scss/screen.scss */
+/* line 310, ../scss/screen.scss */
 #tabBar ul li a div {
   background-image: url("../img/geminiIcons.png");
   background-size: 600px 150px;
@@ -249,43 +250,43 @@ body {
   display: block;
   margin: -4px auto 0 auto;
 }
-/* line 315, ../scss/screen.scss */
+/* line 317, ../scss/screen.scss */
 #tabBar ul li a div#projectTabBarIcon {
   background-position: -203px -76px;
 }
-/* line 317, ../scss/screen.scss */
+/* line 319, ../scss/screen.scss */
 #tabBar ul li a div#projectTabBarIcon.active {
   background-position: -203px -43px;
 }
-/* line 321, ../scss/screen.scss */
-#tabBar ul li a div#invoiceTabBarIcon {
-  background-position: -373px -76px;
-}
 /* line 323, ../scss/screen.scss */
-#tabBar ul li a div#invoiceTabBarIcon.active {
-  background-position: -373px -43px;
+#tabBar ul li a div#invoiceTabBarIcon {
+  background-position: -381px -76px;
 }
-/* line 327, ../scss/screen.scss */
+/* line 325, ../scss/screen.scss */
+#tabBar ul li a div#invoiceTabBarIcon.active {
+  background-position: -381px -43px;
+}
+/* line 329, ../scss/screen.scss */
 #tabBar ul li a div#usersTabBarIcon {
   background-position: -337px -76px;
 }
-/* line 329, ../scss/screen.scss */
+/* line 331, ../scss/screen.scss */
 #tabBar ul li a div#usersTabBarIcon.active {
   background-position: -337px -43px;
 }
-/* line 333, ../scss/screen.scss */
+/* line 335, ../scss/screen.scss */
 #tabBar ul li a div#timesheetsTabBarIcon {
   background-position: -293px -76px;
 }
-/* line 335, ../scss/screen.scss */
+/* line 337, ../scss/screen.scss */
 #tabBar ul li a div#timesheetsTabBarIcon.active {
   background-position: -293px -43px;
 }
-/* line 339, ../scss/screen.scss */
+/* line 341, ../scss/screen.scss */
 #tabBar ul li a div#clientsTabBarIcon {
   background-position: -247px -76px;
 }
-/* line 341, ../scss/screen.scss */
+/* line 343, ../scss/screen.scss */
 #tabBar ul li a div#clientsTabBarIcon.active {
   background-position: -247px -43px;
 }

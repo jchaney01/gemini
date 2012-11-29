@@ -9,7 +9,7 @@
                 $user = new User;
                     $user->first_name = "Admin";
                     $user->last_name = "Smith";
-                    $user->email = "admin";
+                    $user->email = "admin@creativeacceleration.com";
                     $user->password = Hash::make("goldeneye01");
                     $user->access_lvl = 100;
                     $user->hour_rate = 10; //Easy math
