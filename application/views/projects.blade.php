@@ -43,3 +43,8 @@
 </div>
 <? } ?>
 @endsection
+
+
+@section('scripts')
+{{Asset::scripts()}}
+@endsection

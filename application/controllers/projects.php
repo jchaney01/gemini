@@ -4,6 +4,12 @@ class Projects_Controller extends Base_Controller
 {
     public $restful = TRUE;
 
+    public function __construct()
+    {
+        Asset::add('projects', 'js/projects.js');
+    }
+
+
     public function get_index(){
         $data = array(
             "changeorders"=>Changeorder::with(array('project','project.client'))->get(),

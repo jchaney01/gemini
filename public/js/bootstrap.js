@@ -2,3 +2,4 @@
 
 //@codekit-append 'vendor/Swipe/swipe.js'
 //@codekit-append 'global.js'
+//@codekit-append 'projects.js'

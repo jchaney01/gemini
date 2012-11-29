@@ -42,5 +42,6 @@
 <script>window.jQuery || document.write('<script src="js/vendor/jquery.js"><\/script>')</script>
 <script src="js/plugins.js"></script>
 <script src="js/bootstrap-ck.js"></script>
+@yield('scripts')
 </body>
 </html>
