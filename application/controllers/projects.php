@@ -3,13 +3,14 @@
 class Projects_Controller extends Base_Controller 
 {
     public $restful = TRUE;
-    public $layout = 'layouts.dual_col_3_slide';
 
     public function get_index(){
         $data = array(
-            "changeorders"=>Changeorder::with(array('project','project.client'))->get()
+            "changeorders"=>Changeorder::with(array('project','project.client'))->get(),
+            "projects"=>Project::where('status','=','Active')->get(),
+            "title"=>"Projects",
         );
-        $this->layout->content = View::make('projects.projects',$data);
+        return View::make('projects',$data);
     }
 
     public function get_show(){
