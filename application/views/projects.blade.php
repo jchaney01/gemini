@@ -48,3 +48,7 @@
 @section('scripts')
 {{Asset::scripts()}}
 @endsection
+
+@section('form_confirm')
+{{Session::get('name')}}
+@endsection

@@ -28,7 +28,7 @@ class Projects_Controller extends Base_Controller
     }
 
     public function get_show(){
-        
+
     }
 
     public function get_new()
@@ -43,7 +43,26 @@ class Projects_Controller extends Base_Controller
 
     public function post_create()
     {
-        
+        $projectData = array(
+            "name"=> Input::get('name'),
+            "client_id"=> Input::get('client_id')
+        );
+        $v = Validator::make($projectData, array(
+            'name'=> "required",
+            'client_id'=> "required",
+        ));
+        if ($v->fails()) {
+            return Redirect::to_route('projects')->with_errors($v);
+        };
+
+        if(Project::create(array(
+            'email' => 'example@gmail.com'
+        ))){
+            Session::flash('status_msg', 'Success');
+        } else {
+            Session::flash('status_msg', 'Failure');
+        }
+        return Redirect::to_route('projects');
     }
 
     public function put_update()
