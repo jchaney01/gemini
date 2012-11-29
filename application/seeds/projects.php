@@ -28,8 +28,8 @@
                     $project->full_image = $faker->url;
                     $project->group = $faker->randomDigit;
                     $project->thumb_loc2 = $faker->url;
-                    $project->repo_name = $faker->url;
-                    $project->repo_url = $faker->name;
+                    $project->repo_name = $faker->name;
+                    $project->repo_url = $faker->url;
                 $project->save();
             }
         }

@@ -23,6 +23,7 @@ class Create_Projects_Table {
 			$table->integer('tro')->default(0);
 			$table->string('preview_image')->nullable();
 			$table->string('full_image')->nullable();
+			$table->string('issue_tracking)_url')->nullable();
 			$table->string('repo_name')->nullable();
 			$table->string('repo_URL')->nullable();
 			$table->integer('group')->nullable();

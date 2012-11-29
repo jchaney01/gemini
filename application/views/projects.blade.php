@@ -21,23 +21,25 @@
 <h1>{{$projects[0]->name}}</h1>
 
 <h2>{{$projects[0]->po}}</h2>
-
+<? if ($projects[0]->issue_tracking_url){?>
 <div class="overviewModule">
-    <a href="#">
+    <a href="{{$projects[0]->issue_tracking_url}}">
         <div>Issue Tracking</div>
     </a>
-
     <p>This project is currently being tracked.<br>
-        Click the link to go to the tracker
+        Click the link to go to the tracker.
     </p>
 </div>
+    <? } ?>
+<? if ($projects[0]->repo_url){?>
 <div class="overviewModule">
-    <a href="#">
+    <a href="{{$projects[0]->repo_url}}">
         <div>Code Repository</div>
     </a>
 
     <p>This project is currently under version control.<br>
-        The repo name is BLAH
+        The repo name is {{$projects[0]->repo_name}}
     </p>
 </div>
+<? } ?>
 @endsection
