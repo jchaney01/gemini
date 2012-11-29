@@ -51,6 +51,7 @@ Route::get('logout', array('as' => 'logout', 'uses' => 'login@logout')); //LIST
 Route::group(array('before' => 'auth:50'), function()
 {
     Route::get('projects', array('as' => 'projects', 'uses' => 'projects@index')); //LIST
+    Route::get('projects/pending', array('as' => 'pending_projects', 'uses' => 'projects@pending')); //LIST All ACTIVE
     Route::get('projects/(:any)', array('as' => 'project', 'uses' => 'projects@show')); //READ - Also shows change orders and timesheets
     Route::get('projects/new', array('as' => 'new_project', 'uses' => 'projects@new')); // FORM TO CREATE
     Route::get('projects/(:any)edit', array('as' => 'edit_project', 'uses' => 'projects@edit')); //FORM TO EDIT
@@ -69,8 +70,8 @@ Route::group(array('before' => 'auth:50'), function()
     Route::put('co/(:any)', 'co@update'); //UPDATE
     Route::delete('co/(:any)', 'co@destroy'); //DELETE
 });
-    //The below is not used to "read" a record.  It is the URL a client visits to approve or deny the change order.
-    Route::get('co/(:any)/(:any)', array('as' => 'co_approve_deny', 'uses' => 'co@approve_deny')); // use /co/approve/coID
+//The below is not used to "read" a record.  It is the URL a client visits to approve or deny the change order.
+Route::get('co/(:any)/(:any)', array('as' => 'co_approve_deny', 'uses' => 'co@approve_deny')); // use /co/approve/coID
 
 //Clients
 Route::group(array('before' => 'auth:50'), function()

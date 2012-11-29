@@ -12,11 +12,19 @@ class Projects_Controller extends Base_Controller
 
     public function get_index(){
         $data = array(
-            "changeorders"=>Changeorder::with(array('project','project.client'))->get(),
-            "projects"=>Project::where('status','=','Active')->get(),
+            "projects"=> Project::with('Changeorder', 'Timesheet')->where('status', '=', 'Active')->get(),
             "title"=>"Projects",
         );
         return View::make('projects',$data);
+    }
+
+    public function get_pending()
+    {
+        $data = array(
+            "projects"=> Project::with('Changeorder', 'Timesheet')->where('status', '=', 'Pending')->get(),
+            "title"   => "Pending Projects",
+        );
+        return View::make('projects', $data);
     }
 
     public function get_show(){
