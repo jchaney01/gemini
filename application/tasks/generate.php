@@ -47,7 +47,6 @@ class Generate_Task
         'backbone.js' => 'http://backbonejs.org/backbone.js',
         'underscore.js' => 'http://underscorejs.org/underscore.js',
         'handlebars.js' => 'http://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.rc.1.js',
-        'bootstrap-popover.js' => 'https://raw.github.com/twitter/bootstrap/master/js/bootstrap-popover.js',
 
         // CSS
         'normalize.css' => 'https://raw.github.com/necolas/normalize.css/master/normalize.css',

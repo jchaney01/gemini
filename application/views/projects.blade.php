@@ -1,7 +1,13 @@
 @layout('layouts.dual_col_3_slide')
 
-@section('content_slide_3_left')
+@section('content_slide_2_left')
+    @foreach ($projects[0]->timesheet as $timesheet)
+       {{$timesheet->user->first_name}}<br/>
+    @endforeach
+@endsection
 
+@section('content_slide_3_left')
+fhfgh
 @endsection
 
 @section('top_right')
@@ -31,7 +37,7 @@
     <? } ?>
 <? if ($projects[0]->repo_url){?>
 <div class="overviewModule">
-    <a href="{{$projects[0]->repo_url}}">
+    <a rel="popover" data-original-title="URL" data-content="{{$projects[0]->repo_url}}" data-trigger="hover" data-placement="right" href="#">
         <div>Code Repository</div>
     </a>
 

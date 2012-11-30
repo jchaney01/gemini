@@ -428,3 +428,22 @@ pre {
     border: none;
     color: #c6c6c6;
 }
+
+.popover{
+    background: #7d7e7d; /* Old browsers */
+    padding: 2px;
+}
+.popover-title{
+    background-color: rgba(0, 0, 0, 0.4);
+    border: none;
+    font-size: 12px;
+    padding: 8px 14px;
+}
+.popover.bottom .arrow{
+    border-bottom-color: #7d7e7d;
+}
+
+.popover-content{
+    color: black;
+    font-size: 11px;
+}
