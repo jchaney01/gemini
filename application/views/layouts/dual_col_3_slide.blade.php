@@ -26,7 +26,15 @@
             @include('partials.logo')
         </div>
         <div id="topRightView" class="span6">
-            @yield('top_right')
+            @section('top_right')
+            <div id="projectList">
+                <ul>
+                    @foreach ($projects as $project)
+                    <li><a href="{{URL::to_route('projects')}}/{{$project->id}}">{{$project->name}}</a></li>
+                    @endforeach
+                </ul>
+            </div>
+            @yieldsection
         </div>
     </div>
     <? if (!Request::route()->is('login')) {?>@include('partials.centralNav')<?}?>

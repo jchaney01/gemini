@@ -13,6 +13,7 @@ class Projects_Controller extends Base_Controller
     public function get_index(){
         $data = array(
             "projects"=> Project::with(array('Changeorder', 'Timesheet','Timesheet.user'))->where('status', '=', 'Active')->get(),
+            "clients"=> Client::all(),
             "title"=>"Projects",
         );
         return View::make('projects',$data);
