@@ -22,7 +22,7 @@
 @include("partials.tabBar")
 <div class="container-fluid">
     <div class="row-fluid" id="header">
-        <div id="logo" class="span6">
+        <div id="logo" class="span5">
             @include('partials.logo')
         </div>
         <div id="topRightView" class="span6">
@@ -34,7 +34,21 @@
                     @endforeach
                 </ul>
             </div>
-            @yieldsection
+            @yield_section
+        </div>
+        <div class="span1" id="projectStatuses">
+            <div class="btn-group btn-group-vertical hidden-phone" data-toggle="buttons-radio">
+                <button type="button" class="btn active btn-inverse"><a href="#"><i class="icon-white icon-fire"></i></a></button>
+                <button type="button" class="btn btn-inverse"><i class="icon-white icon-star-empty"></i></button>
+                <button type="button" class="btn btn-inverse"><i class="icon-white icon-warning-sign"></i></button>
+                <button type="button" class="btn btn-inverse"><i class="icon-white icon-ok"></i></button>
+            </div>
+            <div class="btn-group btn-group visible-phone" data-toggle="buttons-radio">
+                <button type="button" class="btn active btn-inverse"><a href="#"><i class="icon-white icon-fire"></i></a></button>
+                <button type="button" class="btn btn-inverse"><i class="icon-white icon-star-empty"></i></button>
+                <button type="button" class="btn btn-inverse"><i class="icon-white icon-warning-sign"></i></button>
+                <button type="button" class="btn btn-inverse"><i class="icon-white icon-ok"></i></button>
+            </div>
         </div>
     </div>
     <? if (!Request::route()->is('login')) {?>@include('partials.centralNav')<?}?>

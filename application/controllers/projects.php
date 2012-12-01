@@ -14,6 +14,7 @@ class Projects_Controller extends Base_Controller
         $data = array(
             "projects"=> Project::with(array('Changeorder', 'Timesheet','Timesheet.user'))->where('status', '=', 'Active')->get(),
             "clients"=> Client::all(),
+            "users"=> User::all(),
             "title"=>"Projects",
         );
         return View::make('projects',$data);

@@ -74,9 +74,12 @@ html{
   @include filter-gradient($black, $body-grad-color);
   @include background-image(linear-gradient(black 30%, $body-grad-color));
   background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-color: $body-grad-color;
   height: 100%;
 }
 body {
+
   color:$body-color;
   font-family: michromaregular,Arial,sans-serif;
   background-color: transparent;
@@ -129,6 +132,9 @@ body {
         padding-left: 30px;
       }
     }
+  }
+  #projectStatuses{
+    margin: 20px 0;
   }
 };
 
@@ -359,50 +365,13 @@ $inActiveOffset: -76px;
   }
 }
 
-//#legal{
-//  color:$grayLight;
-//  position:fixed;
-//  bottom:15px;
-//  left: 10px;
-//  z-index:40;
-//  img{
-//    width: 22px;
-//    float: left;
-//  }
-//}
-//
-//.COEntry{
-//  margin-bottom:20px;
-//
-//
-//  line-height:1.2em;
-//  a{
-//  background-color: transparent;
-//  display: inline-block;
-//  padding: 5px;
-//  margin-bottom: -3px;
-//}}
-//
-//.status{
-//  &.approved,&.not_sent{
-//    color:$green;
-//  }
-//  &.denied,&.past_due{
-//    color:$red;
-//  }
-//  &.pending,&.due{
-//    color:$yellow;
-//  }
-//  &.paid{
-//    display: none;
-//  }
-//}
-//
-//.invoiceSummary{
-//  div{
-//    margin-bottom: 40px;
-//  }
-//}
-//.invoiceEntry{
-//  line-height:1.5em;
-//}
+
+//projects
+#createProjectForm{
+  padding:30px;
+  border-radius:10px;
+  background-color:rgba(50,50,50,0.5);
+  button[type=submit]{
+    margin-top: 20px;
+  }
+}

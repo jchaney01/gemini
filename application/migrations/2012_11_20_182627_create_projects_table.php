@@ -13,21 +13,21 @@ class Create_Projects_Table {
 			$table->blob('notes')->nullable();
 			$table->blob('description')->nullable();
 			$table->string('live_url')->nullable();
-			$table->string('thumb_loc')->nullable();
+			$table->string('large_thumb_url')->nullable();
+			$table->string('small_thumb_url')->nullable();
+			$table->string('full_image_url')->nullable();
 			$table->integer('feature')->nullable();
+			$table->integer('personal_feature')->nullable();
 			$table->integer('authrequired'); //Used to determine if the feature_key is required to see this project in a portfolio.
 			$table->blob('personal_desc')->nullable();
 			$table->string('po')->nullable();
 			$table->integer('budgeted_dollars')->nullable();
 			$table->integer('budgeted_hours')->nullable();
 			$table->integer('tro')->default(0);
-			$table->string('preview_image')->nullable();
-			$table->string('full_image')->nullable();
 			$table->string('issue_tracking)_url')->nullable();
 			$table->string('repo_name')->nullable();
 			$table->string('repo_URL')->nullable();
 			$table->integer('group')->nullable();
-			$table->string('thumb_loc2')->nullable();
 			$table->timestamps();
 	});
 }

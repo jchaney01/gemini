@@ -20,6 +20,7 @@
             alert("Your browser is too old to navigate to a different subsection.")
         }
         $("[rel=popover]").popover();
+        $('textarea').autoResizer();
     }
     function setActiveSubNav(index){
         $("#centralNav a").removeClass("active");
