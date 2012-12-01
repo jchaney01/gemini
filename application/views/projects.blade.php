@@ -100,12 +100,7 @@
             <label>Small Thumbnail</label>
             <input class="span12" type="text" placeholder="http://domain.com/image_small.jpg" name="small_thumb_url">
         </div>
-
-
-
-
-        <button type="submit" class="btn btn-primary"><i class="icon-white icon-plus"></i> New</button>
-        <button type="submit" class="btn btn-inverse"><i class="icon-white icon-remove"></i> Delete</button>
+        <button type="submit" class="btn btn-inverse"><i class="icon-white icon-plus"></i> New</button>
     </fieldset>
 </form>@endsection
 

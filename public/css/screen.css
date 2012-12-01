@@ -355,13 +355,13 @@ body {
   background-position: -247px -43px;
 }
 
-/* line 370, ../scss/screen.scss */
+/* line 374, ../scss/screen.scss */
 #createProjectForm {
   padding: 30px;
   border-radius: 10px;
   background-color: rgba(50, 50, 50, 0.5);
 }
-/* line 374, ../scss/screen.scss */
+/* line 378, ../scss/screen.scss */
 #createProjectForm button[type=submit] {
   margin-top: 20px;
 }

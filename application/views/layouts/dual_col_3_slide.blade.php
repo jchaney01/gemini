@@ -37,7 +37,7 @@
             @yield_section
         </div>
         <div class="span1" id="projectStatuses">
-            <div class="btn-group btn-group-vertical hidden-phone" data-toggle="buttons-radio">
+            <div class="btn-group btn-group-vertical hidden-phone" data-toggle="buttons-radio" style="margin-left: 20px">
                 <button type="button" class="btn active btn-inverse"><a href="#"><i class="icon-white icon-fire"></i></a></button>
                 <button type="button" class="btn btn-inverse"><i class="icon-white icon-star-empty"></i></button>
                 <button type="button" class="btn btn-inverse"><i class="icon-white icon-warning-sign"></i></button>
@@ -56,9 +56,11 @@
     <div class="row-fluid">
         <div id='slider'>
             <ul>
-                <li style='display:block' id="projectOverview" class="page1">
+                <li style='display:block' class="page1">
                     <div class="span7">
                         @yield('content_slide_1_left')
+                       <button style="margin: 10px 0 10px 0;" class="btn btn-inverse"><a style="color: white" href="#"><i class="icon-white icon-pencil"></i> Edit</a></button>
+                       <button style="margin: 10px 0 10px 5px;" class="btn btn-inverse"><a style="color: white" href="#"><i class="icon-white icon-remove"></i> Delete</a></button>
                     </div>
                     <div class="span5">
                         @yield('content_slide_1_right')
