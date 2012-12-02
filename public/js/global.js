@@ -32,17 +32,17 @@
             case 0:
                 positionIndicator.animate({
                     left:'0%'
-                });
+                },250);
                 break;
             case 1:
                 positionIndicator.animate({
                     left:'34%'
-                });
+                },250);
                 break;
             case 2:
                 positionIndicator.animate({
                     left:'68%'
-                });
+                },250);
                 break;
         }
     }

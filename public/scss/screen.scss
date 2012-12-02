@@ -64,9 +64,14 @@ $base-font-size:12px;
 
 a{
   color: $blue;
+  -webkit-transition: color 0.15s ease-in-out; /*safari and chrome */
+  -o-transition: color 0.15s ease-in-out; /* opera */
+  -ms-transition: color 0.15s ease-in-out; /* ms */
+  transition: color 0.15s ease-in-out; /* w3c */
   &:hover{
     text-decoration: none;
     color: $white;
+    text-shadow: 0 0 15px $blue;
   }
 }
 
@@ -123,10 +128,17 @@ body {
       font-size: $base-font-size+4;
       color:$white;
       li{
-        a{
-          color: $white;
+        //background-color:rgba(50,50,50,0.4);
+        &:nth-child(2n){
+          //background-color:rgba(50,50,50,0.6);
         }
-        background: url("../img/arrowBullet.png") 0px 3px no-repeat;
+        a{
+          color: $blue;
+          &:hover{
+            color:$white;
+          }
+        }
+        //background: url("../img/arrowBullet.png") 0px 3px no-repeat;
         background-size: 20px 20px;
         padding-bottom: 15px;
         padding-left: 30px;
@@ -141,12 +153,14 @@ body {
 #centralNav{
   margin-bottom: 20px;
   font-size:13px;
-  @include breakpoint(small) {
-    font-size:16px;
-    div{
-      margin-bottom: 8px;
-    }
-  }
+  //@include breakpoint(small) {
+  //  font-size:16px;
+  //  background-color:rgba(50,50,50,0.5);
+  //  padding:10px;
+  //  div{
+  //    margin-bottom: 8px;
+  //  }
+  //}
     a{
       &.active{
         color:$white;
