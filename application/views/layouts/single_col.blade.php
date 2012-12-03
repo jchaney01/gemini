@@ -29,7 +29,7 @@
             @yield('top_right')
         </div>
     </div>
-    <? if (!Request::route()->is('login')) {?>@include('partials.centralNav')<?}?>
+    @include('partials.centralNav')
 
     <div class="row-fluid">
         <div class="span12">

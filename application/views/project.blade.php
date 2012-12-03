@@ -1,4 +1,4 @@
-@layout('layouts.dual_col_3_slide')
+@layout('layouts.master')
 
 @section('content_slide_1_left')
 <h1>{{$projects[0]->name}}</h1>
@@ -25,6 +25,7 @@
     </p>
 </div>
 <? } ?>
+
 @endsection
 
 @section('content_slide_2_left')

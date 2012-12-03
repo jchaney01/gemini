@@ -1,4 +1,4 @@
-@layout('layouts.single_col_no_slide')
+@layout('layouts.single_col')
 
 @section('content')
     <div class="row-fluid">

@@ -1,3 +1,4 @@
+@if(Section::yield('centralNav'))
 <div id="centralNav">
     <div class="row-fluid hidden-phone">
         @section("centralNav")
@@ -12,3 +13,4 @@
         </div>
     </div>
 </div>
+@endif

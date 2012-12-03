@@ -1,42 +1,15 @@
 @layout('layouts.master')
 @section('content_slide_1_left')
-<h1>{{$projects[0]->name}}</h1>
-
-<h2>{{$projects[0]->po}}</h2>
-<? if ($projects[0]->issue_tracking_url){?>
-<div class="module">
-    <a href="{{$projects[0]->issue_tracking_url}}">
-        <div>Issue Tracking</div>
-    </a>
-    <p>This project is currently being tracked.<br>
-        Click the link to go to the tracker.
-    </p>
-</div>
-    <? } ?>
-<? if ($projects[0]->repo_url){?>
-<div class="module">
-    <a rel="popover" data-original-title="URL" data-content="{{$projects[0]->repo_url}}" data-trigger="hover" data-placement="right" href="#">
-        <div>Code Repository</div>
-    </a>
-
-    <p>{{$projects[0]->repo_name}}
-    </p>
-</div>
-<? } ?>
-<button style="margin: 10px 0 10px 0;" class="btn btn-inverse"><a style="color: white" href="#"><i class="icon-white icon-pencil"></i> Edit</a></button>
-<button style="margin: 10px 0 10px 5px;" class="btn btn-inverse"><a style="color: white" href="#"><i class="icon-white icon-remove"></i> Delete</a></button>
+    @foreach($clients as $client)
+        <div class="module">
+            <h2><a <?if (count($client->project)){?>class="active" <?}?>href="#">{{$client->company_name}}</a></h2>
+        </div>
+    @endforeach
 @endsection
 
 @section('content_slide_1_right')
-
 <form id="createProjectForm">
     <fieldset>
-        <label>Client</label>
-        <select name="client" id="client">
-            @foreach($clients as $client)
-                <option value="{{$client->id}}">{{$client->company_name}}</option>
-            @endforeach
-        </select>
         <label>Project Name</label>
         <input type="text" class="span12" placeholder="Type something…">
         <label>Budget</label>
@@ -64,13 +37,6 @@
             <input class="span12" type="text" placeholder="ssh://git@caxserve.com:NAME">
             <label>Notes</label>
             <textarea class="span12" name="notes" cols="30" rows="1"></textarea>
-            <label>Time Reporting Override</label>
-            <select name="tro" id="tro">
-                <option value="">None</option>
-                @foreach($users as $user)
-                <option value="{{$user->id}}">{{$user->first_name}} {{$user->last_name}}</option>
-                @endforeach
-            </select>
         </div>
         <label class="checkbox">
             <input type="checkbox" class="hideIt" name="feature" id="feature" value="1"> Feature
@@ -104,21 +70,16 @@
         </div>
         <button type="submit" class="btn btn-inverse"><i class="icon-white icon-plus"></i> New</button>
     </fieldset>
-</form>@endsection
-@section("centralNav")
-<div class="span4"><a href="http://apple.com1" class="active">Overview</a></div>
-<div class="span4"><a href="http://apple.com1" class="">Time Logs</a></div>
-<div class="span4"><a href="http://apple.com1" class="">Change Orders</a></div>
+</form>
 @endsection
 
+
 @section('content_slide_2_left')
-    @foreach ($projects[0]->timesheet as $timesheet)
-       {{$timesheet->user->first_name}}<br/>
-    @endforeach
+
 @endsection
 
 @section('content_slide_3_left')
-fhfgh
+
 @endsection
 
 
@@ -129,5 +90,5 @@ fhfgh
 @endsection
 
 @section('form_confirm')
-{{Session::get('name')}}
+
 @endsection

@@ -53,7 +53,8 @@
             </div>
         </div>
     </div>
-    <? if (!Request::route()->is('login')) {?>@include('partials.centralNav')<?}?>
+
+    @include('partials.centralNav')
 
     <div class="row-fluid">
         <div id='slider'>
@@ -61,8 +62,6 @@
                 <li style='display:block' class="page1">
                     <div class="span7">
                         @yield('content_slide_1_left')
-                       <button style="margin: 10px 0 10px 0;" class="btn btn-inverse"><a style="color: white" href="#"><i class="icon-white icon-pencil"></i> Edit</a></button>
-                       <button style="margin: 10px 0 10px 5px;" class="btn btn-inverse"><a style="color: white" href="#"><i class="icon-white icon-remove"></i> Delete</a></button>
                     </div>
                     <div class="span5">
                         @yield('content_slide_1_right')
@@ -91,7 +90,6 @@
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery.js"><\/script>')</script>
-
 <script src="js/vendor/bootstrap.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/bootstrap-ck.js"></script>
