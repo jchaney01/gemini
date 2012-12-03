@@ -268,7 +268,7 @@ class Validator {
 	 */
 	protected function validate_required_with($attribute, $value, $parameters)
 	{
-//        Log::write('info', 'required with');
+
 		$other = $parameters[0];
 
 		if ($this->validate_required($other, $this->attributes[$other]))
@@ -281,7 +281,7 @@ class Validator {
 
     /**
      * Validate that an attribute exists in the attributes array, if an
-     * attribute does not exists in the attributes array.
+     * attribute does not exist in the attributes array.
      *
      * @param  string  $attribute
      * @param  mixed   $value
@@ -290,9 +290,9 @@ class Validator {
      */
     protected function validate_required_unless($attribute, $value, $parameters)
     {
-        $other = $parameters[0]; //contact_name
+        $other = $parameters[0];
 
-            if ($this->attributes[$other]!=""){
+            if (($this->attributes[$other]!="" && $this->validate_required($other, $this->attributes[$other])) || $this->validate_required($attribute, $this->attributes[$attribute])){
                 return true;
             } else {
                 return false;
