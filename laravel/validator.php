@@ -280,8 +280,8 @@ class Validator {
 	}
 
     /**
-     * Validate that an attribute exists in the attributes array, if another
-     * attribute exists in the attributes array.
+     * Validate that an attribute exists in the attributes array, if an
+     * attribute does not exists in the attributes array.
      *
      * @param  string  $attribute
      * @param  mixed   $value
@@ -290,14 +290,11 @@ class Validator {
      */
     protected function validate_required_unless($attribute, $value, $parameters)
     {
-
         $other = $parameters[0]; //contact_name
 
             if ($this->attributes[$other]!=""){
-                Log::write('info', 'required unless true');
                 return true;
             } else {
-                Log::write('info', 'required unless false');
                 return false;
             }
     }
