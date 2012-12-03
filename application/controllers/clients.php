@@ -6,7 +6,17 @@ class Clients_Controller extends Base_Controller
 
     public function __construct()
     {
-        //Asset::add('projects', 'js/projects.js');
+        //Registering a new validation rule that will make a field required unless
+        //Another filed is populated
+//        Validator::register('required_unless', function($attribute, $value, $parameters)
+//        {
+//            $filedThatMustBrePresentToPass = $parameters[0];
+//            $sourceFieldValue = $value;
+//            $sourceFieldName = $attribute;
+//            $referencedValue = $this->attributes[$filedThatMustBrePresentToPass];
+//            error_log('Jason:'.$this->attributes);
+//
+//        });
     }
 
 
@@ -36,23 +46,28 @@ class Clients_Controller extends Base_Controller
 
     public function post_create()
     {
+
         $messages = array(
-            'same'    => 'The :attribute and :other must match.',
-            'size'    => 'The :attribute must be exactly :size.',
-            'between' => 'The :attribute must be between :min - :max.',
-            'required_with'      => ':attribute must be included as well.',
+            'required_with'      => ':attribute must be included',
+            'integer'      => ':attribute must be a valid number',
         );
 
         $v = Validator::make(Input::all(), array(
-            'company_name'=> "unique:clients",
+            'company_name'=> "unique:clients|required_unless:contact_name",
             'contact_email'=> "unique:clients|email",
-            'hour_billable_rate'=> "numeric|required",
+            'hour_billable_rate'=> "numeric",
             'company_url'=> "active_url",
             'client_address'=> "required_with:client_zip",
             'client_zip'=> "integer|required_with:client_address"
         ),$messages);
+
+        if (!Input::get('hour_billable_rate')){
+            Input::merge(array(
+                "hour_billable_rate"=>Config::get('application.client_rate', 75)
+            ));
+        }
         if ($v->fails()) {
-            return Redirect::to_route('clients')->with_errors($v);
+            return Redirect::to_route('clients')->with_errors($v)->with_input();
         };
         if(Client::create(Input::all())){
             Session::flash('status_msg', 'Success');

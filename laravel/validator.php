@@ -214,7 +214,7 @@ class Validator {
 	 */
 	protected function implicit($rule)
 	{
-		return $rule == 'required' or $rule == 'accepted' or $rule == 'required_with';
+		return $rule == 'required' or $rule == 'accepted' or $rule == 'required_with' or $rule == 'required_unless';
 	}
 
 	/**
@@ -268,6 +268,7 @@ class Validator {
 	 */
 	protected function validate_required_with($attribute, $value, $parameters)
 	{
+//        Log::write('info', 'required with');
 		$other = $parameters[0];
 
 		if ($this->validate_required($other, $this->attributes[$other]))
@@ -277,6 +278,29 @@ class Validator {
 
 		return true;
 	}
+
+    /**
+     * Validate that an attribute exists in the attributes array, if another
+     * attribute exists in the attributes array.
+     *
+     * @param  string  $attribute
+     * @param  mixed   $value
+     * @param  array   $parameters
+     * @return bool
+     */
+    protected function validate_required_unless($attribute, $value, $parameters)
+    {
+
+        $other = $parameters[0]; //contact_name
+
+            if ($this->attributes[$other]!=""){
+                Log::write('info', 'required unless true');
+                return true;
+            } else {
+                Log::write('info', 'required unless false');
+                return false;
+            }
+    }
 
 	/**
 	 * Validate that an attribute has a matching confirmation attribute.
