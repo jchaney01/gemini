@@ -8,7 +8,7 @@
 @endsection
 
 @section('content_slide_1_right')
-<form id="createProjectForm">
+<form id="createProjectForm" method="post" action="{{URL::to_route('clients')}}">
     <fieldset>
         <label>Company Name</label>
         {{$errors->first('company_name','<span class="help-inline animated flash">:message</span>')}}
@@ -38,7 +38,7 @@
         {{$errors->first('client_zip','<span class="help-inline animated flash">:message</span>')}}
         <input type="text" class="span12" placeholder="XXXX Street Name" name="client_address">
         <input type="text" class="span6" placeholder="city" name="client_city">
-        <select name="state" class="span3">
+        <select name="client_state" class="span3">
             <option value="AL">AL</option>
             <option value="AK">AK</option>
             <option value="AZ">AZ</option>
@@ -98,6 +98,7 @@
         <div><button type="submit" class="btn btn-inverse"><i class="icon-white icon-plus"></i> New</button></div>
     </fieldset>
 </form>
+{{Session::get('status_msg')}}
 @endsection
 
 @section('content_slide_2_left')

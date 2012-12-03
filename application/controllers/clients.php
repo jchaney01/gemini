@@ -36,7 +36,30 @@ class Clients_Controller extends Base_Controller
 
     public function post_create()
     {
+        $messages = array(
+            'same'    => 'The :attribute and :other must match.',
+            'size'    => 'The :attribute must be exactly :size.',
+            'between' => 'The :attribute must be between :min - :max.',
+            'required_with'      => ':attribute must be included as well.',
+        );
 
+        $v = Validator::make(Input::all(), array(
+            'company_name'=> "unique:clients",
+            'contact_email'=> "unique:clients|email",
+            'hour_billable_rate'=> "numeric|required",
+            'company_url'=> "active_url",
+            'client_address'=> "required_with:client_zip",
+            'client_zip'=> "integer|required_with:client_address"
+        ),$messages);
+        if ($v->fails()) {
+            return Redirect::to_route('clients')->with_errors($v);
+        };
+        if(Client::create(Input::all())){
+            Session::flash('status_msg', 'Success');
+        } else {
+            Session::flash('status_msg', 'Failure');
+        }
+        return Redirect::to_route('clients');
     }
 
     public function put_update()
