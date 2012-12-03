@@ -38,7 +38,7 @@
             @endforeach
         </select>
         <label>Project Name</label>
-        <input type="text" class="span12" placeholder="Type something…">
+        <input type="text" class="span12" placeholder="Type something…" name="name">
         <label>Budget</label>
         <div class="controls controls-row">
             <input class="span3" id="dollars" type="text" placeholder="dollars">

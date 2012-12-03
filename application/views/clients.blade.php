@@ -10,69 +10,95 @@
 @section('content_slide_1_right')
 <form id="createProjectForm">
     <fieldset>
-        <label>Project Name</label>
-        <input type="text" class="span12" placeholder="Type something…">
-        <label>Budget</label>
-        <div class="controls controls-row">
-            <input class="span3" id="dollars" type="text" placeholder="dollars">
-            <input class="span3" id="hours" type="text" placeholder="hours">
-            <input class="span6" id="po" type="text" placeholder="PO/ATN">
-        </div>
-        <label>Due</label>
-        <input type="date">
-        <label class="checkbox">
-            <input class="hideIt" type="checkbox" id="advanced"> Advanced
-        </label>
-        <div class="hidden">
-            <label>Status</label>
-            <select name="status" id="status">
-                <option value="active">Active</option>
-                <option value="pending">Pending</option>
-                <option value="invoice">Waiting to Invoice</option>
-                <option value="complete">Complete</option>
-            </select>
-            <label>Repo Name</label>
-            <input class="span12" type="text" placeholder="Type something…">
-            <label>Repo URL</label>
-            <input class="span12" type="text" placeholder="ssh://git@caxserve.com:NAME">
-            <label>Notes</label>
-            <textarea class="span12" name="notes" cols="30" rows="1"></textarea>
-        </div>
-        <label class="checkbox">
-            <input type="checkbox" class="hideIt" name="feature" id="feature" value="1"> Feature
-        </label>
-        <div class="hidden">
-            <label class="checkbox">
-                <input type="checkbox" name="personal_feature" id="personal_feature" value="1"> Personal feature?
-            </label>
-            <label class="checkbox">
-                <input type="checkbox" name="authrequired" id="authrequired" value="1"> Auth required?
-            </label>
-            <label>Description</label>
-            <textarea class="span12" name="description" cols="30" rows="1"></textarea>
-            <label>Personal description</label>
-            <textarea class="span12" name="personal_desc" cols="30" rows="1"></textarea>
-            <label>Group</label>
-            <select name="group" id="group">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-            </select>
-            <label>Live URL</label>
-            <input class="span12" type="text" placeholder="http://domain.com" name="live_url">
-            <label>Full res URL</label>
-            <input class="span12" type="text" placeholder="http://domain.com/image_full.jpg" name="full_image_url">
-            <label>Large Thumbnail</label>
-            <input class="span12" type="text" placeholder="http://domain.com/image_large.jpg" name="large_thumb_url">
-            <label>Small Thumbnail</label>
-            <input class="span12" type="text" placeholder="http://domain.com/image_small.jpg" name="small_thumb_url">
-        </div>
-        <button type="submit" class="btn btn-inverse"><i class="icon-white icon-plus"></i> New</button>
+        <label>Company Name</label>
+        {{$errors->first('company_name','<span class="help-inline animated flash">:message</span>')}}
+        <input type="text" class="span12" placeholder="Type something…" name="company_name">
+        <label>Contact Name</label>
+        {{$errors->first('contact_name','<span class="help-inline animated flash">:message</span>')}}
+        <input type="text" class="span12" placeholder="John Doe" name="contact_name">
+        <label>Contact Email</label>
+        {{$errors->first('contact_email','<span class="help-inline animated flash">:message</span>')}}
+        <input type="text" class="span12" placeholder="foo@exapmple.com" name="contact_email">
+        <label>Contact Phone</label>
+        {{$errors->first('contact_phone','<span class="help-inline animated flash">:message</span>')}}
+        <input type="text" class="span6" placeholder="xxx-xxx-xxxx" name="contact_phone">
+        <label>Hourly Rate</label>
+        {{$errors->first('hour_billable_rate','<span class="help-inline animated flash">:message</span>')}}
+        <div class="input-prepend input-append"><span class="add-on">$</span><input type="text" class="span2" placeholder="75" name="hour_billable_rate" value="75"><span class="add-on">.00</span></div>
+        <label>Company URL</label>
+        {{$errors->first('company_url','<span class="help-inline animated flash">:message</span>')}}
+        <input type="text" class="span12" placeholder="http://www.example.com" name="company_url">
+        <label>Company Phone</label>
+        {{$errors->first('company_phone','<span class="help-inline animated flash">:message</span>')}}
+        <input type="text" class="span6" placeholder="xxx-xxx-xxxx" name="company_phone">
+        <label>Address</label>
+        {{$errors->first('client_address','<span class="help-inline animated flash">:message</span>')}}
+        {{$errors->first('client_city','<span class="help-inline animated flash">:message</span>')}}
+        {{$errors->first('client_state','<span class="help-inline animated flash">:message</span>')}}
+        {{$errors->first('client_zip','<span class="help-inline animated flash">:message</span>')}}
+        <input type="text" class="span12" placeholder="XXXX Street Name" name="client_address">
+        <input type="text" class="span6" placeholder="city" name="client_city">
+        <select name="state" class="span3">
+            <option value="AL">AL</option>
+            <option value="AK">AK</option>
+            <option value="AZ">AZ</option>
+            <option value="AR">AR</option>
+            <option value="CA">CA</option>
+            <option value="CO">CO</option>
+            <option value="CT">CT</option>
+            <option value="DE">DE</option>
+            <option value="DC">DC</option>
+            <option value="FL">FL</option>
+            <option value="GA">GA</option>
+            <option value="HI">HI</option>
+            <option value="ID">ID</option>
+            <option value="IL">IL</option>
+            <option value="IN">IN</option>
+            <option value="IA">IA</option>
+            <option value="KS">KS</option>
+            <option value="KY">KY</option>
+            <option value="LA">LA</option>
+            <option value="ME">ME</option>
+            <option value="MD">MD</option>
+            <option value="MA">MA</option>
+            <option value="MI">MI</option>
+            <option value="MN">MN</option>
+            <option value="MS">MS</option>
+            <option value="MO">MO</option>
+            <option value="MT">MT</option>
+            <option value="NE">NE</option>
+            <option value="NV">NV</option>
+            <option value="NH">NH</option>
+            <option value="NJ">NJ</option>
+            <option value="NM">NM</option>
+            <option value="NY">NY</option>
+            <option value="NC">NC</option>
+            <option value="ND">ND</option>
+            <option value="OH">OH</option>
+            <option value="OK">OK</option>
+            <option value="OR">OR</option>
+            <option value="PA">PA</option>
+            <option value="RI">RI</option>
+            <option value="SC">SC</option>
+            <option value="SD">SD</option>
+            <option value="TN">TN</option>
+            <option value="TX">TX</option>
+            <option value="UT">UT</option>
+            <option value="VT">VT</option>
+            <option value="VA">VA</option>
+            <option value="WA">WA</option>
+            <option value="WV">WV</option>
+            <option value="WI">WI</option>
+            <option value="WY">WY</option>
+        </select>
+        <input type="text" class="span3" placeholder="zip" name="client_zip">
+        <label>Notes</label>
+        {{$errors->first('notes','<span class="help-inline animated flash">:message</span>')}}
+        <textarea name="notes" id="notes" cols="30" class="span12" rows="1"></textarea>
+        <div><button type="submit" class="btn btn-inverse"><i class="icon-white icon-plus"></i> New</button></div>
     </fieldset>
 </form>
 @endsection
-
 
 @section('content_slide_2_left')
 
