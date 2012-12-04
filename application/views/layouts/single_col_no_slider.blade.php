@@ -57,11 +57,8 @@
     @include('partials.centralNav')
 
     <div class="row-fluid">
-        <div class="span6">
-            @yield('content_left')
-        </div>
-        <div class="span6">
-            @yield('content_right')
+        <div class="span12">
+            @yield('content')
         </div>
     </div>
 </div>

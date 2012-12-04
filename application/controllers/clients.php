@@ -33,7 +33,7 @@ class Clients_Controller extends Base_Controller
 
         $data = array(
             "projects"=> Project::where('status', '=', 'Active')->get(),
-            "clients"=> Client::with("project")->find($id),
+            "client"=> Client::with("project")->find($id),
             "title"=>"Client",
         );
         return View::make('client',$data);

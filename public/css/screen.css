@@ -168,33 +168,35 @@ body {
 }
 
 /* line 191, ../scss/screen.scss */
-#slider h1 {
+h1 {
   font-size: 20px;
   display: inline-block;
   color: #eeeeee;
   -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(50%, black), to(rgba(0, 0, 0, 0.5)));
   margin: 0;
 }
+
 /* line 197, ../scss/screen.scss */
-#slider h2 {
+h2 {
   font-size: 14px;
   margin: 0;
   line-height: 1em;
 }
+
 /* line 203, ../scss/screen.scss */
-#slider .module a {
+.module a {
   display: inline-block;
 }
 /* line 205, ../scss/screen.scss */
-#slider .module a.active {
+.module a.active {
   color: #ffc40d;
 }
 /* line 209, ../scss/screen.scss */
-#slider .module.module:not(:first-child) {
+.module.module:not(:first-child) {
   margin: 20px 0 0 0;
 }
 /* line 212, ../scss/screen.scss */
-#slider .module.module:last-child {
+.module.module:last-child {
   margin-bottom: 20px;
 }
 
