@@ -26,8 +26,9 @@ class Create_Projects_Table {
 			$table->integer('tro')->default(0);
 			$table->string('issue_tracking)_url')->nullable();
 			$table->string('repo_name')->nullable();
-			$table->string('repo_URL')->nullable();
+			$table->string('repo_url')->nullable();
 			$table->integer('group')->nullable();
+			$table->integer('by');
 			$table->timestamps();
 	});
 }

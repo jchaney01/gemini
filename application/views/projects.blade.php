@@ -28,27 +28,34 @@
 @endsection
 
 @section('content_slide_1_right')
-
-<form id="createProjectForm">
+@if(Session::get('status_msg'))
+<div class="alert alert-success fade in">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>{{Session::get('status_msg')}}</strong>
+</div>
+@endif
+<form id="createProjectForm" method="post" action="{{URL::to_route('projects')}}">
     <fieldset>
         <label>Client</label>
-        <select name="client" id="client">
+        {{$errors->first('client_id','<span class="help-inline animated flash">:message</span>')}}
+        <select name="client_id" id="client">
+            <option value=""></option>x
             @foreach($clients as $client)
-                <option value="{{$client->id}}">{{$client->company_name}}</option>
+                <option <?php if(Input::old('client_id')==$client->id){?>selected="selected"<?}?> value="{{$client->id}}">{{$client->company_name}}</option>
             @endforeach
         </select>
         <label>Project Name</label>
-        <input type="text" class="span12" placeholder="Type something…" name="name">
+        <input type="text" class="span12" placeholder="Type something…" value="{{Input::old('name')}}" name="name">
         <label>Budget</label>
         <div class="controls controls-row">
-            <input class="span3" id="dollars" type="text" placeholder="dollars">
-            <input class="span3" id="hours" type="text" placeholder="hours">
-            <input class="span6" id="po" type="text" placeholder="PO/ATN">
+            <input class="span3" id="dollars" type="text" placeholder="dollars" name="budgeted_dollars">
+            <input class="span3" id="hours" type="text" placeholder="hours" name="budgeted_hours">
+            <input class="span6" id="po" type="text" placeholder="PO/ATN" name="po">
         </div>
         <label>Due</label>
         <input type="date">
         <label class="checkbox">
-            <input class="hideIt" type="checkbox" id="advanced"> Advanced
+            <input class="hideIt" type="checkbox" name="due_date" id="advanced"> Advanced
         </label>
         <div class="hidden">
             <label>Status</label>
@@ -59,9 +66,9 @@
                 <option value="complete">Complete</option>
             </select>
             <label>Repo Name</label>
-            <input class="span12" type="text" placeholder="Type something…">
+            <input class="span12" name="repo_name" type="text" placeholder="Type something…">
             <label>Repo URL</label>
-            <input class="span12" type="text" placeholder="ssh://git@caxserve.com:NAME">
+            <input class="span12" type="text" name="repo_url" placeholder="ssh://git@caxserve.com:NAME">
             <label>Notes</label>
             <textarea class="span12" name="notes" cols="30" rows="1"></textarea>
             <label>Time Reporting Override</label>

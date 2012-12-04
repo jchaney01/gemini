@@ -45,24 +45,35 @@ class Projects_Controller extends Base_Controller
 
     public function post_create()
     {
-        $projectData = array(
-            "name"=> Input::get('name'),
-            "client_id"=> Input::get('client_id')
-        );
-        $v = Validator::make($projectData, array(
-            'name'=> "required",
-            'client_id'=> "required",
-        ));
-        if ($v->fails()) {
-            return Redirect::to_route('projects')->with_errors($v);
-        };
 
-        if(Project::create(array(
-            'email' => 'example@gmail.com'
-        ))){
-            Session::flash('status_msg', 'Success');
+        $messages = array(
+            'required_with'      => ':attribute must be included',
+            'required_unless'    => ':attribute must be included if contact name is empty',
+            'integer'      => ':attribute must be a valid number',
+        );
+
+        $v = Validator::make(Input::all(), array(
+            'client_id'=> "required",
+            'name'=> "unique:projects",
+            'budgeted_dollars'=> "numeric",
+            'budgeted_hours'=> "numeric",
+            'live_url'=>"active_url",
+            'full_image_url'=>"active_url",
+            'large_thumb_url'=>"active_url",
+            'small_thumb_url'=>"active_url",
+        ),$messages);
+
+        Input::merge(array(
+            "by"=>Auth::user()->id
+        ));
+
+        if ($v->fails()) {
+            return Redirect::to_route('projects')->with_errors($v)->with_input();
+        };
+        if($project = Project::create(Input::all())){
+            Session::flash('status_msg', $project->name." created successfully");
         } else {
-            Session::flash('status_msg', 'Failure');
+            Session::flash('status_msg', 'Error creating project');
         }
         return Redirect::to_route('projects');
     }

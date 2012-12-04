@@ -40,6 +40,9 @@
         <label>Hourly Rate</label>
         {{$errors->first('hour_billable_rate','<span class="help-inline animated flash">:message</span>')}}
         <div class="input-prepend input-append"><span class="add-on">$</span><input type="text" class="span2" name="hour_billable_rate" value=""><span class="add-on">.00</span></div>
+        <label>Default Net Terms</label>
+        {{$errors->first('net','<span class="help-inline animated flash">:message</span>')}}
+        <input type="text" class="span2" name="net" value="30">
         <label>Company URL</label>
         {{$errors->first('company_url','<span class="help-inline animated flash">:message</span>')}}
         <input type="text" class="span12" placeholder="http://www.example.com" name="company_url" value="{{Input::old('company_url')}}">

@@ -20,7 +20,7 @@ class Create_Invoices_Table {
 			$table->string('paid_with')->nullable();
 			$table->string('proj_tracking_url')->nullable();
 			$table->string('co_url')->nullable();
-			$table->integer('net')->nullable();
+			$table->integer('override_net')->nullable();
 			$table->timestamps();
 	});
 

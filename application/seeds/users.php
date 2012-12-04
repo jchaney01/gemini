@@ -13,7 +13,7 @@
                     $user->password = Hash::make("goldeneye01");
                     $user->access_lvl = 100;
                     $user->hour_rate = 10; //Easy math
-                    $user->api_key = $faker->md5;
+                    $user->login_key = $faker->md5;
                 $user->save();
 
                 $user = new User;
@@ -23,7 +23,7 @@
                     $user->password = Hash::make("goldeneye01");
                     $user->access_lvl = 50;
                     $user->hour_rate = 10; //Easy math
-                    $user->api_key = $faker->md5;
+                    $user->login_key = $faker->md5;
                 $user->save();
 
                 echo "Admin user email is admin with password goldeneye01.  Contractor email is dude with password goldeneye01";
