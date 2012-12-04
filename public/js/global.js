@@ -21,6 +21,7 @@
         }
         $("[rel=popover]").popover();
         $('textarea').autoResizer();
+        $('input#filter').quicksearch('.filterable');
     }
     function setActiveSubNav(index){
         $("#centralNav a").removeClass("active");

@@ -1,7 +1,10 @@
 @layout('layouts.master')
 @section('content_slide_1_left')
+<form>
+    <input type="text" id="filter" placeholder="filter">
+</form>
     @foreach($clients as $client)
-        <div class="module">
+        <div class="module filterable">
             <h2><a <?if (count($client->project)){?>class="active" <?}?>href="{{URL::to_route('client')}}/{{$client->id}}">
                 @if ($client->company_name)
                     {{$client->company_name}}

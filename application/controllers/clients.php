@@ -49,7 +49,7 @@ class Clients_Controller extends Base_Controller
 
         $messages = array(
             'required_with'      => ':attribute must be included',
-            'required_unless'    => ':attribute must be included if client name is empty',
+            'required_unless'    => ':attribute must be included if contact name is empty',
             'integer'      => ':attribute must be a valid number',
         );
 
