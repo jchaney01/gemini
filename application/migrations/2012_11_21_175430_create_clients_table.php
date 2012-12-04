@@ -19,6 +19,7 @@
                 $table->text('client_city')->nullable();
                 $table->text('client_state')->nullable();
                 $table->text('client_zip')->nullable();
+                $table->text('by')->nullable();
                 $table->string('access_code');
                 $table->blob('notes')->nullable();
                 $table->timestamps();

@@ -49,6 +49,7 @@ class Clients_Controller extends Base_Controller
 
         $messages = array(
             'required_with'      => ':attribute must be included',
+            'required_unless'    => ':attribute must be included if client name is empty',
             'integer'      => ':attribute must be a valid number',
         );
 
@@ -66,13 +67,22 @@ class Clients_Controller extends Base_Controller
                 "hour_billable_rate"=>Config::get('application.client_rate', 75)
             ));
         }
+        Input::merge(array(
+            "by"=>Auth::user()->id
+        ));
+
         if ($v->fails()) {
             return Redirect::to_route('clients')->with_errors($v)->with_input();
         };
-        if(Client::create(Input::all())){
-            Session::flash('status_msg', 'Success');
+        if($client = Client::create(Input::all())){
+            if($client->company_name){
+                $name = $client->company_name;
+            } else {
+                $name = $client->contact_name;
+            }
+            Session::flash('status_msg', $name." created successfully");
         } else {
-            Session::flash('status_msg', 'Failure');
+            Session::flash('status_msg', 'Error creating client');
         }
         return Redirect::to_route('clients');
     }

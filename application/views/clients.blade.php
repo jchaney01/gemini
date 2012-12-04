@@ -2,12 +2,24 @@
 @section('content_slide_1_left')
     @foreach($clients as $client)
         <div class="module">
-            <h2><a <?if (count($client->project)){?>class="active" <?}?>href="#">{{$client->company_name}}</a></h2>
+            <h2><a <?if (count($client->project)){?>class="active" <?}?>href="{{URL::to_route('client')}}/{{$client->id}}">
+                @if ($client->company_name)
+                    {{$client->company_name}}
+                @else
+                    {{$client->contact_name}}
+                @endif
+            </a></h2>
         </div>
     @endforeach
 @endsection
 
 @section('content_slide_1_right')
+@if(Session::get('status_msg'))
+<div class="alert alert-success fade in">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>{{Session::get('status_msg')}}</strong>
+</div>
+@endif
 <form id="createProjectForm" method="post" action="{{URL::to_route('clients')}}">
     <fieldset>
         <label>Company Name</label>
@@ -98,7 +110,7 @@
         <div><button type="submit" class="btn btn-inverse"><i class="icon-white icon-plus"></i> New</button></div>
     </fieldset>
 </form>
-{{Session::get('status_msg')}}
+
 @endsection
 
 @section('content_slide_2_left')
