@@ -12,7 +12,7 @@ class Projects_Controller extends Base_Controller
 
     public function get_index(){
         $data = array(
-            "projects"=> Project::with(array('Changeorder', 'Timesheet','Timesheet.user'))->where('status', '=', 'Active')->get(),
+            "projects"=> Project::with(array('Changeorder', 'Timesheet','Timesheet.user'))->where('status', '=', 'Active')->order_by('name', 'asc')->get(),
             "clients"=> Client::all(),
             "users"=> User::all(),
             "title"=>"Projects",
@@ -54,7 +54,7 @@ class Projects_Controller extends Base_Controller
 
         $v = Validator::make(Input::all(), array(
             'client_id'=> "required",
-            'name'=> "unique:projects",
+            'name'=> "required|unique:projects",
             'budgeted_dollars'=> "numeric",
             'budgeted_hours'=> "numeric",
             'live_url'=>"active_url",
