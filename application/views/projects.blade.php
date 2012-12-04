@@ -45,69 +45,83 @@
             @endforeach
         </select>
         <label>Project Name</label>
+        {{$errors->first('name','<span class="help-inline animated flash">:message</span>')}}
         <input type="text" class="span12" placeholder="Type something…" value="{{Input::old('name')}}" name="name">
         <label>Budget</label>
+        {{$errors->first('budgeted_dollars','<span class="help-inline animated flash">:message</span>')}}
+        {{$errors->first('budgeted_hours','<span class="help-inline animated flash">:message</span>')}}
+        {{$errors->first('po','<span class="help-inline animated flash">:message</span>')}}
         <div class="controls controls-row">
-            <input class="span3" id="dollars" type="text" placeholder="dollars" name="budgeted_dollars">
-            <input class="span3" id="hours" type="text" placeholder="hours" name="budgeted_hours">
-            <input class="span6" id="po" type="text" placeholder="PO/ATN" name="po">
+            <input class="span3" id="dollars" type="text" placeholder="dollars" value="{{Input::old('budgeted_dollars')}}" name="budgeted_dollars">
+            <input class="span3" id="hours" type="text" placeholder="hours" value="{{Input::old('budgeted_hours')}}" name="budgeted_hours">
+            <input class="span6" id="po" type="text" placeholder="PO/ATN" value="{{Input::old('budgeted_po')}}" name="po">
         </div>
         <label>Due</label>
-        <input type="date">
+        {{$errors->first('due_date','<span class="help-inline animated flash">:message</span>')}}
+        <input type="date" value="{{Input::old('due_date')}}" name="due_date">
         <label class="checkbox">
-            <input class="hideIt" type="checkbox" name="due_date" id="advanced"> Advanced
+            <input class="hideIt" type="checkbox" name="advanced" <?php if(Input::old('advanced')){?>checked="checked"<?}?> id="advanced"> Advanced
         </label>
-        <div class="hidden">
+        <div class="hidden" <?php if(Input::old('advanced')){?>style="display: block;opacity: 1;height:auto;width:auto;visibility:visible;"<?}?>>
             <label>Status</label>
+            {{$errors->first('status','<span class="help-inline animated flash">:message</span>')}}
             <select name="status" id="status">
-                <option value="active">Active</option>
-                <option value="pending">Pending</option>
-                <option value="invoice">Waiting to Invoice</option>
-                <option value="complete">Complete</option>
+                <option <?php if(Input::old('status')=='active'){?>selected="selected"<?}?> value="active">Active</option>
+                <option <?php if(Input::old('status')=='pending'){?>selected="selected"<?}?> value="pending">Pending</option>
+                <option <?php if(Input::old('status')=='invoice'){?>selected="selected"<?}?> value="invoice">Waiting to Invoice</option>
+                <option <?php if(Input::old('status')=='complete'){?>selected="selected"<?}?> value="complete">Complete</option>
             </select>
             <label>Repo Name</label>
-            <input class="span12" name="repo_name" type="text" placeholder="Type something…">
+            {{$errors->first('repo_name','<span class="help-inline animated flash">:message</span>')}}
+            <input class="span12" name="repo_name" type="text" placeholder="Type something…" value="{{Input::old('repo_name')}}">
             <label>Repo URL</label>
-            <input class="span12" type="text" name="repo_url" placeholder="ssh://git@caxserve.com:NAME">
+            {{$errors->first('repo_url','<span class="help-inline animated flash">:message</span>')}}
+            <input class="span12" type="text" name="repo_url" placeholder="ssh://git@caxserve.com:NAME" value="{{Input::old('repo_url')}}">
             <label>Notes</label>
-            <textarea class="span12" name="notes" cols="30" rows="1"></textarea>
+            {{$errors->first('notes','<span class="help-inline animated flash">:message</span>')}}
+            <textarea class="span12" name="notes" cols="30" rows="1">{{Input::old('notes')}}</textarea>
             <label>Time Reporting Override</label>
+            {{$errors->first('tro','<span class="help-inline animated flash">:message</span>')}}
             <select name="tro" id="tro">
-                <option value="">None</option>
+                <option <?php if(!Input::old('tro')){?>selected="selected"<?}?> value="">None</option>
                 @foreach($users as $user)
-                <option value="{{$user->id}}">{{$user->first_name}} {{$user->last_name}}</option>
+                <option <?php if(Input::old('tro')==$user->id){?>selected="selected"<?}?> value="{{$user->id}}">{{$user->first_name}} {{$user->last_name}}</option>
                 @endforeach
             </select>
         </div>
         <label class="checkbox">
-            <input type="checkbox" class="hideIt" name="feature" id="feature" value="1"> Feature
+            <input type="checkbox" class="hideIt" name="feature" <?php if(Input::old('feature')){?>checked="checked"<?}?> id="feature" value="1"> Feature
         </label>
-        <div class="hidden">
+        <div class="hidden" <?php if(Input::old('feature')){?>style="display: block;opacity: 1;height:auto;width:auto;visibility:visible;"<?}?>>
             <label class="checkbox">
-                <input type="checkbox" name="personal_feature" id="personal_feature" value="1"> Personal feature?
+                <input type="checkbox" name="personal_feature" id="personal_feature" <?php if(Input::old('personal_feature')){?>checked="checked"<?}?> value="1"> Personal feature?
             </label>
             <label class="checkbox">
-                <input type="checkbox" name="authrequired" id="authrequired" value="1"> Auth required?
+                <input type="checkbox" name="authrequired" id="authrequired" value="1" <?php if(Input::old('authrequired')){?>checked="checked"<?}?>> Auth required?
             </label>
             <label>Description</label>
-            <textarea class="span12" name="description" cols="30" rows="1"></textarea>
+            <textarea class="span12" name="description" cols="30" rows="1">{{Input::old('description')}}</textarea>
             <label>Personal description</label>
-            <textarea class="span12" name="personal_desc" cols="30" rows="1"></textarea>
+            <textarea class="span12" name="personal_desc" cols="30" rows="1">{{Input::old('personal_desc')}}</textarea>
             <label>Group</label>
             <select name="group" id="group">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
+                <option <?php if(Input::old('group')==1){?>selected="selected"<?}?> value="1">1</option>
+                <option <?php if(Input::old('group')==2){?>selected="selected"<?}?> value="2">2</option>
+                <option <?php if(Input::old('group')==3){?>selected="selected"<?}?> value="3">3</option>
+                <option <?php if(Input::old('group')==4){?>selected="selected"<?}?> value="4">4</option>
             </select>
             <label>Live URL</label>
-            <input class="span12" type="text" placeholder="http://domain.com" name="live_url">
+            {{$errors->first('live_url','<span class="help-inline animated flash">:message</span>')}}
+            <input class="span12" value="{{Input::old('live_url')}}" type="text" placeholder="http://domain.com" name="live_url">
             <label>Full res URL</label>
-            <input class="span12" type="text" placeholder="http://domain.com/image_full.jpg" name="full_image_url">
+            {{$errors->first('full_image_url','<span class="help-inline animated flash">:message</span>')}}
+            <input class="span12" value="{{Input::old('full_image_url')}}" type="text" placeholder="http://domain.com/image_full.jpg" name="full_image_url">
             <label>Large Thumbnail</label>
-            <input class="span12" type="text" placeholder="http://domain.com/image_large.jpg" name="large_thumb_url">
+            {{$errors->first('large_thumb_url','<span class="help-inline animated flash">:message</span>')}}
+            <input class="span12" type="text" value="{{Input::old('large_thumb_url')}}" placeholder="http://domain.com/image_large.jpg" name="large_thumb_url">
             <label>Small Thumbnail</label>
-            <input class="span12" type="text" placeholder="http://domain.com/image_small.jpg" name="small_thumb_url">
+            {{$errors->first('small_thumb_url','<span class="help-inline animated flash">:message</span>')}}
+            <input class="span12" type="text" value="{{Input::old('small_thumb_url')}}" placeholder="http://domain.com/image_small.jpg" name="small_thumb_url">
         </div>
         <button type="submit" class="btn btn-inverse"><i class="icon-white icon-plus"></i> New</button>
     </fieldset>
