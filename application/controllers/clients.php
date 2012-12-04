@@ -26,12 +26,17 @@ class Clients_Controller extends Base_Controller
            "clients"=> Client::with("project")->order_by('company_name', 'asc')->get(),
            "title"=>"Clients",
         );
-//        dd($data['clients'][0]->project);
         return View::make('clients',$data);
     }
 
-    public function get_show(){
+    public function get_show($id){
 
+        $data = array(
+            "projects"=> Project::where('status', '=', 'Active')->get(),
+            "clients"=> Client::with("project")->find($id),
+            "title"=>"Client",
+        );
+        return View::make('client',$data);
     }
 
     public function get_new()
