@@ -172,7 +172,7 @@ h6 {
 .input-append .add-on {
     background: #444;
     color: #c6c6c6;
-    border-color: #111;
+    border-color: #50514F;
     text-shadow: 0 1px 0  black;
 }
 
@@ -187,7 +187,7 @@ input[type="file"],
 select,
 textarea {
     color: white;
-    border-color: #111111;
+    border-color: #373737;
 }
 
 /* line 160, ../sass/darkstrap.scss */
@@ -427,4 +427,47 @@ code {
 pre {
     border: none;
     color: #c6c6c6;
+}
+
+.popover{
+    background: #7d7e7d; /* Old browsers */
+    padding: 2px;
+    width:auto;
+}
+.popover-title{
+    background-color: rgba(0, 0, 0, 0.4);
+    border: none;
+    font-size: 12px;
+    padding: 8px 14px;
+}
+.popover.bottom .arrow{
+    border-bottom-color: #7d7e7d;
+}
+.popover.right .arrow{
+    border-right-color: #7d7e7d;
+}
+
+.popover-content{
+    color: black;
+    font-size: 11px;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"], input[type="date"],
+input[type="month"], input[type="time"], input[type="week"],
+input[type="number"], input[type="email"], input[type="url"],
+input[type="search"], input[type="tel"], input[type="color"], .uneditable-input{
+    border: 1px solid #50514f;
+    background-color: rgba(20,20,20,0.5);
+    color: #dbdbdb;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #424242;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color: #424242;
 }

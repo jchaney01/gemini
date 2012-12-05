@@ -16,7 +16,6 @@
                     $project->notes = $faker->sentence($nbWords = 6);
                     $project->description = $faker->sentence($nbWords = 10);
                     $project->live_url = $faker->url;
-                    $project->thumb_loc = $faker->url;
                     $project->feature = 0;
                     $project->authrequired = 0;
                     $project->personal_desc = $faker->sentence($nbWords = 10);
@@ -24,10 +23,9 @@
                     $project->budgeted_dollars = $faker->randomNumber($nbDigits = NULL);
                     $project->budgeted_hours = $faker->randomNumber($nbDigits = NULL);
                     $project->tro = 0;
-                    $project->preview_image = $faker->url;
-                    $project->full_image = $faker->url;
+                    $project->small_thumb_url = $faker->url;
+                    $project->full_image_url = $faker->url;
                     $project->group = $faker->randomDigit;
-                    $project->thumb_loc2 = $faker->url;
                     $project->repo_name = $faker->name;
                     $project->repo_url = $faker->url;
                 $project->save();

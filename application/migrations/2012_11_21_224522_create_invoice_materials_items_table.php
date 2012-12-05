@@ -17,7 +17,7 @@ class Create_Invoice_Materials_Items_Table {
 
 	public function down()
     {
-		Schema::drop('BLAH');
+		Schema::drop('invoice_material_items');
 
     }
 

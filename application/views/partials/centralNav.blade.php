@@ -1,5 +1,6 @@
+@if(Section::yield('centralNav'))
 <div id="centralNav">
-    <div class="row-fluid">
+    <div class="row-fluid hidden-phone">
         @section("centralNav")
         <div class="span4"><a href="http://apple.com1" class="active">Overview</a></div>
         <div class="span4"><a href="http://apple.com1" class="">Time Logs</a></div>
@@ -12,3 +13,4 @@
         </div>
     </div>
 </div>
+@endif

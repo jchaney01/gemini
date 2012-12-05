@@ -10,4 +10,9 @@ class Project extends Eloquent {
     {
         return $this->has_many('Changeorder');
     }
+
+    public function timesheet()
+    {
+        return $this->has_many('Timesheet');
+    }
 }

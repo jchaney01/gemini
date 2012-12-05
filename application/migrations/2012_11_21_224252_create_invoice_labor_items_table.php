@@ -16,7 +16,7 @@ class Create_Invoice_Labor_Items_Table {
 
 	public function down()
     {
-		Schema::drop('items');
+		Schema::drop('invoice_labor_items');
 
     }
 

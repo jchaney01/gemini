@@ -25,16 +25,41 @@
         <div id="logo" class="span6">
             @include('partials.logo')
         </div>
-        <div id="topRightView" class="span6">
-            @yield('top_right')
+        <div id="topRightView" class="span5">
+            @section('top_right')
+            <div id="projectList">
+                <ul>
+                    @foreach ($projects as $project)
+                    <li><a href="{{URL::to_route('projects')}}/{{$project->id}}">{{$project->name}}</a></li>
+                    @endforeach
+                </ul>
+            </div>
+            @yield_section
+        </div>
+        <div class="span1" id="projectStatuses">
+            <div class="btn-group btn-group-vertical hidden-phone" data-toggle="buttons-radio" style="margin-left: 20px">
+                <button type="button" class="btn active btn-inverse"><a href="#"><i class="icon-white icon-fire"></i></a></button>
+                <button type="button" class="btn btn-inverse"><i class="icon-white icon-star-empty"></i></button>
+                <button type="button" class="btn btn-inverse"><i class="icon-white icon-warning-sign"></i></button>
+                <button type="button" class="btn btn-inverse"><i class="icon-white icon-ok"></i></button>
+                <button type="button" class="btn btn-inverse"><i class="icon-white icon-search"></i></button>
+            </div>
+            <div class="btn-group btn-group visible-phone" data-toggle="buttons-radio">
+                <button type="button" class="btn active btn-inverse"><a href="#"><i class="icon-white icon-fire"></i></a></button>
+                <button type="button" class="btn btn-inverse"><i class="icon-white icon-star-empty"></i></button>
+                <button type="button" class="btn btn-inverse"><i class="icon-white icon-warning-sign"></i></button>
+                <button type="button" class="btn btn-inverse"><i class="icon-white icon-ok"></i></button>
+                <button type="button" class="btn btn-inverse"><i class="icon-white icon-search"></i></button>
+            </div>
         </div>
     </div>
-    <? if (!Request::route()->is('login')) {?>@include('partials.centralNav')<?}?>
+
+    @include('partials.centralNav')
 
     <div class="row-fluid">
         <div id='slider'>
             <ul>
-                <li style='display:block' id="projectOverview" class="page1">
+                <li style='display:block' class="page1">
                     <div class="span7">
                         @yield('content_slide_1_left')
                     </div>
@@ -65,6 +90,7 @@
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery.js"><\/script>')</script>
+<script src="js/vendor/bootstrap.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/bootstrap-ck.js"></script>
 @yield('scripts')

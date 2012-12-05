@@ -49,11 +49,29 @@ $body-grad-color : $grayDark;
 $body-color : $grayLight;
 $base-font-size:12px;
 
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $grayDark;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $blue;
+}
+
 a{
   color: $blue;
+  -webkit-transition: color 0.15s ease-in-out; /*safari and chrome */
+  -o-transition: color 0.15s ease-in-out; /* opera */
+  -ms-transition: color 0.15s ease-in-out; /* ms */
+  transition: color 0.15s ease-in-out; /* w3c */
   &:hover{
     text-decoration: none;
     color: $white;
+    text-shadow: 0 0 15px $blue;
   }
 }
 
@@ -61,9 +79,12 @@ html{
   @include filter-gradient($black, $body-grad-color);
   @include background-image(linear-gradient(black 30%, $body-grad-color));
   background-attachment:fixed;
+  background-repeat: no-repeat;
+  background-color: $body-grad-color;
   height: 100%;
 }
 body {
+
   color:$body-color;
   font-family: michromaregular,Arial,sans-serif;
   background-color: transparent;
@@ -83,7 +104,6 @@ body {
   }
   #logo{
     padding:35px 0 0 40px;
-
     .clientName{
       font-size: $base-font-size+ 4;
       padding-bottom: 5px;
@@ -103,36 +123,52 @@ body {
     max-height:150px;
     margin:20px 0;
     ul{
+      margin: 0;
       list-style: none;
       font-size: $base-font-size+4;
       color:$white;
       li{
-        a{
-          color: $white;
+        //background-color:rgba(50,50,50,0.4);
+        &:nth-child(2n){
+          //background-color:rgba(50,50,50,0.6);
         }
-        background: url("../img/arrowBullet.png") 0px 3px no-repeat;
+        a{
+          color: $blue;
+          &:hover{
+            color:$white;
+          }
+        }
+        //background: url("../img/arrowBullet.png") 0px 3px no-repeat;
         background-size: 20px 20px;
         padding-bottom: 15px;
         padding-left: 30px;
       }
     }
   }
+  #projectStatuses{
+    margin: 20px 0;
+  }
 };
 
 #centralNav{
   margin-bottom: 20px;
   font-size:13px;
-  @include breakpoint(small) {
-    font-size:16px;
-    div{
-      margin-bottom: 8px;
-    }
-  }
+  //@include breakpoint(small) {
+  //  font-size:16px;
+  //  background-color:rgba(50,50,50,0.5);
+  //  padding:10px;
+  //  div{
+  //    margin-bottom: 8px;
+  //  }
+  //}
     a{
       &.active{
         color:$white;
       }
-      color:$gray;
+      &.hover{
+        color:$white;
+      }
+
     }
 
   .navLine{
@@ -146,12 +182,12 @@ body {
       background-color: $blue;
       height: 5px;
       position: relative;
-      left: 34%;
+      left: 0%;
     }
   }
 };
 
-#slider{
+
   h1{
     font-size: $base-font-size + 8;
     display: inline-block;
@@ -163,19 +199,22 @@ body {
     margin: 0;
     line-height: 1em;
   }
-  .overviewModule{
+  .module{
     a{
-      padding: 10px 10px 10px 0;
-      display:inline-block;
+      display: inline-block;
+      &.active{
+        color: $yellow;
+      }
     }
-    margin: 30px 0 0 0;
+    &.module:not(:first-child){
+      margin: 20px 0 0 0;
+    }
+    &.module:last-child{
+      margin-bottom: 20px;
+    }
+
   }
-  .timeEntry{
-    margin-bottom: 30px;
-    font-size: $base-font-size;
-    color:$grayLight;
-  }
-}
+
 
 .time{
   color: $white;
@@ -342,51 +381,18 @@ $inActiveOffset: -76px;
     }
   }
 }
+//#slider .btn{
+//
+//  font-size: 12px;
+//  padding: 5px 10px 10px 10px;
+//}
 
-//#legal{
-//  color:$grayLight;
-//  position:fixed;
-//  bottom:15px;
-//  left: 10px;
-//  z-index:40;
-//  img{
-//    width: 22px;
-//    float: left;
-//  }
-//}
-//
-//.COEntry{
-//  margin-bottom:20px;
-//
-//
-//  line-height:1.2em;
-//  a{
-//  background-color: transparent;
-//  display: inline-block;
-//  padding: 5px;
-//  margin-bottom: -3px;
-//}}
-//
-//.status{
-//  &.approved,&.not_sent{
-//    color:$green;
-//  }
-//  &.denied,&.past_due{
-//    color:$red;
-//  }
-//  &.pending,&.due{
-//    color:$yellow;
-//  }
-//  &.paid{
-//    display: none;
-//  }
-//}
-//
-//.invoiceSummary{
-//  div{
-//    margin-bottom: 40px;
-//  }
-//}
-//.invoiceEntry{
-//  line-height:1.5em;
-//}
+//projects
+#createProjectForm{
+  padding:30px;
+  border-radius:10px;
+  background-color:rgba(50,50,50,0.5);
+  button[type=submit]{
+    margin-top: 20px;
+  }
+}

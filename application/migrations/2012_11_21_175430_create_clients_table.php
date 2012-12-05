@@ -9,17 +9,19 @@
             {
                 $table->increments('id');
                 $table->text('company_name')->nullable();
+                $table->string('contact_name')->nullable();
+                $table->string('contact_email')->nullable();
+                $table->string('contact_phone')->nullable();
+                $table->integer('hour_billable_rate');
+                $table->string('company_url')->nullable();
+                $table->integer('company_phone')->nullable();
                 $table->text('client_address')->nullable();
                 $table->text('client_city')->nullable();
                 $table->text('client_state')->nullable();
                 $table->text('client_zip')->nullable();
-                $table->string('contact_name')->nullable();
-                $table->string('contact_phone')->nullable();
-                $table->integer('company_phone')->nullable();
-                $table->integer('hour_billable_rate');
-                $table->string('contact_email')->nullable();
-                $table->string('company_url')->nullable();
-                $table->string('access_code')->nullable();
+                $table->text('by')->nullable();
+                $table->integer('net')->default(30);
+                $table->string('access_code');
                 $table->blob('notes')->nullable();
                 $table->timestamps();
             });
@@ -27,7 +29,7 @@
 
         public function down()
         {
-            Schema::drop('TABLE');
+            Schema::drop('clients');
 
         }
 

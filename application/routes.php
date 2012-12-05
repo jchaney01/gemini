@@ -76,6 +76,7 @@ Route::get('co/(:any)/(:any)', array('as' => 'co_approve_deny', 'uses' => 'co@ap
 //Clients
 Route::group(array('before' => 'auth:50'), function()
 {
+    Route::get('clients/(:any)', array('as' => 'client', 'uses' => 'clients@show')); // READ
     Route::get('clients', array('as' => 'clients', 'uses' => 'clients@index')); //LIST
     Route::get('clients/new', array('as' => 'new_client', 'uses' => 'clients@new')); // FORM TO CREATE
     Route::get('clients/(:any)edit', array('as' => 'edit_client', 'uses' => 'clients@edit')); //FORM TO EDIT

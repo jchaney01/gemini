@@ -107,13 +107,16 @@ $post = Post::create(array(
 The Post::create() method does exactly the same as instantiating a new object, assigning the values, and calling the save method. The created object is returned, or false on failure.
 
 =ATTACK=
-Create Project Form
-JS for projects
-    swiping
-Clients
-Projects
+View client
+Edit Clients
+Delete clients
+Edit projects
+Delete projects
 Change Orders
 Time Sheets
 Invoices
 Budget Graph
-Users
+Create Users
+Edit Users
+Delete users
+Dashboard

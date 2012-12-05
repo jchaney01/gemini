@@ -12,13 +12,16 @@
             });
             $("#centralNav a").on('click',function(e){
                 e.preventDefault();
-                window.mySwipe.slide($(e.currentTarget).index());
-                setActiveSubNav($(e.currentTarget).index());
-                animateNavBarToIndex($(e.currentTarget).index());
+                window.mySwipe.slide($(e.currentTarget).parent().index());
+                setActiveSubNav($(e.currentTarget).parent().index());
+                animateNavBarToIndex($(e.currentTarget).parent().index());
             });
         } else {
             alert("Your browser is too old to navigate to a different subsection.")
         }
+        $("[rel=popover]").popover();
+        $('textarea').autoResizer();
+        $('input#filter').quicksearch('.filterable');
     }
     function setActiveSubNav(index){
         $("#centralNav a").removeClass("active");
@@ -29,18 +32,18 @@
         switch(index){
             case 0:
                 positionIndicator.animate({
-                    left:'0'
-                });
+                    left:'0%'
+                },250);
                 break;
             case 1:
                 positionIndicator.animate({
-                    left:'43%'
-                });
+                    left:'34%'
+                },250);
                 break;
             case 2:
                 positionIndicator.animate({
-                    left:'70%'
-                });
+                    left:'68%'
+                },250);
                 break;
         }
     }

@@ -60,6 +60,18 @@
   }
 }
 
+@mixin input-placeholder($color) {
+  &.placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+}
+
 
 @mixin border-radius ($radii) {
   -webkit-border-radius: $radii;
