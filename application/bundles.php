@@ -36,6 +36,7 @@
 return array(
 
 	'docs' => array('handles' => 'docs'),
-	'plant' => array('handles' => 'plant')
-
+	'plant' => array('handles' => 'plant'),
+    'oneauth' => array('auto' => TRUE),
+    'bundocs' => array('auto' => TRUE, 'handles' => 'bundocs')
 );
