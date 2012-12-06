@@ -46,6 +46,9 @@
         <label>Company URL</label>
         {{$errors->first('company_url','<span class="help-inline animated flash">:message</span>')}}
         <input type="text" class="span12" placeholder="http://www.example.com" name="company_url" value="{{Input::old('company_url')}}">
+        <label>Company Logo</label>
+        {{$errors->first('company_logo_url','<span class="help-inline animated flash">:message</span>')}}
+        <input type="text" class="span12" placeholder="http://www.example.com/image.jpg" name="company_logo_url" value="{{Input::old('company_logo_url')}}">
         <label>Company Phone</label>
         {{$errors->first('company_phone','<span class="help-inline animated flash">:message</span>')}}
         <input type="text" class="span6" placeholder="xxx-xxx-xxxx" name="company_phone" value="{{Input::old('company_phone')}}">

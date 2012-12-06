@@ -25,6 +25,7 @@
 <? } ?>
 <button style="margin: 10px 0 10px 0;" class="btn btn-inverse"><a style="color: white" href="#"><i class="icon-white icon-pencil"></i> Edit</a></button>
 <button style="margin: 10px 0 10px 5px;" class="btn btn-inverse"><a style="color: white" href="#"><i class="icon-white icon-remove"></i> Delete</a></button>
+@if(Auth::user()->access_lvl > 50)<button style="margin: 10px 0 10px 5px;" class="btn btn-inverse"><a style="color: white" href="#"><i class="icon-white icon-th-list"></i> Invoice</a></button>@endif
 @endsection
 
 @section('content_slide_1_right')

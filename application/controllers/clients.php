@@ -64,6 +64,7 @@ class Clients_Controller extends Base_Controller
             'hour_billable_rate'=> "numeric",
             'company_url'=> "active_url",
             'client_address'=> "required_with:client_zip",
+            'client_logo_url'=> "active_url",
             'client_zip'=> "integer|required_with:client_address",
             'net'=> "integer"
         ),$messages);
@@ -100,6 +101,6 @@ class Clients_Controller extends Base_Controller
 
     public function delete_destroy()
     {
-
+        return 1;
     }
 }

@@ -179,7 +179,7 @@ h1 {
 /* line 197, ../scss/screen.scss */
 h2 {
   font-size: 14px;
-  margin: 0;
+  margin: 0 0 5px 0;
   line-height: 1em;
 }
 

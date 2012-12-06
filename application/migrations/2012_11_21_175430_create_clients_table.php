@@ -14,7 +14,7 @@
                 $table->string('contact_phone')->nullable();
                 $table->integer('hour_billable_rate');
                 $table->string('company_url')->nullable();
-                $table->integer('company_phone')->nullable();
+                $table->string('company_phone')->nullable();
                 $table->text('client_address')->nullable();
                 $table->text('client_city')->nullable();
                 $table->text('client_state')->nullable();
@@ -23,6 +23,7 @@
                 $table->integer('net')->default(30);
                 $table->string('access_code');
                 $table->blob('notes')->nullable();
+                $table->string('client_logo_url')->nullable();
                 $table->timestamps();
             });
         }
