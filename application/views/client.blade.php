@@ -122,7 +122,7 @@
         <textarea name="notes" id="notes" cols="30" class="span12" rows="1">{{Input::old('notes')}}</textarea>
         <div>
             <button type="submit" class="btn btn-inverse"><i class="icon-white icon-ok"></i> Update</button>
-            <button style="margin: 30px 0 10px 5px;" class="btn btn-danger"><a style="color: #ffffdfgdfgdfgfdff;" data-method="delete" href="{{URL::to_route('clients')}}/{{$client->id}}"><i class="icon-white icon-remove"></i> Delete</a></button>
+            <button style="margin: 30px 0 10px 5px;" class="btn btn-danger"><a id="delete" style="color: #ffffdfgdfgdfgfdff;" data-method="delete" href="{{URL::to_route('clients')}}/{{$client->id}}"><i class="icon-white icon-remove"></i> Delete</a></button>
         </div>
     </fieldset>
 </form>

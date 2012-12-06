@@ -12,7 +12,7 @@ class Projects_Controller extends Base_Controller
 
     public function get_index(){
         $data = array(
-            "projects"=> Project::with(array('Changeorder', 'Timesheet','Timesheet.user'))->where('status', '=', 'Active')->order_by('name', 'asc')->get(),
+            "projects"=> Project::with(array('changeorder', 'timesheet','timesheet.user'))->where('status', '=', 'Active')->order_by('name', 'asc')->get(),
             "clients"=> Client::all(),
             "users"=> User::all(),
             "title"=>"Projects",

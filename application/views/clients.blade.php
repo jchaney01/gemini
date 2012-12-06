@@ -18,7 +18,7 @@
 
 @section('content_slide_1_right')
 @if(Session::get('status_msg'))
-<div class="alert alert-success fade in">
+<div class="alert alert-success fade in <?if(!Session::get('type')){?>alert-error<?}?>">
     <button type="button" class="close" data-dismiss="alert">×</button>
     <strong>{{Session::get('status_msg')}}</strong>
 </div>

@@ -6,17 +6,7 @@ class Clients_Controller extends Base_Controller
 
     public function __construct()
     {
-        //Registering a new validation rule that will make a field required unless
-        //Another filed is populated
-//        Validator::register('required_unless', function($attribute, $value, $parameters)
-//        {
-//            $filedThatMustBrePresentToPass = $parameters[0];
-//            $sourceFieldValue = $value;
-//            $sourceFieldName = $attribute;
-//            $referencedValue = $this->attributes[$filedThatMustBrePresentToPass];
-//            error_log('Jason:'.$this->attributes);
-//
-//        });
+        Asset::add('clients', 'js/clients.js');
     }
 
 
@@ -87,6 +77,8 @@ class Clients_Controller extends Base_Controller
             } else {
                 $name = $client->contact_name;
             }
+
+
             Session::flash('status_msg', $name." created successfully");
         } else {
             Session::flash('status_msg', 'Error creating client');
@@ -99,8 +91,18 @@ class Clients_Controller extends Base_Controller
 
     }
 
-    public function delete_destroy()
+    public function delete_destroy($id)
     {
-        return 1;
+        $client = Client::with(array('project', 'invoice'))->find($id);
+        if($client->project || $client->invoice){
+            Session::flash('status_msg', "Unable to delete.  Client has a project or invoice which would become orphaned.");
+            Session::flash('type', 0);
+            return Redirect::to_route('clients');
+        } else {
+            Session::flash('status_msg', "deleted successfully");
+            Session::flash('type', 1);
+            $client->delete();
+            return Redirect::to_route('clients');
+        }
     }
 }
