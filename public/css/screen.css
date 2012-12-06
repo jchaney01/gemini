@@ -361,12 +361,12 @@ h2 {
 }
 
 /* line 391, ../scss/screen.scss */
-#createProjectForm {
+#createForm {
   padding: 30px;
   border-radius: 10px;
   background-color: rgba(50, 50, 50, 0.5);
 }
 /* line 395, ../scss/screen.scss */
-#createProjectForm button[type=submit] {
+#createForm button[type=submit] {
   margin-top: 20px;
 }

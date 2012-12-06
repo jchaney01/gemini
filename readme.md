@@ -119,3 +119,6 @@ Create Users
 Edit Users
 Delete users
 Dashboard
+
+V3
+Social login

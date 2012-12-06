@@ -23,7 +23,7 @@
     <strong>{{Session::get('status_msg')}}</strong>
 </div>
 @endif
-<form id="createProjectForm" method="post" action="{{URL::to_route('clients')}}">
+<?php echo Form::open(URL::to_route('clients'), 'POST', array('id' => 'createForm'));?>
     <fieldset>
         <label>Company Name</label>
         {{$errors->first('company_name','<span class="help-inline animated flash">:message</span>')}}

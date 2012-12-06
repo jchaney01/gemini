@@ -80,7 +80,9 @@ class Clients_Controller extends Base_Controller
 
 
             Session::flash('status_msg', $name." created successfully");
+            Session::flash('type', 1);
         } else {
+            Session::flash('type', 0);
             Session::flash('status_msg', 'Error creating client');
         }
         return Redirect::to_route('clients');

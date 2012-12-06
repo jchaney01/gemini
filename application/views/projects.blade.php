@@ -35,7 +35,7 @@
     <strong>{{Session::get('status_msg')}}</strong>
 </div>
 @endif
-<form id="createProjectForm" method="post" action="{{URL::to_route('projects')}}">
+<form id="createForm" method="post" action="{{URL::to_route('projects')}}">
     <fieldset>
         <label>Client</label>
         {{$errors->first('client_id','<span class="help-inline animated flash">:message</span>')}}
