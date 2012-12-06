@@ -1,11 +1,5 @@
 @layout('layouts.dual_col_no_slider')
 
-
-
-
-
-
-
 @section('content_left')
 <h1>
     @if($client->company_name)
@@ -26,6 +20,12 @@
 
 
 @section('content_right')
+@if(Session::get('status_msg'))
+<div class="alert alert-success fade in <?if(!Session::get('type')){?>alert-error<?}?>">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>{{Session::get('status_msg')}}</strong>
+</div>
+@endif
 <?php echo Form::open(URL::to_route('clients').'/'.$client->id, 'PUT', array('id' => 'createForm'));?>
     <fieldset>
         <field type="hidden" name="_method" value="PUT">
@@ -127,9 +127,6 @@
     </fieldset>
 </form>
 @endsection
-
-
-
 
 @section('scripts')
 {{Asset::scripts()}}
