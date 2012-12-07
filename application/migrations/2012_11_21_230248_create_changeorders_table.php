@@ -9,6 +9,7 @@ class Create_Changeorders_Table {
 			$table->integer('user_id');
 			$table->string('recipient');
 			$table->blob('desc');
+			$table->integer('can_move_forward');
 			$table->string('issue_tracking_url')->nullable();
 			$table->integer('status')->default(1); //1 = pending, 2 = approved, 0 = denied
 			$table->string('approved_by')->nullable();

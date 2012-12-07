@@ -4,6 +4,12 @@ class Clients_Controller extends Base_Controller
 {
     public $restful = TRUE;
 
+    public $messages = array(
+        'required_with'      => ':attribute must be included',
+        'required_unless'    => ':attribute must be included if contact name is empty',
+        'integer'      => ':attribute must be a valid number',
+    );
+
 
     public function __construct()
     {
@@ -43,11 +49,7 @@ class Clients_Controller extends Base_Controller
     public function post_create()
     {
 
-        $messages = array(
-            'required_with'      => ':attribute must be included',
-            'required_unless'    => ':attribute must be included if contact name is empty',
-            'integer'      => ':attribute must be a valid number',
-        );
+
 
         $v = Validator::make(Input::all(), array(
             'company_name'=> "unique:clients|required_unless:contact_name",
@@ -58,7 +60,7 @@ class Clients_Controller extends Base_Controller
             'client_logo_url'=> "active_url",
             'client_zip'=> "integer|required_with:client_address",
             'net'=> "integer"
-        ),$messages);
+        ),$this->messages);
 
         if (!Input::get('hour_billable_rate')){
             Input::merge(array(
@@ -92,12 +94,6 @@ class Clients_Controller extends Base_Controller
     public function put_update($id)
     {
 
-        $messages = array(
-            'required_with'      => ':attribute must be included',
-            'required_unless'    => ':attribute must be included if contact name is empty',
-            'integer'      => ':attribute must be a valid number',
-        );
-
         $v = Validator::make(Input::all(), array(
             'company_name'=> "unique:clients,company_name,".$id."|required_unless:contact_name",
             'contact_email'=> "unique:clients,contact_email,".$id."|email",
@@ -107,7 +103,7 @@ class Clients_Controller extends Base_Controller
             'client_logo_url'=> "active_url",
             'client_zip'=> "integer|required_with:client_address",
             'net'=> "integer"
-        ),$messages);
+        ),$this->messages);
 
         if (!Input::get('hour_billable_rate')){
             Input::merge(array(

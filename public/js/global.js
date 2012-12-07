@@ -1,5 +1,5 @@
 //This file has JS code used by every single page.
-(function () {
+;(function () {
     'use strict';
     // restfulizer.js
 

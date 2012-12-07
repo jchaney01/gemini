@@ -18,14 +18,20 @@
     <a rel="popover" data-original-title="URL" data-content="{{$projects[0]->repo_url}}" data-trigger="hover" data-placement="right" href="#">
         <div>Code Repository</div>
     </a>
-
     <p>{{$projects[0]->repo_name}}
     </p>
 </div>
 <? } ?>
-<button style="margin: 10px 0 10px 0;" class="btn btn-inverse"><a style="color: white" href="#"><i class="icon-white icon-pencil"></i> Edit</a></button>
-<button style="margin: 10px 0 10px 5px;" class="btn btn-inverse"><a style="color: white" href="#"><i class="icon-white icon-remove"></i> Delete</a></button>
-@if(Auth::user()->access_lvl > 50)<button style="margin: 10px 0 10px 5px;" class="btn btn-inverse"><a style="color: white" href="#"><i class="icon-white icon-th-list"></i> Invoice</a></button>@endif
+@if(Auth::user()->access_lvl > 50)
+    <div>
+        <button style="margin: 10px 0 5px 0;" class="btn btn-inverse"><a style="color: white" href="#"><i class="icon-white icon-pencil"></i> Edit</a></button>
+        <button style="margin: 10px 0 5px 5px;" class="btn btn-inverse"><a style="color: white" href="#"><i class="icon-white icon-th-list"></i> Invoice</a></button></div>
+    <div>
+        <button style="margin: 10px 0 10px 0;" class="btn btn-inverse"><a style="color: white" href="#"><i class="icon-white icon-fire"></i> Active</a></button>
+        <button style="margin: 10px 0 10px 5px;" class="btn btn-inverse"><a style="color: white" href="#"><i class="icon-white icon-star-empty"></i> Pending</a></button>
+        <button style="margin: 10px 0 10px 5px;" class="btn btn-inverse"><a style="color: white" href="#"><i class="icon-white icon-ok"></i> Complete</a></button>
+    </div>
+@endif
 @endsection
 
 @section('content_slide_1_right')
@@ -61,7 +67,7 @@
         {{$errors->first('due_date','<span class="help-inline animated flash">:message</span>')}}
         <input type="date" value="{{Input::old('due_date')}}" name="due_date">
         <label class="checkbox">
-            <input class="hideIt" type="checkbox" name="advanced" <?php if(Input::old('advanced')){?>checked="checked"<?}?> id="advanced"> Advanced
+            <input class="hideIt" type="checkbox" id="advanced"> Advanced
         </label>
         <div class="hidden" <?php if(Input::old('advanced')){?>style="display: block;opacity: 1;height:auto;width:auto;visibility:visible;"<?}?>>
             <label>Status</label>
@@ -142,6 +148,44 @@
 @section('content_slide_3_left')
 fhfgh
 @endsection
+
+@section('content_slide_3_right')
+@if(Session::get('status_msg'))
+<div class="alert alert-success fade in">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>{{Session::get('status_msg')}}</strong>
+</div>
+@endif
+<form id="createForm" method="post" action="{{URL::to_route('projects')}}">
+    <fieldset>
+        <label>Recipient</label>
+        {{$errors->first('recipent','<span class="help-inline animated flash">:message</span>')}}
+        <input type="text" class="span6" placeholder="name@domain.com" value="{{Input::old('recipient')}}"
+               name="recipient">
+        <select class="span6" id="autopop">
+            <option value="">Autopopulate</option>
+        </select>
+        <label>Description</label>
+        {{$errors->first('desc','<span class="help-inline animated flash">:message</span>')}}
+        <textarea name="desc" class="span12"></textarea>
+        <label>Estimated Hours</label>
+        {{$errors->first('estimated_hours','<span class="help-inline animated flash">:message</span>')}}
+        <div class="controls controls-row">
+            <input class="span3" type="text" placeholder="XX" value="{{Input::old('estimated_hours')}}"
+                   name="estimated_hours">
+        </div>
+        <label>Issue Tracking URL</label>
+        {{$errors->first('issue_tracking_url','<span class="help-inline animated flash">:message</span>')}}
+        <input class="span12" name="issue_tracking_url" type="text" placeholder="http://cabugs.com/X"
+               value="{{Input::old('issue_tracking_url')}}">
+
+        <label class="checkbox">
+            <input type="checkbox" id="move_forward"> Can't move on anything else unless approved
+        </label>
+        <button type="submit" class="btn btn-inverse"><i class="icon-white icon-share"></i> Send</button>
+    </fieldset>
+</form>
+    @endsection
 
 
 
