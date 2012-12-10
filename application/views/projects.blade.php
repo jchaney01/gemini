@@ -164,6 +164,9 @@ fhfgh
                name="recipient">
         <select class="span6" id="autopop">
             <option value="">Autopopulate</option>
+            @foreach($clients as $client)
+                <option <?php if(Input::old('client_id')==$client->id){?>selected="selected"<?}?> value="{{$client->id}}">{{$client->company_name}}</option>
+            @endforeach
         </select>
         <label>Description</label>
         {{$errors->first('desc','<span class="help-inline animated flash">:message</span>')}}
