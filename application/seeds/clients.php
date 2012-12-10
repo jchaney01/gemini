@@ -6,7 +6,7 @@
         public function grow()
         {
             $faker = Faker\Factory::create();
-
+            
             for ($i = 0; $i < 70; ++$i) {
                 $client = new Client;
                     $client->company_name = $faker->name;
@@ -33,4 +33,3 @@
             return 100;
         }
     }
-
