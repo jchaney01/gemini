@@ -162,6 +162,7 @@ There are no change orders for this project.
 @endif
 <form id="createForm" method="post" action="{{URL::to_route('projects')}}">
     <fieldset>
+        <input type="hidden" name="project_id" value="{{$project->id}}"/>
         <label>Recipient</label>
         {{$errors->first('recipent','<span class="help-inline animated flash">:message</span>')}}
         <input id="recipient" type="text" class="span6" placeholder="name@domain.com" value="{{Input::old('recipient')}}"

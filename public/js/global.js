@@ -26,6 +26,9 @@
             .attr('onclick','$(this).find("form").submit();');
     });
     $(init);
+
+
+
     function init () {
         if ( Modernizr.csstransforms ) {
             window.mySwipe = new Swipe(document.getElementById('slider'),{
@@ -46,6 +49,7 @@
         $("[rel=popover]").popover();
         $('textarea').autoResizer();
         $('input#filter').quicksearch('.filterable');
+
     }
     function setActiveSubNav(index){
         $("#centralNav a").removeClass("active");
