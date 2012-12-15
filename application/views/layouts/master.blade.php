@@ -7,11 +7,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{$title}}</title>
+    <title><? if(isset($project)){?>{{$project->name}}<? } else {?>{{$title}}<? } ?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     @include("partials.css")
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="{{URL::to_asset('js/vendor/modernizr-2.6.2.min.js')}}"></script>
 </head>
 <body>
 <!--[if lt IE 8]>

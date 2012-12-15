@@ -10,13 +10,21 @@ class Projects_Controller extends Base_Controller
     }
 
 
-    public function get_index(){
+    public function get_index($id = null){
         $data = array(
             "projects"=> Project::with(array('changeorder', 'timesheet','timesheet.user'))->where('status', '=', 'Active')->order_by('name', 'asc')->get(),
             "clients"=> Client::all(),
             "users"=> User::all(),
             "title"=>"Projects",
         );
+
+
+        if ($id){
+            $data['project'] = Project::with(array('changeorder', 'timesheet','timesheet.user'))->find($id);
+        } else {
+            $data['project'] = $data['projects'][0];
+        }
+
         return View::make('projects',$data);
     }
 
@@ -27,10 +35,6 @@ class Projects_Controller extends Base_Controller
             "title"   => "Pending Projects",
         );
         return View::make('projects', $data);
-    }
-
-    public function get_show(){
-
     }
 
     public function get_new()

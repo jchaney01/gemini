@@ -52,7 +52,7 @@ Route::group(array('before' => 'auth:50'), function()
 {
     Route::get('projects', array('as' => 'projects', 'uses' => 'projects@index')); //LIST
     Route::get('projects/pending', array('as' => 'pending_projects', 'uses' => 'projects@pending')); //LIST All ACTIVE
-    Route::get('projects/(:any)', array('as' => 'project', 'uses' => 'projects@show')); //READ - Also shows change orders and timesheets
+    Route::get('projects/(:any)', array('as' => 'project', 'uses' => 'projects@index')); //READ - Also shows change orders and timesheets
     Route::get('projects/new', array('as' => 'new_project', 'uses' => 'projects@new')); // FORM TO CREATE
     Route::get('projects/(:any)edit', array('as' => 'edit_project', 'uses' => 'projects@edit')); //FORM TO EDIT
     Route::post('projects', 'projects@create'); //CREATE

@@ -1,11 +1,11 @@
 @layout('layouts.master')
 @section('content_slide_1_left')
-<h1>{{$projects[0]->name}}</h1>
+<h1>{{$project->name}}</h1>
 
-<h2>{{$projects[0]->po}}</h2>
-<? if ($projects[0]->issue_tracking_url){?>
+<h2>{{$project->po}}</h2>
+<? if ($project->issue_tracking_url){?>
 <div class="module">
-    <a href="{{$projects[0]->issue_tracking_url}}">
+    <a href="{{$project->issue_tracking_url}}">
         <div>Issue Tracking</div>
     </a>
     <p>This project is currently being tracked.<br>
@@ -13,12 +13,12 @@
     </p>
 </div>
     <? } ?>
-<? if ($projects[0]->repo_url){?>
+<? if ($project->repo_url){?>
 <div class="module">
-    <a rel="popover" data-original-title="URL" data-content="{{$projects[0]->repo_url}}" data-trigger="hover" data-placement="right" href="#">
+    <a rel="popover" data-original-title="URL" data-content="{{$project->repo_url}}" data-trigger="hover" data-placement="right" href="#">
         <div>Code Repository</div>
     </a>
-    <p>{{$projects[0]->repo_name}}
+    <p>{{$project->repo_name}}
     </p>
 </div>
 <? } ?>
@@ -140,13 +140,17 @@
 @endsection
 
 @section('content_slide_2_left')
-    @foreach ($projects[0]->timesheet as $timesheet)
+    @foreach ($project->timesheet as $timesheet)
        {{$timesheet->user->first_name}}<br/>
     @endforeach
 @endsection
 
 @section('content_slide_3_left')
-fhfgh
+@if($project->changeorders)
+change order
+@else
+There are no change orders for this project.
+@endif
 @endsection
 
 @section('content_slide_3_right')
@@ -160,10 +164,13 @@ fhfgh
     <fieldset>
         <label>Recipient</label>
         {{$errors->first('recipent','<span class="help-inline animated flash">:message</span>')}}
-        <input type="text" class="span6" placeholder="name@domain.com" value="{{Input::old('recipient')}}"
+        <input id="recipient" type="text" class="span6" placeholder="name@domain.com" value="{{Input::old('recipient')}}"
                name="recipient">
         <select class="span6" id="autopop">
             <option value="">Autopopulate</option>
+            @foreach($clients as $client)
+                <option value="{{$client->contact_email}}">{{$client->company_name}}</option>
+            @endforeach
         </select>
         <label>Description</label>
         {{$errors->first('desc','<span class="help-inline animated flash">:message</span>')}}
