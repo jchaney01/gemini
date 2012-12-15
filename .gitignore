@@ -36,3 +36,5 @@ intermediate
 publish
 .idea
 gemini.iml
+/gemini.sublime-project
+/gemini.sublime-workspace
