@@ -17,14 +17,11 @@ class Projects_Controller extends Base_Controller
             "users"=> User::all(),
             "title"=>"Projects",
         );
-
-
         if ($id){
             $data['project'] = Project::with(array('changeorder', 'timesheet','timesheet.user'))->find($id);
         } else {
             $data['project'] = $data['projects'][0];
         }
-
         return View::make('projects',$data);
     }
 
@@ -66,6 +63,7 @@ class Projects_Controller extends Base_Controller
             'full_image_url'=>"active_url",
             'large_thumb_url'=>"active_url",
             'small_thumb_url'=>"active_url",
+            'estimate_pad_percentage'=>"numeric"
         ),$messages);
 
         Input::merge(array(

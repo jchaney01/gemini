@@ -78,6 +78,11 @@
                 <option <?php if(Input::old('status')=='invoice'){?>selected="selected"<?}?> value="invoice">Waiting to Invoice</option>
                 <option <?php if(Input::old('status')=='complete'){?>selected="selected"<?}?> value="complete">Complete</option>
             </select>
+            <label>CO Pad Adjustment</label>
+                    {{$errors->first('repo_name','<span class="help-inline animated flash">:message</span>')}}
+            <div class="input-append">
+                <input class="span4" name="estimate_pad_percentage" type="text" placeholder="" value="{{Input::old('estimate_pad_percentage')}}"><span class="add-on"><span style="font-family: sans-serif">&#37;</span></span>
+            </div>
             <label>Repo Name</label>
             {{$errors->first('repo_name','<span class="help-inline animated flash">:message</span>')}}
             <input class="span12" name="repo_name" type="text" placeholder="Type something…" value="{{Input::old('repo_name')}}">

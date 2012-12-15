@@ -29,6 +29,7 @@ class Create_Projects_Table {
 			$table->string('repo_url')->nullable();
 			$table->integer('group')->nullable();
 			$table->integer('by');
+			$table->integer('estimate_pad_percentage')->default(10);
 			$table->timestamps();
 	});
 }

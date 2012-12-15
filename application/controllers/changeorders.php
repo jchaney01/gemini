@@ -31,14 +31,27 @@ class Changeorders_Controller extends Base_Controller
         ));
 
         if ($v->fails()) {
-            return Redirect::to_route('projects')->with_errors($v)->with_input();
+            return Redirect::to(URL::to_route('projects').'#changeorders')->with_errors($v)->with_input();//Hash navigation for the slider
         };
         if($changeorder = Changeorder::create(Input::all())){
             Session::flash('status_msg',"created successfully");
         } else {
             Session::flash('status_msg', 'Error creating change order');
         }
-        return Redirect::to(URL::to_route('projects').'#changeorders'); //Hash navigation for the slider
+        // email change order
+
+        $project = Project::with(array('client'))->find(Input::get('project_id'));
+        $clientRate = $project->client->hour_billable_rate;
+        $padPercentage = $project->estimate_pad_percentage;
+        $totalDollars = $clientRate*Input::get('estimated_hours');
+        $additionalDolars = $totalDollars*($padPercentage/100);
+        $total = $totalDollars+$additionalDolars;
+
+
+
+        // redirect to confirm screen
+
+
     }
 
     public function put_update()
