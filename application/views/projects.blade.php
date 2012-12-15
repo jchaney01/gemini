@@ -81,7 +81,12 @@
             <label>CO Pad Adjustment</label>
                     {{$errors->first('repo_name','<span class="help-inline animated flash">:message</span>')}}
             <div class="input-append">
-                <input class="span4" name="estimate_pad_percentage" type="text" placeholder="" value="{{Input::old('estimate_pad_percentage')}}"><span class="add-on"><span style="font-family: sans-serif">&#37;</span></span>
+                <input class="span4" name="estimate_pad_percentage" type="text" placeholder="Default:10" value="{{Input::old('estimate_pad_percentage')}}"><span class="add-on"><span style="font-family: sans-serif">&#37;</span></span>
+            </div>
+            <label>Bill rate override</label>
+                    {{$errors->first('client_rate_override','<span class="help-inline animated flash">:message</span>')}}
+            <div class="input-append">
+                <input class="span8" name="client_rate_override" type="text" placeholder="Defaults to client rate if not set" value="{{Input::old('client_rate_override')}}"><span class="add-on">$</span>
             </div>
             <label>Repo Name</label>
             {{$errors->first('repo_name','<span class="help-inline animated flash">:message</span>')}}

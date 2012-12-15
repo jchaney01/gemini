@@ -41,13 +41,16 @@ class Changeorders_Controller extends Base_Controller
         // email change order
 
         $project = Project::with(array('client'))->find(Input::get('project_id'));
-        $clientRate = $project->client->hour_billable_rate;
+        if($project->client_rate_override){
+            $clientRate = $project->client_rate_override;
+        } else {
+            $clientRate = $project->client->hour_billable_rate;
+        }
         $padPercentage = $project->estimate_pad_percentage;
-        $totalDollars = $clientRate*Input::get('estimated_hours');
-        $additionalDolars = $totalDollars*($padPercentage/100);
-        $total = $totalDollars+$additionalDolars;
+        $totalHours = round(Input::get('estimated_hours')+(Input::get('estimated_hours')*($padPercentage/100)));
+        $totalDollars = $clientRate*$totalHours;
 
-
+        
 
         // redirect to confirm screen
 

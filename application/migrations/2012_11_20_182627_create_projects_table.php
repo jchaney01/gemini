@@ -30,6 +30,7 @@ class Create_Projects_Table {
 			$table->integer('group')->nullable();
 			$table->integer('by');
 			$table->integer('estimate_pad_percentage')->default(10);
+			$table->integer('client_rate_override')->nullable();
 			$table->timestamps();
 	});
 }

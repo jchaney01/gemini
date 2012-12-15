@@ -63,7 +63,8 @@ class Projects_Controller extends Base_Controller
             'full_image_url'=>"active_url",
             'large_thumb_url'=>"active_url",
             'small_thumb_url'=>"active_url",
-            'estimate_pad_percentage'=>"numeric"
+            'estimate_pad_percentage'=>"numeric|between:0,100",
+            'client_rate_override'=>"numeric"
         ),$messages);
 
         Input::merge(array(
