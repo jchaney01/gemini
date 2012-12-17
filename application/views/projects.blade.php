@@ -170,7 +170,7 @@ There are no change orders for this project.
     <strong>{{Session::get('status_msg')}}</strong>
 </div>
 @endif
-<form id="createForm" method="post" action="{{URL::to_route('projects')}}">
+<form id="createForm" method="post" action="{{URL::to_route('changeorders')}}">
     <fieldset>
         <input type="hidden" name="project_id" value="{{$project->id}}"/>
         <label>Recipient</label>

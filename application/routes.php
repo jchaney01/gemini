@@ -66,7 +66,7 @@ Route::group(array('before' => 'auth:50'), function()
     Route::get('co/new', array('as' => 'new_co', 'uses' => 'co@new')); // FORM TO CREATE
     Route::get('co/confirm', array('as' => 'confirm_co', 'uses' => 'co@confirm')); // Confirms submission
     Route::get('co/(:any)edit', array('as' => 'edit_co', 'uses' => 'co@edit')); //FORM TO EDIT
-    Route::post('co', 'co@create'); //CREATE
+    Route::post('co', 'co@create'); //CREATE NAME IT so you can reference it in the form action!!!!!
     Route::put('co/(:any)', 'co@update'); //UPDATE
     Route::delete('co/(:any)', 'co@destroy'); //DELETE
 });

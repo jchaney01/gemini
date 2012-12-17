@@ -35,25 +35,28 @@ class Changeorders_Controller extends Base_Controller
         };
         if($changeorder = Changeorder::create(Input::all())){
             Session::flash('status_msg',"created successfully");
+
+            $project = Project::with(array('client'))->find(Input::get('project_id'));
+            if($project->client_rate_override){
+                $clientRate = $project->client_rate_override;
+            } else {
+                $clientRate = $project->client->hour_billable_rate;
+            }
+            $padPercentage = $project->estimate_pad_percentage;
+            $totalHours = round(Input::get('estimated_hours')+(Input::get('estimated_hours')*($padPercentage/100)));
+            $totalDollars = $clientRate*$totalHours;
+            //Email it off
+
+
+
         } else {
             Session::flash('status_msg', 'Error creating change order');
         }
         // email change order
 
-        $project = Project::with(array('client'))->find(Input::get('project_id'));
-        if($project->client_rate_override){
-            $clientRate = $project->client_rate_override;
-        } else {
-            $clientRate = $project->client->hour_billable_rate;
-        }
-        $padPercentage = $project->estimate_pad_percentage;
-        $totalHours = round(Input::get('estimated_hours')+(Input::get('estimated_hours')*($padPercentage/100)));
-        $totalDollars = $clientRate*$totalHours;
 
-        
 
         // redirect to confirm screen
-
 
     }
 
