@@ -71,7 +71,7 @@ Route::group(array('before' => 'auth:50'), function()
     Route::delete('co/(:any)', 'co@destroy'); //DELETE
 });
 //The below is not used to "read" a record.  It is the URL a client visits to approve or deny the change order.
-Route::get('co/(:any)/(:any)', array('as' => 'co_approve_deny', 'uses' => 'co@approve_deny')); // use /co/approve/coID
+Route::get('co/(:any)/(:any)', array('as' => 'co_response', 'uses' => 'changeorders@get_process_client_response')); // use /co/approve/coID
 
 //Clients
 Route::group(array('before' => 'auth:50'), function()

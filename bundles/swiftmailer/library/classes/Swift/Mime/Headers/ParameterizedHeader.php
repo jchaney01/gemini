@@ -123,7 +123,7 @@ class Swift_Mime_Headers_ParameterizedHeader
    * Get the value of this header prepared for rendering.
    * @return string
    */
-  public function getFieldBody() //TODO: Check caching here
+  public function getFieldBody()
   {
     $body = parent::getFieldBody();
     foreach ($this->_params as $name => $value)
@@ -188,7 +188,7 @@ class Swift_Mime_Headers_ParameterizedHeader
     //If it's not already a valid parameter value...
     if (!preg_match('/^' . self::TOKEN_REGEX . '$/D', $value))
     {
-      //TODO: text, or something else??
+
       //... and it's not ascii
       if (!preg_match('/^' . $this->getGrammar()->getDefinition('text') . '*$/D', $value))
       {

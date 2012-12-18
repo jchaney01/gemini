@@ -21,7 +21,7 @@ class RedirectTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function tearDown()
 	{
-		// @todo clear httpfoundation request data
+		
 		Config::set('session.driver', '');
 		Router::$routes = array();
 		Router::$names = array();

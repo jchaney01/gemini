@@ -180,7 +180,7 @@
          echo $co->desc.'</p>
                       </div>
                 <div>
-                    <button class="btn btn-inverse"><a style="color: white" href="#"><i class="icon-white icon-refresh"></i> Resend for approval</a></button>
+                    <button class="btn btn-inverse"><a style="color: white" href="#"><i class="icon-white icon-refresh"></i> Resend</a></button>
                 </div>
             </div>';
                 }
@@ -229,6 +229,7 @@
         <button type="submit" class="btn btn-inverse"><i class="icon-white icon-share"></i> Send</button>
     </fieldset>
 </form>
+*Once emailed to a client, a change order cannot be deleted or edited.  Submit a new one if a corrected or amendment becomes necessary.
     @endsection
 
 

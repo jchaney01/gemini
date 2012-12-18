@@ -15,7 +15,7 @@ class InputTest extends PHPUnit_Framework_TestCase {
 	 */
 	public function tearDown()
 	{
-		// @todo clear httpfoundation request data
+
 		Config::set('application.key', '');
 		Session::$instance = null;
 	}
