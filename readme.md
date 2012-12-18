@@ -118,5 +118,9 @@ Edit Users
 Delete users
 Dashboard
 
+Confirm
+=======
+Editing a project and clearing co and bill rate overrides correctly 10's and nulls respectivelly
+
 V3
 Social login

@@ -160,7 +160,7 @@ body {
 }
 /* line 180, ../scss/screen.scss */
 #centralNav .navLine #positionIndicator {
-  width: 100px;
+  width: 85px;
   background-color: #448ccb;
   height: 5px;
   position: relative;
@@ -199,20 +199,45 @@ h2 {
 .module.module:last-child {
   margin-bottom: 20px;
 }
+/* line 215, ../scss/screen.scss */
+.module .COmodule > p {
+  max-height: 400px;
+  overflow: auto;
+  line-height: 21px;
+}
 
-/* line 219, ../scss/screen.scss */
+/* line 222, ../scss/screen.scss */
+.status {
+  font-size: 12px;
+  margin-left: 10px;
+  -webkit-mask-image: none;
+}
+/* line 226, ../scss/screen.scss */
+.status.status-approved {
+  color: #46a546;
+}
+/* line 229, ../scss/screen.scss */
+.status.status-denied {
+  color: #9d261d;
+}
+/* line 232, ../scss/screen.scss */
+.status.status-pending {
+  color: #ffc40d;
+}
+
+/* line 236, ../scss/screen.scss */
 .time {
   color: white;
   font-size: 22px;
   margin-bottom: 5px;
 }
-/* line 223, ../scss/screen.scss */
+/* line 240, ../scss/screen.scss */
 .time span {
   font-size: 12px;
   color: #999999;
 }
 
-/* line 271, ../scss/screen.scss */
+/* line 288, ../scss/screen.scss */
 #tabBar {
   width: 100%;
   height: 50px;
@@ -229,7 +254,7 @@ h2 {
   background-image: -o-linear-gradient(#555555 30%, #333333);
   background-image: linear-gradient(#555555 30%, #333333);
 }
-/* line 281, ../scss/screen.scss */
+/* line 298, ../scss/screen.scss */
 #tabBar ul {
   list-style: none;
   margin: 0px;
@@ -237,28 +262,28 @@ h2 {
   font-size: 0;
   text-align: center;
 }
-/* line 287, ../scss/screen.scss */
+/* line 304, ../scss/screen.scss */
 #tabBar ul li {
   display: inline-block;
   text-align: left;
   border-right: 1px solid #999999;
   padding: 3px;
 }
-/* line 291, ../scss/screen.scss */
+/* line 308, ../scss/screen.scss */
 #tabBar ul li:first-child {
   border-left: 1px solid #999999;
 }
 @media (max-width: 767px) {
-  /* line 295, ../scss/screen.scss */
+  /* line 312, ../scss/screen.scss */
   #tabBar ul li:first-child {
     border-left: none;
   }
-  /* line 298, ../scss/screen.scss */
+  /* line 315, ../scss/screen.scss */
   #tabBar ul li:last-child {
     border-right: none;
   }
 }
-/* line 302, ../scss/screen.scss */
+/* line 319, ../scss/screen.scss */
 #tabBar ul li.active, #tabBar ul li:hover {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF333333', endColorstr='#FF555555');
@@ -268,7 +293,7 @@ h2 {
   background-image: -o-linear-gradient(#333333 30%, #555555);
   background-image: linear-gradient(#333333 30%, #555555);
 }
-/* line 307, ../scss/screen.scss */
+/* line 324, ../scss/screen.scss */
 #tabBar ul li a {
   color: #eeeeee;
   font-weight: lighter;
@@ -280,37 +305,37 @@ h2 {
   font-size: 11px;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
 }
-/* line 309, ../scss/screen.scss */
+/* line 326, ../scss/screen.scss */
 #tabBar ul li a:hover {
   color: #999999;
 }
-/* line 311, ../scss/screen.scss */
+/* line 328, ../scss/screen.scss */
 #tabBar ul li a:hover div#projectTabBarIcon {
   background-position: -203px -43px;
 }
-/* line 314, ../scss/screen.scss */
+/* line 331, ../scss/screen.scss */
 #tabBar ul li a:hover div#invoiceTabBarIcon {
   background-position: -381px -43px;
 }
-/* line 317, ../scss/screen.scss */
+/* line 334, ../scss/screen.scss */
 #tabBar ul li a:hover div#clientsTabBarIcon {
   background-position: -247px -43px;
 }
-/* line 320, ../scss/screen.scss */
+/* line 337, ../scss/screen.scss */
 #tabBar ul li a:hover div#timesheetsTabBarIcon {
   background-position: -293px -43px;
 }
-/* line 323, ../scss/screen.scss */
+/* line 340, ../scss/screen.scss */
 #tabBar ul li a:hover div#usersTabBarIcon {
   background-position: -337px -43px;
 }
 @media (max-width: 767px) {
-  /* line 307, ../scss/screen.scss */
+  /* line 324, ../scss/screen.scss */
   #tabBar ul li a {
     padding: 5px 10px;
   }
 }
-/* line 342, ../scss/screen.scss */
+/* line 359, ../scss/screen.scss */
 #tabBar ul li a div {
   background-image: url("../img/geminiIcons.png");
   background-size: 600px 150px;
@@ -319,54 +344,54 @@ h2 {
   display: block;
   margin: -4px auto 0 auto;
 }
-/* line 349, ../scss/screen.scss */
+/* line 366, ../scss/screen.scss */
 #tabBar ul li a div#projectTabBarIcon {
   background-position: -203px -76px;
 }
-/* line 351, ../scss/screen.scss */
+/* line 368, ../scss/screen.scss */
 #tabBar ul li a div#projectTabBarIcon.active {
   background-position: -203px -43px;
 }
-/* line 355, ../scss/screen.scss */
+/* line 372, ../scss/screen.scss */
 #tabBar ul li a div#invoiceTabBarIcon {
   background-position: -381px -76px;
 }
-/* line 357, ../scss/screen.scss */
+/* line 374, ../scss/screen.scss */
 #tabBar ul li a div#invoiceTabBarIcon.active {
   background-position: -381px -43px;
 }
-/* line 361, ../scss/screen.scss */
+/* line 378, ../scss/screen.scss */
 #tabBar ul li a div#usersTabBarIcon {
   background-position: -337px -76px;
 }
-/* line 363, ../scss/screen.scss */
+/* line 380, ../scss/screen.scss */
 #tabBar ul li a div#usersTabBarIcon.active {
   background-position: -337px -43px;
 }
-/* line 367, ../scss/screen.scss */
+/* line 384, ../scss/screen.scss */
 #tabBar ul li a div#timesheetsTabBarIcon {
   background-position: -293px -76px;
 }
-/* line 369, ../scss/screen.scss */
+/* line 386, ../scss/screen.scss */
 #tabBar ul li a div#timesheetsTabBarIcon.active {
   background-position: -293px -43px;
 }
-/* line 373, ../scss/screen.scss */
+/* line 390, ../scss/screen.scss */
 #tabBar ul li a div#clientsTabBarIcon {
   background-position: -247px -76px;
 }
-/* line 375, ../scss/screen.scss */
+/* line 392, ../scss/screen.scss */
 #tabBar ul li a div#clientsTabBarIcon.active {
   background-position: -247px -43px;
 }
 
-/* line 391, ../scss/screen.scss */
+/* line 408, ../scss/screen.scss */
 #createForm {
   padding: 30px;
   border-radius: 10px;
   background-color: rgba(50, 50, 50, 0.5);
 }
-/* line 395, ../scss/screen.scss */
+/* line 412, ../scss/screen.scss */
 #createForm button[type=submit] {
   margin-top: 20px;
 }

@@ -36,5 +36,6 @@
 return array(
 	'docs' => array('handles' => 'docs'),
 	'plant' => array('handles' => 'plant'),
-    'oneauth' => array('auto' => TRUE)
+    'oneauth' => array('auto' => TRUE),
+    'swiftmailer' => array('auto'=>true)
 );

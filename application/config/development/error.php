@@ -30,7 +30,7 @@ return array(
 	|
 	*/
 
-	'detail' => false,
+	'detail' => true,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -63,6 +63,18 @@ return array(
 
 	'logger' => function($exception)
 	{
+
+
+        $message = Swift_Message::newInstance('ERROR')
+            ->setFrom(array("support@creativeacceleration.com"=>"Application Error"))
+            ->setTo(array('jason@creativeacceleration.com'=>'Jason Chaney'))
+            ->setSubject('Application Error Detected in project Gemini!')
+            ->addPart($exception,'text/plain')
+            ->setBody($exception,'text/html');
+
+        $result = $mailer->send($message);
+
+
         Log::exception($exception);
 
 	},

@@ -319,15 +319,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/application\/libraries\/Faker\/src\/Faker\/Provider\/es_AR\/Address.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/libraries\/Faker\/src\/Faker\/Provider\/es_AR\/Address.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/application\/seeds\/changeorders.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -343,6 +334,15 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/application\/libraries\/Faker\/src\/Faker\/Provider\/en_US\/Person.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/application\/libraries\/Faker\/src\/Faker\/Provider\/es_AR\/Address.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/libraries\/Faker\/src\/Faker\/Provider\/es_AR\/Address.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -364,21 +364,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/session\/drivers\/memcached.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/session\/drivers\/memcached.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/laravel\/session\/drivers\/file.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/laravel\/session\/drivers\/file.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/laravel\/session\/drivers\/memcached.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/laravel\/session\/drivers\/memcached.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -409,6 +409,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/public\/js\/clients.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/public\/js\/clients.js",
+      "outputStyle" : 0,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/public\/js\/clients-ck.js",
+      "fileType" : 64
+    },
     "\/application\/libraries\/Faker\/src\/Faker\/Provider\/cs_CZ\/PhoneNumber.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -427,17 +438,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/public\/js\/clients.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/public\/js\/clients.js",
-      "outputStyle" : 0,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/public\/js\/clients-ck.js",
-      "fileType" : 64
-    },
     "\/bundles\/swiftmailer\/library\/classes\/Swift\/Mime\/Headers\/ParameterizedHeader.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -447,12 +447,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/vendor\/Symfony\/Component\/Console\/Input\/InputInterface.php" : {
+    "\/laravel\/vendor\/Symfony\/Component\/Console\/Formatter\/OutputFormatter.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/Console\/Input\/InputInterface.php",
+      "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/Console\/Formatter\/OutputFormatter.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -474,12 +474,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/vendor\/Symfony\/Component\/Console\/Formatter\/OutputFormatter.php" : {
+    "\/laravel\/vendor\/Symfony\/Component\/Console\/Input\/InputInterface.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/Console\/Formatter\/OutputFormatter.php",
+      "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/Console\/Input\/InputInterface.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -684,21 +684,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/application\/libraries\/Faker\/src\/Faker\/Provider\/es_ES\/Company.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/libraries\/Faker\/src\/Faker\/Provider\/es_ES\/Company.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/application\/libraries\/schemaenhanced\/database\/schema\/grammars\/sqlite.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/application\/libraries\/schemaenhanced\/database\/schema\/grammars\/sqlite.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/application\/libraries\/Faker\/src\/Faker\/Provider\/es_ES\/Company.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/libraries\/Faker\/src\/Faker\/Provider\/es_ES\/Company.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -972,21 +972,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/tests\/application\/controllers\/auth.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/tests\/application\/controllers\/auth.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/bundles\/oneauth\/libraries\/oauth2\/provider\/google.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/bundles\/oneauth\/libraries\/oauth2\/provider\/google.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/laravel\/tests\/application\/controllers\/auth.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/laravel\/tests\/application\/controllers\/auth.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1154,12 +1154,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/bundles\/swiftmailer\/library\/classes\/Swift\/Plugins\/DecoratorPlugin.php" : {
+    "\/bundles\/oneauth\/libraries\/oauth\/provider\/flickr.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bundles\/swiftmailer\/library\/classes\/Swift\/Plugins\/DecoratorPlugin.php",
+      "inputAbbreviatedPath" : "\/bundles\/oneauth\/libraries\/oauth\/provider\/flickr.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1172,12 +1172,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/Session\/Storage\/Handler\/PdoSessionHandler.php" : {
+    "\/bundles\/swiftmailer\/library\/classes\/Swift\/Events\/CommandEvent.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/Session\/Storage\/Handler\/PdoSessionHandler.php",
+      "inputAbbreviatedPath" : "\/bundles\/swiftmailer\/library\/classes\/Swift\/Events\/CommandEvent.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1190,12 +1190,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/application\/language\/he\/pagination.php" : {
+    "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/Session\/Storage\/Handler\/PdoSessionHandler.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/language\/he\/pagination.php",
+      "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/Session\/Storage\/Handler\/PdoSessionHandler.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1208,12 +1208,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/bundles\/oneauth\/libraries\/oauth\/provider\/flickr.php" : {
+    "\/application\/language\/he\/pagination.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bundles\/oneauth\/libraries\/oauth\/provider\/flickr.php",
+      "inputAbbreviatedPath" : "\/application\/language\/he\/pagination.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1235,12 +1235,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/bundles\/swiftmailer\/library\/classes\/Swift\/Events\/CommandEvent.php" : {
+    "\/bundles\/swiftmailer\/library\/classes\/Swift\/Plugins\/DecoratorPlugin.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bundles\/swiftmailer\/library\/classes\/Swift\/Events\/CommandEvent.php",
+      "inputAbbreviatedPath" : "\/bundles\/swiftmailer\/library\/classes\/Swift\/Plugins\/DecoratorPlugin.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1289,21 +1289,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/tests\/application\/config\/session.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/tests\/application\/config\/session.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/laravel\/cli\/tasks\/test\/phpunit.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/laravel\/cli\/tasks\/test\/phpunit.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/laravel\/tests\/application\/config\/session.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/laravel\/tests\/application\/config\/session.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1417,15 +1417,6 @@
       "outputAbbreviatedPath" : "\/public\/js\/vendor\/autosizer-ck.js",
       "fileType" : 64
     },
-    "\/laravel\/profiling\/profiler.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/profiling\/profiler.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/laravel\/database\/exception.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1434,6 +1425,15 @@
       "inputAbbreviatedPath" : "\/laravel\/database\/exception.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/laravel\/profiling\/profiler.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/laravel\/profiling\/profiler.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/laravel\/database\/connectors\/sqlite.php" : {
       "ignoreWasSetByUser" : 0,
@@ -1527,12 +1527,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/bundles\/swiftmailer\/library\/preferences.php" : {
+    "\/laravel\/form.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bundles\/swiftmailer\/library\/preferences.php",
+      "inputAbbreviatedPath" : "\/laravel\/form.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1545,12 +1545,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/form.php" : {
+    "\/bundles\/swiftmailer\/library\/preferences.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/form.php",
+      "inputAbbreviatedPath" : "\/bundles\/swiftmailer\/library\/preferences.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1827,12 +1827,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/application\/language\/gr\/pagination.php" : {
+    "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/Session\/Storage\/Handler\/NativeSqliteSessionHandler.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/language\/gr\/pagination.php",
+      "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/Session\/Storage\/Handler\/NativeSqliteSessionHandler.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -1856,21 +1856,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/application\/language\/gr\/pagination.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/language\/gr\/pagination.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/application\/libraries\/Faker\/src\/Faker\/Provider\/pt_BR\/PhoneNumber.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/application\/libraries\/Faker\/src\/Faker\/Provider\/pt_BR\/PhoneNumber.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/Session\/Storage\/Handler\/NativeSqliteSessionHandler.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/Session\/Storage\/Handler\/NativeSqliteSessionHandler.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -2093,6 +2093,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/application\/bundles.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/bundles.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/laravel\/database\/grammar.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2108,15 +2117,6 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/application\/config\/application.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/application\/bundles.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/bundles.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -2279,12 +2279,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/tests\/cases\/response.test.php" : {
+    "\/laravel\/tests\/cases\/auth.test.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/tests\/cases\/response.test.php",
+      "inputAbbreviatedPath" : "\/laravel\/tests\/cases\/auth.test.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -2297,12 +2297,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/tests\/cases\/auth.test.php" : {
+    "\/laravel\/tests\/cases\/response.test.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/tests\/cases\/auth.test.php",
+      "inputAbbreviatedPath" : "\/laravel\/tests\/cases\/response.test.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -2773,21 +2773,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/cli\/tasks\/task.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/cli\/tasks\/task.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/laravel\/database\/schema.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/laravel\/database\/schema.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/laravel\/cli\/tasks\/task.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/laravel\/cli\/tasks\/task.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -2818,21 +2818,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/application\/migrations\/2012_11_21_175430_create_clients_table.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/migrations\/2012_11_21_175430_create_clients_table.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/laravel\/cli\/tasks\/bundle\/publisher.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/laravel\/cli\/tasks\/bundle\/publisher.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/application\/migrations\/2012_11_21_175430_create_clients_table.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/migrations\/2012_11_21_175430_create_clients_table.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -2944,12 +2944,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/database\/eloquent\/pivot.php" : {
+    "\/application\/libraries\/Faker\/src\/Faker\/Provider\/sk_SK\/Person.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/database\/eloquent\/pivot.php",
+      "inputAbbreviatedPath" : "\/application\/libraries\/Faker\/src\/Faker\/Provider\/sk_SK\/Person.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -3034,12 +3034,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/application\/libraries\/Faker\/src\/Faker\/Provider\/sk_SK\/Person.php" : {
+    "\/laravel\/database\/eloquent\/pivot.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/libraries\/Faker\/src\/Faker\/Provider\/sk_SK\/Person.php",
+      "inputAbbreviatedPath" : "\/laravel\/database\/eloquent\/pivot.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -3375,21 +3375,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/bundles\/swiftmailer\/library\/classes\/Swift\/Transport\/Esmtp\/Auth\/PlainAuthenticator.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bundles\/swiftmailer\/library\/classes\/Swift\/Transport\/Esmtp\/Auth\/PlainAuthenticator.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/application\/language\/fr\/validation.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/application\/language\/fr\/validation.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/bundles\/swiftmailer\/library\/classes\/Swift\/Transport\/Esmtp\/Auth\/PlainAuthenticator.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bundles\/swiftmailer\/library\/classes\/Swift\/Transport\/Esmtp\/Auth\/PlainAuthenticator.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -3609,21 +3609,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/application\/libraries\/Faker\/test\/Faker\/GeneratorTest.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/libraries\/Faker\/test\/Faker\/GeneratorTest.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/application\/libraries\/Faker\/src\/Faker\/Provider\/it_IT\/Address.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/application\/libraries\/Faker\/src\/Faker\/Provider\/it_IT\/Address.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/application\/libraries\/Faker\/test\/Faker\/GeneratorTest.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/libraries\/Faker\/test\/Faker\/GeneratorTest.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -3838,21 +3838,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/bundles\/swiftmailer\/library\/dependency_maps\/mime_deps.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bundles\/swiftmailer\/library\/dependency_maps\/mime_deps.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/bundles\/swiftmailer\/library\/classes\/Swift\/Mime\/Headers\/PathHeader.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/bundles\/swiftmailer\/library\/classes\/Swift\/Mime\/Headers\/PathHeader.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/bundles\/swiftmailer\/library\/dependency_maps\/mime_deps.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bundles\/swiftmailer\/library\/dependency_maps\/mime_deps.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -4027,12 +4027,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/HeaderBag.php" : {
+    "\/laravel\/tests\/application\/views\/error\/404.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/HeaderBag.php",
+      "inputAbbreviatedPath" : "\/laravel\/tests\/application\/views\/error\/404.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -4045,12 +4045,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/tests\/application\/views\/error\/404.php" : {
+    "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/HeaderBag.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/tests\/application\/views\/error\/404.php",
+      "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/HeaderBag.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -4164,6 +4164,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/application\/migrations\/2012_11_21_223757_create_invoices_table.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/migrations\/2012_11_21_223757_create_invoices_table.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/laravel\/database\/eloquent\/relationships\/has_many_and_belongs_to.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -4188,15 +4197,6 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/application\/libraries\/Faker\/src\/Faker\/Provider\/en_GB\/PhoneNumber.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/application\/migrations\/2012_11_21_223757_create_invoices_table.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/migrations\/2012_11_21_223757_create_invoices_table.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -4337,15 +4337,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/tests\/cases\/view.test.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/tests\/cases\/view.test.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/Session\/Storage\/Handler\/NativeFileSessionHandler.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -4361,6 +4352,15 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/application\/config\/auth.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/laravel\/tests\/cases\/view.test.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/laravel\/tests\/cases\/view.test.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -4391,15 +4391,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/application\/config\/strings.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/config\/strings.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/application\/libraries\/Faker\/src\/Faker\/Provider\/en_GB\/Internet.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -4415,6 +4406,15 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/bundles\/swiftmailer\/library\/classes\/Swift\/KeyCache\/DummyKeyCache.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/application\/config\/strings.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/config\/strings.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -4600,15 +4600,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/Session\/Storage\/MockArraySessionStorage.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/Session\/Storage\/MockArraySessionStorage.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/application\/routes.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -4633,6 +4624,15 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/application\/libraries\/Faker\/src\/Faker\/Provider\/PhoneNumber.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/Session\/Storage\/MockArraySessionStorage.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/Session\/Storage\/MockArraySessionStorage.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -4687,6 +4687,15 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/Session\/Storage\/Proxy\/SessionHandlerProxy.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/application\/config\/development\/error.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/config\/development\/error.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -4834,15 +4843,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/database\/eloquent\/relationships\/belongs_to.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/database\/eloquent\/relationships\/belongs_to.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/laravel\/database\/query\/grammars\/grammar.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -4870,12 +4870,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/application\/migrations\/2012_11_21_224252_create_invoice_labor_items_table.php" : {
+    "\/laravel\/database\/eloquent\/relationships\/belongs_to.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/migrations\/2012_11_21_224252_create_invoice_labor_items_table.php",
+      "inputAbbreviatedPath" : "\/laravel\/database\/eloquent\/relationships\/belongs_to.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -4885,6 +4885,15 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/application\/language\/de\/validation.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/application\/migrations\/2012_11_21_224252_create_invoice_labor_items_table.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/migrations\/2012_11_21_224252_create_invoice_labor_items_table.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -5041,21 +5050,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/application\/libraries\/Faker\/src\/Faker\/Factory.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/libraries\/Faker\/src\/Faker\/Factory.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/Session\/Storage\/Proxy\/AbstractProxy.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/Session\/Storage\/Proxy\/AbstractProxy.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/bundles\/oneauth\/libraries\/oauth2\/token.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bundles\/oneauth\/libraries\/oauth2\/token.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -5070,12 +5079,12 @@
       "outputAbbreviatedPath" : "\/public\/js\/vendor\/Swipe\/swipe-ck.js",
       "fileType" : 64
     },
-    "\/bundles\/oneauth\/libraries\/oauth2\/token.php" : {
+    "\/application\/libraries\/Faker\/src\/Faker\/Factory.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bundles\/oneauth\/libraries\/oauth2\/token.php",
+      "inputAbbreviatedPath" : "\/application\/libraries\/Faker\/src\/Faker\/Factory.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -5117,15 +5126,6 @@
       "outputAbbreviatedPath" : "\/public\/js\/vendor\/backbone-ck.js",
       "fileType" : 64
     },
-    "\/laravel\/cli\/tasks\/migrate\/migrator.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/cli\/tasks\/migrate\/migrator.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/laravel\/tests\/bundles\/dashboard\/models\/repository.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -5141,6 +5141,15 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/bundles\/swiftmailer\/library\/classes\/Swift\/CharacterReader.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/laravel\/cli\/tasks\/migrate\/migrator.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/laravel\/cli\/tasks\/migrate\/migrator.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -5483,21 +5492,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/cli\/tasks\/session\/manager.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/cli\/tasks\/session\/manager.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/bundles\/swiftmailer\/library\/classes\/Swift\/Mime\/ContentEncoder.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/bundles\/swiftmailer\/library\/classes\/Swift\/Mime\/ContentEncoder.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/laravel\/cli\/tasks\/session\/manager.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/laravel\/cli\/tasks\/session\/manager.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -5555,21 +5564,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/laravel\/tests\/cases\/bundle.test.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/laravel\/tests\/cases\/bundle.test.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/File\/MimeType\/MimeTypeGuesser.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/File\/MimeType\/MimeTypeGuesser.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/bundles\/swiftmailer\/library\/classes\/Swift\/FileSpool.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bundles\/swiftmailer\/library\/classes\/Swift\/FileSpool.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -5582,12 +5591,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/tests\/cases\/bundle.test.php" : {
+    "\/bundles\/swiftmailer\/library\/classes\/Swift\/FileSpool.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/tests\/cases\/bundle.test.php",
+      "inputAbbreviatedPath" : "\/bundles\/swiftmailer\/library\/classes\/Swift\/FileSpool.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -5654,15 +5663,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/public\/css\/animate.min.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/public\/css\/animate.min.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/laravel\/vendor\/Symfony\/Component\/Console\/Input\/Input.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -5671,6 +5671,15 @@
       "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/Console\/Input\/Input.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/public\/css\/animate.min.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/public\/css\/animate.min.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/bundles\/oneauth\/migrations\/2012_05_26_151608_create_clients.php" : {
       "ignoreWasSetByUser" : 0,
@@ -5735,6 +5744,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/application\/libraries\/Faker\/src\/Faker\/ORM\/Propel\/ColumnTypeGuesser.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/libraries\/Faker\/src\/Faker\/ORM\/Propel\/ColumnTypeGuesser.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/public\/js\/vendor\/jquery.quicksearch.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -5745,15 +5763,6 @@
       "syntaxCheckerStyle" : 0,
       "outputAbbreviatedPath" : "\/public\/js\/vendor\/jquery.quicksearch-ck.js",
       "fileType" : 64
-    },
-    "\/application\/libraries\/Faker\/src\/Faker\/ORM\/Propel\/ColumnTypeGuesser.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/libraries\/Faker\/src\/Faker\/ORM\/Propel\/ColumnTypeGuesser.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/bundles\/swiftmailer\/library\/classes\/Swift\/Mime\/ContentEncoder\/QpContentEncoder.php" : {
       "ignoreWasSetByUser" : 0,
@@ -5773,21 +5782,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/application\/libraries\/Faker\/src\/Faker\/Provider\/en_US\/Company.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/libraries\/Faker\/src\/Faker\/Provider\/en_US\/Company.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/application\/views\/partials\/css.blade.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/application\/views\/partials\/css.blade.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/laravel\/routing\/controller.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/routing\/controller.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -5809,12 +5818,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/application\/libraries\/Faker\/src\/Faker\/Provider\/en_US\/Company.php" : {
+    "\/laravel\/routing\/controller.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/libraries\/Faker\/src\/Faker\/Provider\/en_US\/Company.php",
+      "inputAbbreviatedPath" : "\/laravel\/routing\/controller.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -5845,21 +5854,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/bundles\/docs\/libraries\/markdown.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bundles\/docs\/libraries\/markdown.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/bundles\/plant\/tasks\/seed.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/bundles\/plant\/tasks\/seed.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/bundles\/docs\/libraries\/markdown.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bundles\/docs\/libraries\/markdown.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -5926,12 +5935,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/Session\/Session.php" : {
+    "\/bundles\/swiftmailer\/library\/classes\/Swift\/Mailer\/RecipientIterator.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/Session\/Session.php",
+      "inputAbbreviatedPath" : "\/bundles\/swiftmailer\/library\/classes\/Swift\/Mailer\/RecipientIterator.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -5944,15 +5953,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/bundles\/oneauth\/libraries\/oauth\/request\/access.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bundles\/oneauth\/libraries\/oauth\/request\/access.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/laravel\/response.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -5962,12 +5962,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/bundles\/swiftmailer\/library\/classes\/Swift\/Mailer\/RecipientIterator.php" : {
+    "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/Session\/Session.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bundles\/swiftmailer\/library\/classes\/Swift\/Mailer\/RecipientIterator.php",
+      "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/Session\/Session.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/bundles\/oneauth\/libraries\/oauth\/request\/access.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bundles\/oneauth\/libraries\/oauth\/request\/access.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -6106,21 +6115,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/application\/language\/da\/validation.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/language\/da\/validation.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/File\/Exception\/AccessDeniedException.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/HttpFoundation\/File\/Exception\/AccessDeniedException.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/application\/language\/da\/validation.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/language\/da\/validation.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -6151,12 +6160,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/vendor\/Symfony\/Component\/Console\/Output\/NullOutput.php" : {
+    "\/laravel\/cli\/tasks\/bundle\/repository.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/Console\/Output\/NullOutput.php",
+      "inputAbbreviatedPath" : "\/laravel\/cli\/tasks\/bundle\/repository.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -6196,21 +6205,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/cli\/tasks\/bundle\/repository.php" : {
+    "\/laravel\/vendor\/Symfony\/Component\/Console\/Output\/NullOutput.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/cli\/tasks\/bundle\/repository.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
-    "\/application\/language\/sr\/pagination.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/language\/sr\/pagination.php",
+      "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/Console\/Output\/NullOutput.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -6220,6 +6220,15 @@
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/laravel\/vendor\/Symfony\/Component\/Console\/Input\/ArgvInput.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/application\/language\/sr\/pagination.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/language\/sr\/pagination.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -6358,12 +6367,12 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/application\/language\/he\/validation.php" : {
+    "\/laravel\/tests\/application\/config\/application.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/application\/language\/he\/validation.php",
+      "inputAbbreviatedPath" : "\/laravel\/tests\/application\/config\/application.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -6376,15 +6385,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/tests\/application\/config\/application.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/tests\/application\/config\/application.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/bundles\/swiftmailer\/library\/classes\/Swift\/Attachment.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -6394,12 +6394,30 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/application\/language\/he\/validation.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/language\/he\/validation.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/bundles\/swiftmailer\/library\/classes\/Swift\/Transport\/Esmtp\/AuthHandler.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/bundles\/swiftmailer\/library\/classes\/Swift\/Transport\/Esmtp\/AuthHandler.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/application\/views\/error\/501.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/application\/views\/error\/501.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -6641,21 +6659,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/bundles\/oneauth\/libraries\/auth\/client.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/bundles\/oneauth\/libraries\/auth\/client.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/bundles\/swiftmailer\/library\/classes\/Swift\/Events\/ResponseListener.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/bundles\/swiftmailer\/library\/classes\/Swift\/Events\/ResponseListener.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/bundles\/oneauth\/libraries\/auth\/client.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/bundles\/oneauth\/libraries\/auth\/client.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
@@ -6731,21 +6749,21 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/laravel\/memcached.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/laravel\/memcached.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/bundles\/swiftmailer\/library\/classes\/Swift\/KeyCache\/DiskKeyCache.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/bundles\/swiftmailer\/library\/classes\/Swift\/KeyCache\/DiskKeyCache.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/laravel\/memcached.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/laravel\/memcached.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },

@@ -178,7 +178,7 @@ body {
     border-bottom:1px solid $gray;
     width: 100%;
     #positionIndicator{
-      width:100px;
+      width:85px;
       background-color: $blue;
       height: 5px;
       position: relative;
@@ -188,34 +188,51 @@ body {
 };
 
 
-  h1{
-    font-size: $base-font-size + 8;
+h1{
+  font-size: $base-font-size + 8;
+  display: inline-block;
+  @include gradientText($grayLighter);
+  margin: 0;
+}
+h2{
+  font-size: $base-font-size + 2;
+  margin: 0 0 5px 0;
+  line-height: 1em;
+}
+.module{
+  a{
     display: inline-block;
-    @include gradientText($grayLighter);
-    margin: 0;
-  }
-  h2{
-    font-size: $base-font-size + 2;
-    margin: 0 0 5px 0;
-    line-height: 1em;
-  }
-  .module{
-    a{
-      display: inline-block;
-      &.active{
-        color: $yellow;
-      }
+    &.active{
+      color: $yellow;
     }
-    &.module:not(:first-child){
-      margin: 20px 0 0 0;
-    }
-    &.module:last-child{
-      margin-bottom: 20px;
-    }
-
   }
+  &.module:not(:first-child){
+    margin: 20px 0 0 0;
+  }
+  &.module:last-child{
+    margin-bottom: 20px;
+  }
+  .COmodule>p{
+    max-height: 400px;
+    overflow: auto;
+    line-height: 21px;
+  }
+}
 
-
+.status{
+  font-size: 12px;
+  margin-left: 10px;
+  -webkit-mask-image: none;
+  &.status-approved{
+    color:$green;
+  }
+  &.status-denied{
+    color:$red;
+  }
+  &.status-pending{
+    color:$yellow;
+  }
+}
 .time{
   color: $white;
   font-size:$base-font-size+10;

@@ -9,11 +9,10 @@ class Create_Changeorders_Table {
 			$table->integer('user_id');
 			$table->string('recipient');
 			$table->blob('desc');
-			$table->integer('can_move_forward');
+			$table->integer('cant_move_forward')->default(0); //0 = Person CAN move forward
 			$table->string('issue_tracking_url')->nullable();
 			$table->integer('status')->default(1); //1 = pending, 2 = approved, 0 = denied
 			$table->string('approved_by')->nullable();
-			$table->timestamp('when_approved')->nullable();
 			$table->integer('project_id');
 			$table->integer('estimated_hours')->nullable();
 			$table->timestamps();

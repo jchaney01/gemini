@@ -62,11 +62,11 @@ Route::group(array('before' => 'auth:50'), function()
 //Change Orders
 Route::group(array('before' => 'auth:50'), function()
 {
-    Route::get('co/(:any)', array('as' => 'co', 'uses' => 'co@show')); // READ
-    Route::get('co/new', array('as' => 'new_co', 'uses' => 'co@new')); // FORM TO CREATE
-    Route::get('co/confirm', array('as' => 'confirm_co', 'uses' => 'co@confirm')); // Confirms submission
-    Route::get('co/(:any)edit', array('as' => 'edit_co', 'uses' => 'co@edit')); //FORM TO EDIT
-    Route::post('co', array("as"=>"create_co","uses"=>'co@create'));
+    Route::get('co/(:any)', array('as' => 'co', 'uses' => 'changeorders@show')); // READ
+    Route::get('co/new', array('as' => 'new_co', 'uses' => 'changeorders@new')); // FORM TO CREATE
+    Route::get('co/confirm', array('as' => 'confirm_co', 'uses' => 'changeorders@confirm')); // Confirms submission
+    Route::get('co/(:any)edit', array('as' => 'edit_co', 'uses' => 'changeorders@edit')); //FORM TO EDIT
+    Route::post('co', array("as"=>"create_co","uses"=>'changeorders@create'));
     Route::put('co/(:any)', 'co@update'); //UPDATE
     Route::delete('co/(:any)', 'co@destroy'); //DELETE
 });

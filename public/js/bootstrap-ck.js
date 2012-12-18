@@ -714,17 +714,20 @@ $.fn.autoResizer.Constructor = AutoResizer;
         switch(index){
             case 0:
                 positionIndicator.animate({
-                    left:'0%'
+                    left:'0%',
+                    width:"85px"
                 },250);
                 break;
             case 1:
                 positionIndicator.animate({
-                    left:'34%'
+                    left:'34%',
+                    width:"100px"
                 },250);
                 break;
             case 2:
                 positionIndicator.animate({
-                    left:'68%'
+                    left:'68%',
+                    width:"130px"
                 },250);
                 break;
         }

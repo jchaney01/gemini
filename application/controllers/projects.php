@@ -22,6 +22,7 @@ class Projects_Controller extends Base_Controller
         } else {
             $data['project'] = $data['projects'][0];
         }
+
         return View::make('projects',$data);
     }
 
@@ -67,6 +68,18 @@ class Projects_Controller extends Base_Controller
             'client_rate_override'=>"numeric"
         ),$messages);
 
+        if(Input::get('estimate_pad_percentage') == ""){
+            Input::merge(array(
+                "estimate_pad_percentage"=>10
+            ));
+        }
+
+        if(Input::get('client_rate_override') == 0){
+            Input::merge(array(
+                "client_rate_override"=>null
+            ));
+        }
+
         Input::merge(array(
             "by"=>Auth::user()->id
         ));
@@ -79,7 +92,7 @@ class Projects_Controller extends Base_Controller
         } else {
             Session::flash('status_msg', 'Error creating project');
         }
-        return Redirect::to_route('projects');
+        return Redirect::to(URL::to_route('project')."/".$project->id);
     }
 
     public function put_update()

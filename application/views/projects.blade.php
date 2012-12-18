@@ -156,11 +156,37 @@
 @endsection
 
 @section('content_slide_3_left')
-@if($project->changeorders)
-change order
-@else
-There are no change orders for this project.
-@endif
+    <?php if($project->changeorder){
+            foreach($project->changeorder as $co){
+                $formattedTimestamp = date("m/d/y g:i A", strtotime($co->updated_at));
+                switch($co->status){
+                    case 0:
+                        $status = "denied";
+                        break;
+                    case 1:
+                        $status = "pending";
+                        break;
+                    case 2:
+                        $status = "approved";
+                        break;
+                };
+                echo '<div class="module">
+                        <h1>'.$co->estimated_hours.' hours<span class="status status-'.$status.'">'.ucfirst($status).'</span></h1>
+                      <div class="COmodule">
+                        <p>';
+                            if ($status != "pending"){
+                                echo ucfirst($status).': <a href="mailto:'.$co->approved_by.'">'.$co->approved_by.'</a> on '.$formattedTimestamp.'<br>';
+                            };
+         echo $co->desc.'</p>
+                      </div>
+                <div>
+                    <button class="btn btn-inverse"><a style="color: white" href="#"><i class="icon-white icon-refresh"></i> Resend for approval</a></button>
+                </div>
+            </div>';
+                }
+                } else {
+                echo 'There are no change orders for this project.';
+            } ?>
 @endsection
 
 @section('content_slide_3_right')
@@ -174,7 +200,7 @@ There are no change orders for this project.
     <fieldset>
         <input type="hidden" name="project_id" value="{{$project->id}}"/>
         <label>Recipient</label>
-        {{$errors->first('recipent','<span class="help-inline animated flash">:message</span>')}}
+        {{$errors->first('recipient','<span class="help-inline animated flash">:message</span>')}}
         <input id="recipient" type="text" class="span6" placeholder="name@domain.com" value="{{Input::old('recipient')}}"
                name="recipient">
         <select class="span6" id="autopop">
@@ -185,7 +211,7 @@ There are no change orders for this project.
         </select>
         <label>Description</label>
         {{$errors->first('desc','<span class="help-inline animated flash">:message</span>')}}
-        <textarea name="desc" class="span12"></textarea>
+        <textarea name="desc" class="span12">{{Input::old('desc')}}</textarea>
         <label>Estimated Hours</label>
         {{$errors->first('estimated_hours','<span class="help-inline animated flash">:message</span>')}}
         <div class="controls controls-row">
@@ -198,7 +224,7 @@ There are no change orders for this project.
                value="{{Input::old('issue_tracking_url')}}">
 
         <label class="checkbox">
-            <input type="checkbox" id="move_forward"> Can't move on anything else unless approved
+            <input type="checkbox" name="cant_move_forward" id="move_forward" > Can't move on anything else unless approved
         </label>
         <button type="submit" class="btn btn-inverse"><i class="icon-white icon-share"></i> Send</button>
     </fieldset>
