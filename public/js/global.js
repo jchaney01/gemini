@@ -41,15 +41,14 @@
                 }
             });
             $("#centralNav a").on('click',function(e){
-
-                var target = $(e.currentTarget);
-
                 e.preventDefault();
+
+                var target = $(e.currentTarget).data("section");
                 //window.mySwipe.slide($(e.currentTarget).parent().index());
                 setActiveSubNav($(e.currentTarget).parent().index());
                 animateNavBarToIndex($(e.currentTarget).parent().index());
 
-                switch($(e.currentTarget).attr("id")){
+                switch(target){
                     case "changeorders":
                         appRouter.navigate("#changeorders",{trigger:true,replace:true});
                         break;

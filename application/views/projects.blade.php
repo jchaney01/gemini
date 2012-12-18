@@ -144,9 +144,9 @@
     </fieldset>
 </form>@endsection
 @section("centralNav")
-<div class="span4"><a id="overview" href="http://apple.com1" class="active">Overview</a></div>
-<div class="span4"><a id="timelogs" href="http://apple.com1" class="">Time Logs</a></div>
-<div class="span4"><a id="changeorders" href="http://apple.com1" class="">Change Orders</a></div>
+<div class="span4"><a data-section="overview" href="http://apple.com1" class="active">Overview</a></div>
+<div class="span4"><a data-section="timelogs" href="http://apple.com1" class="">Time Logs</a></div>
+<div class="span4"><a data-section="changeorders" href="http://apple.com1" class="">Change Orders</a></div>
 @endsection
 
 @section('content_slide_2_left')
