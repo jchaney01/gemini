@@ -57,6 +57,7 @@ class Changeorders_Controller extends Base_Controller
 
 
         // redirect to confirm screen
+        return 1;
 
     }
 

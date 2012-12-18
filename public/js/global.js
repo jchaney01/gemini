@@ -30,6 +30,9 @@
 
 
     function init () {
+
+
+
         if ( Modernizr.csstransforms ) {
             window.mySwipe = new Swipe(document.getElementById('slider'),{
                 callback: function(event, index, elem) {
@@ -38,10 +41,25 @@
                 }
             });
             $("#centralNav a").on('click',function(e){
+
+                var target = $(e.currentTarget);
+
                 e.preventDefault();
-                window.mySwipe.slide($(e.currentTarget).parent().index());
+                //window.mySwipe.slide($(e.currentTarget).parent().index());
                 setActiveSubNav($(e.currentTarget).parent().index());
                 animateNavBarToIndex($(e.currentTarget).parent().index());
+
+                switch($(e.currentTarget).attr("id")){
+                    case "changeorders":
+                        appRouter.navigate("#changeorders",{trigger:true,replace:true});
+                        break;
+                    case "overview":
+                        appRouter.navigate("#overview",{trigger:true,replace:true});
+                        break;
+                    case "timelogs":
+                        appRouter.navigate("#timelogs",{trigger:true,replace:true});
+                        break;
+                }
             });
         } else {
             alert("Your browser is too old to navigate to a different subsection.")
@@ -49,6 +67,25 @@
         $("[rel=popover]").popover();
         $('textarea').autoResizer();
         $('input#filter').quicksearch('.filterable');
+        var AppRouter = Backbone.Router.extend({
+
+            routes: {
+                "changeorders":                 "co",    // #changeorders
+                "overview":                 "overview",
+                "timelogs":                 "timelogs"
+            },
+            co: function() {
+                window.mySwipe.slide(2);
+            },
+            overview: function() {
+                window.mySwipe.slide(0);
+            },
+            timelogs: function() {
+                window.mySwipe.slide(1);
+            }
+        });
+        var appRouter = new AppRouter();
+        Backbone.history.start();
 
     }
     function setActiveSubNav(index){
