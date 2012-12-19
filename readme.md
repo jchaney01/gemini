@@ -1,7 +1,6 @@
 Gemini Main Todo
 ================
-Move client validation to the model so you can reuse it on multiple actions
-Edit projects
+*Edit projects
 Abstract the two project form fieldsets to a partial
 Time Sheets (with pagination)
 Invoices
@@ -12,6 +11,8 @@ Edit Users
 Delete users
 Create Users
 Style CO approve screen
+
+*untested
 
 Gemini Dashboard
 ================
