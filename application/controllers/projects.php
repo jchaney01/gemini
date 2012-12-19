@@ -69,8 +69,6 @@ class Projects_Controller extends Base_Controller
     public function post_create()
     {
 
-
-
         $v = Validator::make(Input::all(), array(
             'client_id'=> "required",
             'name'=> "required|unique:projects",
