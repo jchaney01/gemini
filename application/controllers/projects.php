@@ -40,9 +40,24 @@ class Projects_Controller extends Base_Controller
         
     }
 
-    public function get_edit()
+    public function get_edit($id)
     {
-        
+
+        $project = Project::with(array('client'))->find($id);
+
+        if ($project){
+
+            $data = array(
+                "project" => $project,
+                "clients" => Client::all(),
+                "title" => "Edit Project ".$project->name,
+            );
+            return View::make('project_edit', $data);
+        } else {
+            return Response::error('404');
+        }
+
+
     }
 
     public function post_create()
