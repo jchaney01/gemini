@@ -1,7 +1,9 @@
 Gemini Main Todo
 ================
+Move client validation to the model so you can reuse it on multiple actions
 Edit projects
-Time Sheets
+Abstract the two project form fieldsets to a partial
+Time Sheets (with pagination)
 Invoices
 Delete projects
 Search

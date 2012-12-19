@@ -26,12 +26,12 @@
 
 @section('content_right')
 @if(Session::get('status_msg'))
-<div class="alert alert-success fade in">
+<div class="alert alert-success fade in <?if(!Session::get('type')){?>alert-error<?}?>">
     <button type="button" class="close" data-dismiss="alert">×</button>
     <strong>{{Session::get('status_msg')}}</strong>
 </div>
 @endif
-<form id="createForm" method="post" action="{{URL::to_route('projects')}}">
+<?php echo Form::open(URL::to_route('projects') . '/' . $project->id, 'PUT', array('id' => 'createForm')); ?>
     <fieldset>
         <label>Client</label>
         {{$errors->first('client_id','<span class="help-inline animated flash">:message</span>')}}
