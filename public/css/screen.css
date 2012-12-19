@@ -167,7 +167,16 @@ body {
   left: 0%;
 }
 
+/* line 189, ../scss/screen.scss */
+.error_page {
+  margin-top: 60px;
+}
 /* line 191, ../scss/screen.scss */
+.error_page p {
+  margin-top: 75px;
+}
+
+/* line 196, ../scss/screen.scss */
 h1 {
   font-size: 20px;
   display: inline-block;
@@ -176,68 +185,68 @@ h1 {
   margin: 0;
 }
 
-/* line 197, ../scss/screen.scss */
+/* line 202, ../scss/screen.scss */
 h2 {
   font-size: 14px;
   margin: 0 0 5px 0;
   line-height: 1em;
 }
 
-/* line 203, ../scss/screen.scss */
+/* line 208, ../scss/screen.scss */
 .module a {
   display: inline-block;
 }
-/* line 205, ../scss/screen.scss */
+/* line 210, ../scss/screen.scss */
 .module a.active {
   color: #ffc40d;
 }
-/* line 209, ../scss/screen.scss */
+/* line 214, ../scss/screen.scss */
 .module.module:not(:first-child) {
   margin: 20px 0 0 0;
 }
-/* line 212, ../scss/screen.scss */
+/* line 217, ../scss/screen.scss */
 .module.module:last-child {
   margin-bottom: 20px;
 }
-/* line 215, ../scss/screen.scss */
+/* line 220, ../scss/screen.scss */
 .module .COmodule > p {
   max-height: 400px;
   overflow: auto;
   line-height: 21px;
 }
 
-/* line 222, ../scss/screen.scss */
+/* line 227, ../scss/screen.scss */
 .status {
   font-size: 12px;
   margin-left: 10px;
   -webkit-mask-image: none;
 }
-/* line 226, ../scss/screen.scss */
+/* line 231, ../scss/screen.scss */
 .status.status-approved {
   color: #46a546;
 }
-/* line 229, ../scss/screen.scss */
+/* line 234, ../scss/screen.scss */
 .status.status-denied {
   color: #9d261d;
 }
-/* line 232, ../scss/screen.scss */
+/* line 237, ../scss/screen.scss */
 .status.status-pending {
   color: #ffc40d;
 }
 
-/* line 236, ../scss/screen.scss */
+/* line 241, ../scss/screen.scss */
 .time {
   color: white;
   font-size: 22px;
   margin-bottom: 5px;
 }
-/* line 240, ../scss/screen.scss */
+/* line 245, ../scss/screen.scss */
 .time span {
   font-size: 12px;
   color: #999999;
 }
 
-/* line 288, ../scss/screen.scss */
+/* line 293, ../scss/screen.scss */
 #tabBar {
   width: 100%;
   height: 50px;
@@ -254,7 +263,7 @@ h2 {
   background-image: -o-linear-gradient(#555555 30%, #333333);
   background-image: linear-gradient(#555555 30%, #333333);
 }
-/* line 298, ../scss/screen.scss */
+/* line 303, ../scss/screen.scss */
 #tabBar ul {
   list-style: none;
   margin: 0px;
@@ -262,28 +271,28 @@ h2 {
   font-size: 0;
   text-align: center;
 }
-/* line 304, ../scss/screen.scss */
+/* line 309, ../scss/screen.scss */
 #tabBar ul li {
   display: inline-block;
   text-align: left;
   border-right: 1px solid #999999;
   padding: 3px;
 }
-/* line 308, ../scss/screen.scss */
+/* line 313, ../scss/screen.scss */
 #tabBar ul li:first-child {
   border-left: 1px solid #999999;
 }
 @media (max-width: 767px) {
-  /* line 312, ../scss/screen.scss */
+  /* line 317, ../scss/screen.scss */
   #tabBar ul li:first-child {
     border-left: none;
   }
-  /* line 315, ../scss/screen.scss */
+  /* line 320, ../scss/screen.scss */
   #tabBar ul li:last-child {
     border-right: none;
   }
 }
-/* line 319, ../scss/screen.scss */
+/* line 324, ../scss/screen.scss */
 #tabBar ul li.active, #tabBar ul li:hover {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF333333', endColorstr='#FF555555');
@@ -293,7 +302,7 @@ h2 {
   background-image: -o-linear-gradient(#333333 30%, #555555);
   background-image: linear-gradient(#333333 30%, #555555);
 }
-/* line 324, ../scss/screen.scss */
+/* line 329, ../scss/screen.scss */
 #tabBar ul li a {
   color: #eeeeee;
   font-weight: lighter;
@@ -305,37 +314,37 @@ h2 {
   font-size: 11px;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
 }
-/* line 326, ../scss/screen.scss */
+/* line 331, ../scss/screen.scss */
 #tabBar ul li a:hover {
   color: #999999;
 }
-/* line 328, ../scss/screen.scss */
+/* line 333, ../scss/screen.scss */
 #tabBar ul li a:hover div#projectTabBarIcon {
   background-position: -203px -43px;
 }
-/* line 331, ../scss/screen.scss */
+/* line 336, ../scss/screen.scss */
 #tabBar ul li a:hover div#invoiceTabBarIcon {
   background-position: -381px -43px;
 }
-/* line 334, ../scss/screen.scss */
+/* line 339, ../scss/screen.scss */
 #tabBar ul li a:hover div#clientsTabBarIcon {
   background-position: -247px -43px;
 }
-/* line 337, ../scss/screen.scss */
+/* line 342, ../scss/screen.scss */
 #tabBar ul li a:hover div#timesheetsTabBarIcon {
   background-position: -293px -43px;
 }
-/* line 340, ../scss/screen.scss */
+/* line 345, ../scss/screen.scss */
 #tabBar ul li a:hover div#usersTabBarIcon {
   background-position: -337px -43px;
 }
 @media (max-width: 767px) {
-  /* line 324, ../scss/screen.scss */
+  /* line 329, ../scss/screen.scss */
   #tabBar ul li a {
     padding: 5px 10px;
   }
 }
-/* line 359, ../scss/screen.scss */
+/* line 364, ../scss/screen.scss */
 #tabBar ul li a div {
   background-image: url("../img/geminiIcons.png");
   background-size: 600px 150px;
@@ -344,54 +353,54 @@ h2 {
   display: block;
   margin: -4px auto 0 auto;
 }
-/* line 366, ../scss/screen.scss */
+/* line 371, ../scss/screen.scss */
 #tabBar ul li a div#projectTabBarIcon {
   background-position: -203px -76px;
 }
-/* line 368, ../scss/screen.scss */
+/* line 373, ../scss/screen.scss */
 #tabBar ul li a div#projectTabBarIcon.active {
   background-position: -203px -43px;
 }
-/* line 372, ../scss/screen.scss */
+/* line 377, ../scss/screen.scss */
 #tabBar ul li a div#invoiceTabBarIcon {
   background-position: -381px -76px;
 }
-/* line 374, ../scss/screen.scss */
+/* line 379, ../scss/screen.scss */
 #tabBar ul li a div#invoiceTabBarIcon.active {
   background-position: -381px -43px;
 }
-/* line 378, ../scss/screen.scss */
+/* line 383, ../scss/screen.scss */
 #tabBar ul li a div#usersTabBarIcon {
   background-position: -337px -76px;
 }
-/* line 380, ../scss/screen.scss */
+/* line 385, ../scss/screen.scss */
 #tabBar ul li a div#usersTabBarIcon.active {
   background-position: -337px -43px;
 }
-/* line 384, ../scss/screen.scss */
+/* line 389, ../scss/screen.scss */
 #tabBar ul li a div#timesheetsTabBarIcon {
   background-position: -293px -76px;
 }
-/* line 386, ../scss/screen.scss */
+/* line 391, ../scss/screen.scss */
 #tabBar ul li a div#timesheetsTabBarIcon.active {
   background-position: -293px -43px;
 }
-/* line 390, ../scss/screen.scss */
+/* line 395, ../scss/screen.scss */
 #tabBar ul li a div#clientsTabBarIcon {
   background-position: -247px -76px;
 }
-/* line 392, ../scss/screen.scss */
+/* line 397, ../scss/screen.scss */
 #tabBar ul li a div#clientsTabBarIcon.active {
   background-position: -247px -43px;
 }
 
-/* line 408, ../scss/screen.scss */
+/* line 413, ../scss/screen.scss */
 #createForm {
   padding: 30px;
   border-radius: 10px;
   background-color: rgba(50, 50, 50, 0.5);
 }
-/* line 412, ../scss/screen.scss */
+/* line 417, ../scss/screen.scss */
 #createForm button[type=submit] {
   margin-top: 20px;
 }

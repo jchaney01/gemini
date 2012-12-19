@@ -186,7 +186,12 @@ body {
     }
   }
 };
-
+.error_page{
+  margin-top: 60px;
+  p{
+    margin-top: 75px;
+  }
+}
 
 h1{
   font-size: $base-font-size + 8;

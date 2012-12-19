@@ -15,6 +15,7 @@ class Create_Changeorders_Table {
 			$table->string('approved_by')->nullable();
 			$table->integer('project_id');
 			$table->integer('estimated_hours')->nullable();
+			$table->integer('approved_dollars')->nullable(); //Storing a calculated value to capture an approval snapshot since rates can change mid-project
 			$table->timestamps();
 	});
 

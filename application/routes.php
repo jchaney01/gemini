@@ -65,13 +65,14 @@ Route::group(array('before' => 'auth:50'), function()
     Route::get('co/(:any)', array('as' => 'co', 'uses' => 'changeorders@show')); // READ
     Route::get('co/new', array('as' => 'new_co', 'uses' => 'changeorders@new')); // FORM TO CREATE
     Route::get('co/confirm', array('as' => 'confirm_co', 'uses' => 'changeorders@confirm')); // Confirms submission
+    Route::get('co/resend/(:any)', array('as' => 'resend_co', 'uses' => 'changeorders@resend'));
     Route::get('co/(:any)edit', array('as' => 'edit_co', 'uses' => 'changeorders@edit')); //FORM TO EDIT
     Route::post('co', array("as"=>"create_co","uses"=>'changeorders@create'));
     Route::put('co/(:any)', 'co@update'); //UPDATE
     Route::delete('co/(:any)', 'co@destroy'); //DELETE
 });
 //The below is not used to "read" a record.  It is the URL a client visits to approve or deny the change order.
-Route::get('co/(:any)/(:any)', array('as' => 'co_response', 'uses' => 'changeorders@get_process_client_response')); // use /co/approve/coID
+Route::get('co/(:any)/(:any)', array('as' => 'co_response', 'uses' => 'changeorders@process_client_response')); // use /co/approve/coID
 
 //Clients
 Route::group(array('before' => 'auth:50'), function()

@@ -175,12 +175,12 @@
                       <div class="COmodule">
                         <p>';
                             if ($status != "pending"){
-                                echo ucfirst($status).': <a href="mailto:'.$co->approved_by.'">'.$co->approved_by.'</a> on '.$formattedTimestamp.'<br>';
+                                echo ucfirst($status).' by <a href="mailto:'.$co->approved_by.'">'.$co->approved_by.'</a> on '.$formattedTimestamp.' from <a href="mailto:'.$co->user->email.'">'.$co->user->first_name.'&nbsp;'.$co->user->last_name.'</a><br>';
                             };
          echo $co->desc.'</p>
                       </div>
                 <div>
-                    <button class="btn btn-inverse"><a style="color: white" href="#"><i class="icon-white icon-refresh"></i> Resend</a></button>
+                    <button class="btn btn-inverse"><a style="color: white" href="'.URL::to_route('resend_co').'/'.$co->id.'"><i class="icon-white icon-refresh"></i> Resend</a></button>
                 </div>
             </div>';
                 }

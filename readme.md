@@ -120,7 +120,8 @@ Dashboard
 
 Confirm
 =======
-Editing a project and clearing co and bill rate overrides correctly 10's and nulls respectivelly
+Editing a project and clearing co and bill rate overrides correctly 10's and nulls respectivelly.
+CO email and resend addresses are dynamic
 
 V3
 Social login
