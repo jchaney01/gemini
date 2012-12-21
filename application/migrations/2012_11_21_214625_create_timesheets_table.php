@@ -11,6 +11,7 @@ class Create_Timesheets_Table {
 			$table->time('time_start');
 			$table->integer('project_id');
 			$table->blob('work_performed')->nullable();
+            $table->date('date');
 			$table->timestamps();
 	});
 

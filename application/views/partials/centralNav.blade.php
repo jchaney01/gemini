@@ -3,7 +3,7 @@
     <div class="row-fluid hidden-phone">
         @section("centralNav")
         <div class="span4"><a id="overview" href="http://apple.com1" class="active">Overview</a></div>
-        <div class="span4"><a id="timelogs" href="http://apple.com1" class="">Time Logs</a></div>
+        <div class="span4"><a id="timelogs" href="http://apple.com1" class="">Time</a></div>
         <div class="span4"><a id="changeorders" href="http://apple.com1" class="">Change Orders</a></div>
         @yield_section
     </div>
