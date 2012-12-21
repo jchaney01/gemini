@@ -16,13 +16,12 @@ class Timesheets_Controller extends Base_Controller
     }
     public function get_index(){
         $data = array(
-            "timesheets"=> Timesheet::with(array('project'))->where('user_id', '=', Auth::user()->id)->order_by('date', 'asc')->get(),
+            "timesheets"=> Timesheet::with(array('project'))->where('user_id', '=', Auth::user()->id)->order_by('date', 'asc')->paginate()->get(),
             "projects"=> Project::where("status",'=','Active')->get(),
             "title"=>"Time Sheets",
         );
         return View::make('timesheets',$data);
     }
-
     public function get_pending()
     {
 
