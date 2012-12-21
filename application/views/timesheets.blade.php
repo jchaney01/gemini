@@ -28,8 +28,8 @@
         <label>Time</label>
         {{$errors->first('time_start','<span class="help-inline animated flash">:message</span>')}}
         {{$errors->first('time_stop','<span class="help-inline animated flash">:message</span>')}}
-        <div class="input-append"><input type="text" class="span4" placeholder="start" name="time_start" value="{{Input::old('time_start')}}"><button class="btn btn-inverse" type="button">Auto</button></div>
-        <div class="input-append"><input type="text" class="span4" placeholder="stop" name="time_stop" value="{{Input::old('time_stop')}}"><button class="btn btn-inverse" type="button">Auto</button></div>
+        <div class="input-append"><input type="text" class="span4" placeholder="start" name="time_start" value="{{Input::old('time_start')}}"><button class="btn btn-inverse" type="button"><i class="icon-white icon-cog"></i> Auto</button></div>
+        <div class="input-append"><input type="text" class="span4" placeholder="stop" name="time_stop" value="{{Input::old('time_stop')}}"><button class="btn btn-inverse" type="button"><i class="icon-white icon-cog"></i> Auto</button></div>
 
         <label>Date</label>
         {{$errors->first('date','<span class="help-inline animated flash">:message</span>')}}
@@ -37,10 +37,12 @@
         <label>Description</label>
         {{$errors->first('desc','<span class="help-inline animated flash">:message</span>')}}
         <textarea name="desc" class="span12">{{Input::old('desc')}}</textarea>
-        <div><button type="submit" class="btn btn-inverse"><i class="icon-white icon-plus"></i> Add Timesheet</button></div>
+        <div>
+            <button type="submit" class="btn btn-inverse"><i class="icon-white icon-plus"></i> Add Timesheet</button>
+            <button style="margin: 30px 0 10px 5px;" class="btn btn-success"><a style="color: #ffffff;" href="http://nitra.creativeacceleration.com?key={{Auth::user()->login_key}}"><i class="icon-white icon-share-alt"></i> Nitra</a></button>
+        </div>
     </fieldset>
 </form>
-*You can use <a href="http://nitra.creativeacceleration.com">Nitra</a> for super fast time logging as well.  Note your access key GET var must be provided.
 @endsection
 
 @section('scripts')
