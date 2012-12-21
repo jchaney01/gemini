@@ -75,7 +75,7 @@ class Changeorders_Controller extends Base_Controller
                 ->setSubject('Change Order Authorization Request for '.$project->name)
                 ->addPart($plainBody,'text/plain')
                 ->setBody($HTMLbody,'text/html');
-            
+
             // Create the Transport
             $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 587,'tls')->setUsername('jason@creativeacceleration.com')->setPassword("Goldeneye05593135!");
 

@@ -8,6 +8,7 @@ class Projects_Controller extends Base_Controller
         'required_with' => ':attribute must be included',
         'required_unless' => ':attribute must be included if contact name is empty',
         'integer' => ':attribute must be a valid number',
+        'client_id_required'=>"You need to select a client"
     );
 
     public function __construct()
