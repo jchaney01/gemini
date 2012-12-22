@@ -41,7 +41,6 @@ class Timesheets_Controller extends Base_Controller
 
     public function post_create()
     {
-
         $v = Validator::make(Input::all(), array(
             'project_id' => "required",
             'time_start' => "required",
@@ -50,7 +49,9 @@ class Timesheets_Controller extends Base_Controller
         ), $this->messages);
 
         Input::merge(array(
-            "user_id" => Auth::user()->id
+            "user_id" => Auth::user()->id,
+            "time_start"=> date("H:i:s", strtotime(Input::get('time_start'))),
+            "time_stop"=> date("H:i:s", strtotime(Input::get('time_stop')))
         ));
 
         if ($v->fails()) {

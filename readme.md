@@ -28,6 +28,8 @@ V3
 Social login
 Passwords
 User time reports (based off of only date range)
+put a condition to where you can't have 2 time entries that start at the same timestamp?
+at the db level
 
 
 NOTES
