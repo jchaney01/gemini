@@ -1,5 +1,17 @@
 <?php
 
+
+/*
+* Class manages conversion and display of time.  You will mainly use human_readable_date() to convert MYSQL date fields to something visually appealing and getElapsedHumanReadableTime() to get elapsed time.
+*
+* @func human_readable_date
+* @param MYSQL time $stop
+*
+* @return string
+*/
+
+
+
 class Timehelper
 {
     public static function human_readable_date($date)
@@ -8,8 +20,8 @@ class Timehelper
     }
 
     /*
- * secToString returns a pretty formatted sentence of time from a MYSQL time field
- * @param MYSQL time $seconds
+ * secToString returns a pretty formatted sentence of elapsed time from seconds
+ * @param time in seconds $seconds
  * @return string
  */
 
