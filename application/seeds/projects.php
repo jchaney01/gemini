@@ -10,7 +10,7 @@
             for ($i = 0; $i < 20; ++$i) {
                 $project = new Project;
                     $project->name = $faker->name;
-                    $project->status = "Active";
+                    $project->status = "active";
                     $project->client_id = $i+1;
                     $project->due_date = $faker->date($format = 'Y-m-d');
                     $project->notes = $faker->sentence($nbWords = 6);

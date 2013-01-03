@@ -14,4 +14,12 @@ class Base_Controller extends Controller {
 		return Response::error('404');
 	}
 
+    public function getProjectList(){
+        if(Session::get('project_state')){
+            return Project::with(array('changeorder', 'timesheet', 'timesheet.user'))->where('status', '=', Session::get('project_state'))->order_by('name', 'asc');
+        } else {
+            return Project::with(array('changeorder', 'timesheet', 'timesheet.user'))->where('status', '=', "active")->order_by('name', 'asc');
+        }
+    }
+
 }

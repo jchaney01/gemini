@@ -5,6 +5,7 @@ Time Sheets (with pagination)
 Abstract the two project form fieldsets to a partial
 Invoices
 Delete projects
+passwords
 Search
 Budget Graph
 Edit Users

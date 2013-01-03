@@ -1,15 +1,8 @@
 <?php
 
-class Passwords_Controller extends Base_Controller
+class Users_Controller extends Base_Controller
 {
     public $restful = TRUE;
-
-    public $messages = array(
-        'required_with'      => ':attribute must be included',
-        'required_unless'    => ':attribute must be included if contact name is empty',
-        'integer'      => ':attribute must be a valid number',
-    );
-
 
     public function __construct()
     {
@@ -20,16 +13,16 @@ class Passwords_Controller extends Base_Controller
     public function get_index(){
 
         $data = array(
-           "projects"=> Project::where('status', '=', 'active')->get(),
-           "passwords"=> Password::with(array('client', 'project'))->order_by('name', 'asc')->get(),
-           "title"=>"Passwords",
+          "projects"=> Project::where('status', '=', 'Active')->get(),
+           "clients"=> Client::with("project")->order_by('company_name', 'asc')->get(),
+           "title"=>"Clients",
         );
-        return View::make('passwords',$data);
+        return View::make('clients',$data);
     }
 
     public function get_show($id){
         $data = array(
-            "projects"=> Project::where('status', '=', 'active')->get(),
+            "projects"=> Project::where('status', '=', 'Active')->get(),
             "client"=> Client::with("project")->find($id),
             "title"=>"Client",
         );
@@ -149,5 +142,17 @@ class Passwords_Controller extends Base_Controller
             $client->delete();
             return Redirect::to_route('clients');
         }
+    }
+
+    public function prefProjectState($state){ //Receives either active, pending, complete or invoice
+        if(Session::put('project_state', $state)){
+            if(Input::get('redirect')){
+                Redirect::to_route(Input::get('redirect'));
+            } else {
+                Redirect::to_route("projects");
+            }
+        } else {
+            return Response::error('500');
+        };
     }
 }

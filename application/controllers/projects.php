@@ -19,7 +19,8 @@ class Projects_Controller extends Base_Controller
 
     public function get_index($id = null){
         $data = array(
-            "projects"=> Project::with(array('changeorder', 'timesheet','timesheet.user'))->where('status', '=', 'Active')->order_by('name', 'asc')->get(),
+            "global_projects" => static::getProjectList(),
+            "projects"=>  Project::with(array('changeorder', 'timesheet', 'timesheet.user'))->where('status', '=', 'active')->order_by('name', 'asc')->get(),
             "clients"=> Client::all(),
             "users"=> User::all(),
             "title"=>"Projects",
@@ -31,15 +32,6 @@ class Projects_Controller extends Base_Controller
         }
 
         return View::make('projects',$data);
-    }
-
-    public function get_pending()
-    {
-        $data = array(
-            "projects"=> Project::with('Changeorder', 'Timesheet')->where('status', '=', 'Pending')->get(),
-            "title"   => "Pending Projects",
-        );
-        return View::make('projects', $data);
     }
 
     public function get_new()

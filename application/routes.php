@@ -51,7 +51,6 @@ Route::get('logout', array('as' => 'logout', 'uses' => 'login@logout')); //LIST
 Route::group(array('before' => 'auth:50'), function()
 {
     Route::get('projects', array('as' => 'projects', 'uses' => 'projects@index')); //LIST
-    Route::get('projects/pending', array('as' => 'pending_projects', 'uses' => 'projects@pending')); //LIST All ACTIVE
     Route::get('projects/(:any)', array('as' => 'project', 'uses' => 'projects@index')); //READ - Also shows change orders and timesheets
     Route::get('projects/new', array('as' => 'new_project', 'uses' => 'projects@new')); // FORM TO CREATE
     Route::get('projects/(:any)edit', array('as' => 'edit_project', 'uses' => 'projects@edit')); //FORM TO EDIT
@@ -103,6 +102,9 @@ Route::group(array('before' => 'auth:100'), function()
     Route::post('users', 'users@create'); //CREATE
     Route::put('users/(:any)', 'users@update'); //UPDATE
     Route::delete('users/(:any)', 'users@destroy'); //DELETE
+});
+Route::group(array('before' => 'auth:50'), function () {
+    Route::get('users/pref/project_state/(:any)', array('as' => 'userPrefProjState', 'uses' => 'users@prefProjectState')); // sets session pref for project state.  Pass GET var with "redirect" and value of named route.
 });
 //Timesheets
 Route::group(array('before' => 'auth:50'), function()
