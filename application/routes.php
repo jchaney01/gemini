@@ -138,6 +138,16 @@ Route::group(array('before' => 'auth:100'), function()
     Route::put('materialitems/(:any)', 'materialitems@update'); //UPDATE
     Route::delete('materialitems/(:any)', 'materialitems@destroy'); //DELETE
 });
+//Passwords
+Route::group(array('before' => 'auth:50'), function()
+{
+    Route::get('passwords', array('as' => 'passwords', 'uses' => 'passwords@index')); // LIST
+    Route::get('passwords/(:any)', array('as' => 'password', 'uses' => 'passwords@show')); // READ
+    Route::get('passwords/(:any)edit', array('as' => 'edit_password', 'uses' => 'passwords@edit')); //FORM TO EDIT
+    Route::post('passwords', 'passwords@create'); //CREATE
+    Route::put('passwords/(:any)', 'passwords@update'); //UPDATE
+    Route::delete('passwords/(:any)', 'passwords@destroy'); //DELETE
+});
 
 /*
 |--------------------------------------------------------------------------
