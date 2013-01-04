@@ -12,7 +12,7 @@ class Timesheets_Controller extends Base_Controller
 
     public function __construct()
     {
-
+        Asset::add('timesheets', 'js/timesheets.js');
     }
     public function get_index(){
         $data = array(

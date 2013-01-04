@@ -28,7 +28,13 @@
         <label>Time</label>
         {{$errors->first('time_start','<span class="help-inline animated flash">:message</span>')}}
         {{$errors->first('time_stop','<span class="help-inline animated flash">:message</span>')}}
-        <div class="input-append"><input type="text" class="span4" placeholder="start" name="time_start" value="{{Input::old('time_start')}}"><button class="btn btn-inverse" type="button"><i class="icon-white icon-cog"></i> Auto</button></div>
+        <div class="input-append">
+            <input type="text" class="span4" placeholder="start" name="time_start" value="{{Input::old('time_start')}}">
+            <button class="btn btn-inverse" type="button">
+                <i class="icon-white icon-cog"></i>
+                Auto
+            </button>
+        </div>
         <div class="input-append"><input type="text" class="span4" placeholder="stop" name="time_stop" value="{{Input::old('time_stop')}}"><button class="btn btn-inverse" type="button"><i class="icon-white icon-cog"></i> Auto</button></div>
 
         <label>Date</label>
