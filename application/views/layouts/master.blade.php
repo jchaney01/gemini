@@ -29,7 +29,7 @@
             @section('top_right')
             <div id="projectList">
                 <ul>
-                    @foreach ($projects as $project)
+                    @foreach ($global_projects as $project)
                     <li><a href="{{URL::to_route('projects')}}/{{$project->id}}">{{$project->name}}</a></li>
                     @endforeach
                 </ul>

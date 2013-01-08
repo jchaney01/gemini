@@ -16,7 +16,7 @@ class Timesheets_Controller extends Base_Controller
     }
     public function get_index(){
         $data = array(
-            "timesheets"=> Timesheet::with(array('project'))->where('user_id', '=', Auth::user()->id)->order_by('date', 'asc')->paginate()->get(),
+            "timesheets"=> Timesheet::with(array('project'))->where('user_id', '=', Auth::user()->id)->order_by('date', 'asc')->paginate(10),
             "projects"=> Project::where("status",'=','Active')->get(),
             "title"=>"Time Sheets",
         );

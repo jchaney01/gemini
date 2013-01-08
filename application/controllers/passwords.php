@@ -20,7 +20,8 @@ class Passwords_Controller extends Base_Controller
     public function get_index(){
 
         $data = array(
-           "projects"=> Project::where('status', '=', 'active')->get(),
+           "global_projects" => static::getProjectList(),
+           "clients" => Client::all(),
            "passwords"=> Password::with(array('client', 'project'))->order_by('name', 'asc')->get(),
            "title"=>"Passwords",
         );

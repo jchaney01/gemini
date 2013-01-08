@@ -254,7 +254,7 @@ $invoice:-381px;
 $users:-337px;
 $timesheets:-293px;
 $clients:-247px;
-$passwords:-247px;
+$passwords:-65px;
 
 $activeOffset: -43px;
 $inActiveOffset: -76px;
@@ -280,9 +280,6 @@ $inActiveOffset: -76px;
 @mixin usersActive(){
   background-position: $users $activeOffset;
 }
-@mixin passwordsActive(){
-  background-position: $passwords $activeOffset;
-}
 @mixin usersInActive(){
   background-position: $users $inActiveOffset;
 }
@@ -291,6 +288,12 @@ $inActiveOffset: -76px;
 }
 @mixin timesheetsInActive(){
   background-position: $timesheets $inActiveOffset;
+}
+@mixin passwordsActive(){
+  background-position: $passwords $activeOffset;
+}
+@mixin passwordsInActive(){
+  background-position: $passwords $inActiveOffset;
 }
 
 
@@ -403,6 +406,12 @@ $inActiveOffset: -76px;
             @include clientsInActive;
             &.active{
               @include clientsActive;
+            }
+          }
+          &#passwordsTabBarIcon{
+            @include passwordsInActive;
+            &.active{
+              @include passwordsActive;
             }
           }
         }

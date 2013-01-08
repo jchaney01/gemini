@@ -246,7 +246,7 @@ h2 {
   color: #999999;
 }
 
-/* line 293, ../scss/screen.scss */
+/* line 300, ../scss/screen.scss */
 #tabBar {
   width: 100%;
   height: 50px;
@@ -263,7 +263,7 @@ h2 {
   background-image: -o-linear-gradient(#555555 30%, #333333);
   background-image: linear-gradient(#555555 30%, #333333);
 }
-/* line 303, ../scss/screen.scss */
+/* line 310, ../scss/screen.scss */
 #tabBar ul {
   list-style: none;
   margin: 0px;
@@ -271,28 +271,28 @@ h2 {
   font-size: 0;
   text-align: center;
 }
-/* line 309, ../scss/screen.scss */
+/* line 316, ../scss/screen.scss */
 #tabBar ul li {
   display: inline-block;
   text-align: left;
   border-right: 1px solid #999999;
   padding: 3px;
 }
-/* line 313, ../scss/screen.scss */
+/* line 320, ../scss/screen.scss */
 #tabBar ul li:first-child {
   border-left: 1px solid #999999;
 }
 @media (max-width: 767px) {
-  /* line 317, ../scss/screen.scss */
+  /* line 324, ../scss/screen.scss */
   #tabBar ul li:first-child {
     border-left: none;
   }
-  /* line 320, ../scss/screen.scss */
+  /* line 327, ../scss/screen.scss */
   #tabBar ul li:last-child {
     border-right: none;
   }
 }
-/* line 324, ../scss/screen.scss */
+/* line 331, ../scss/screen.scss */
 #tabBar ul li.active, #tabBar ul li:hover {
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF333333', endColorstr='#FF555555');
@@ -302,7 +302,7 @@ h2 {
   background-image: -o-linear-gradient(#333333 30%, #555555);
   background-image: linear-gradient(#333333 30%, #555555);
 }
-/* line 329, ../scss/screen.scss */
+/* line 336, ../scss/screen.scss */
 #tabBar ul li a {
   color: #eeeeee;
   font-weight: lighter;
@@ -314,37 +314,41 @@ h2 {
   font-size: 11px;
   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
 }
-/* line 331, ../scss/screen.scss */
+/* line 338, ../scss/screen.scss */
 #tabBar ul li a:hover {
   color: #999999;
 }
-/* line 333, ../scss/screen.scss */
+/* line 340, ../scss/screen.scss */
 #tabBar ul li a:hover div#projectTabBarIcon {
   background-position: -203px -43px;
 }
-/* line 336, ../scss/screen.scss */
+/* line 343, ../scss/screen.scss */
 #tabBar ul li a:hover div#invoiceTabBarIcon {
   background-position: -381px -43px;
 }
-/* line 339, ../scss/screen.scss */
+/* line 346, ../scss/screen.scss */
 #tabBar ul li a:hover div#clientsTabBarIcon {
   background-position: -247px -43px;
 }
-/* line 342, ../scss/screen.scss */
+/* line 349, ../scss/screen.scss */
 #tabBar ul li a:hover div#timesheetsTabBarIcon {
   background-position: -293px -43px;
 }
-/* line 345, ../scss/screen.scss */
+/* line 352, ../scss/screen.scss */
 #tabBar ul li a:hover div#usersTabBarIcon {
   background-position: -337px -43px;
 }
+/* line 355, ../scss/screen.scss */
+#tabBar ul li a:hover div#passwordsTabBarIcon {
+  background-position: -65px -43px;
+}
 @media (max-width: 767px) {
-  /* line 329, ../scss/screen.scss */
+  /* line 336, ../scss/screen.scss */
   #tabBar ul li a {
     padding: 5px 10px;
   }
 }
-/* line 364, ../scss/screen.scss */
+/* line 374, ../scss/screen.scss */
 #tabBar ul li a div {
   background-image: url("../img/geminiIcons.png");
   background-size: 600px 150px;
@@ -353,54 +357,62 @@ h2 {
   display: block;
   margin: -4px auto 0 auto;
 }
-/* line 371, ../scss/screen.scss */
+/* line 381, ../scss/screen.scss */
 #tabBar ul li a div#projectTabBarIcon {
   background-position: -203px -76px;
 }
-/* line 373, ../scss/screen.scss */
+/* line 383, ../scss/screen.scss */
 #tabBar ul li a div#projectTabBarIcon.active {
   background-position: -203px -43px;
 }
-/* line 377, ../scss/screen.scss */
+/* line 387, ../scss/screen.scss */
 #tabBar ul li a div#invoiceTabBarIcon {
   background-position: -381px -76px;
 }
-/* line 379, ../scss/screen.scss */
+/* line 389, ../scss/screen.scss */
 #tabBar ul li a div#invoiceTabBarIcon.active {
   background-position: -381px -43px;
 }
-/* line 383, ../scss/screen.scss */
+/* line 393, ../scss/screen.scss */
 #tabBar ul li a div#usersTabBarIcon {
   background-position: -337px -76px;
 }
-/* line 385, ../scss/screen.scss */
+/* line 395, ../scss/screen.scss */
 #tabBar ul li a div#usersTabBarIcon.active {
   background-position: -337px -43px;
 }
-/* line 389, ../scss/screen.scss */
+/* line 399, ../scss/screen.scss */
 #tabBar ul li a div#timesheetsTabBarIcon {
   background-position: -293px -76px;
 }
-/* line 391, ../scss/screen.scss */
+/* line 401, ../scss/screen.scss */
 #tabBar ul li a div#timesheetsTabBarIcon.active {
   background-position: -293px -43px;
 }
-/* line 395, ../scss/screen.scss */
+/* line 405, ../scss/screen.scss */
 #tabBar ul li a div#clientsTabBarIcon {
   background-position: -247px -76px;
 }
-/* line 397, ../scss/screen.scss */
+/* line 407, ../scss/screen.scss */
 #tabBar ul li a div#clientsTabBarIcon.active {
   background-position: -247px -43px;
 }
-
+/* line 411, ../scss/screen.scss */
+#tabBar ul li a div#passwordsTabBarIcon {
+  background-position: -65px -76px;
+}
 /* line 413, ../scss/screen.scss */
+#tabBar ul li a div#passwordsTabBarIcon.active {
+  background-position: -65px -43px;
+}
+
+/* line 429, ../scss/screen.scss */
 #createForm {
   padding: 30px;
   border-radius: 10px;
   background-color: rgba(50, 50, 50, 0.5);
 }
-/* line 417, ../scss/screen.scss */
+/* line 433, ../scss/screen.scss */
 #createForm button[type=submit] {
   margin-top: 20px;
 }
