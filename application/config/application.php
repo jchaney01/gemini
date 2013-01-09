@@ -55,7 +55,7 @@ return array(
 	|
 	*/
 
-	'key' => 'Cad8vrW0DjeQ2Fv02lm8IPNGFTYVAZTi',
+	'key' => 'Cad8vrWhDjeQ2Fv022m8IPNGFTYVAZTi',
 
 	/*
 	|--------------------------------------------------------------------------

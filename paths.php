@@ -24,6 +24,7 @@
 $environments = array(
 
 	'development' => array('http://localhost*', '*.dev*'),
+	'production' => array('*.com*'),
 
 );
 
